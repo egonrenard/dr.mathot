@@ -1,0 +1,16 @@
+:host {
+  display: block;   
+  width: 100%;      
+  margin-bottom: 20px; 
+}
+
+.page-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2vh 10vw;
+  padding: 2dvh 10dvw;
+
+}
+

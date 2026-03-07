@@ -1,0 +1,36 @@
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .65vw 1.1vw;
+  padding: .65dvw 1.1dvw;
+  min-width: 9vw;
+  min-width: 9dvw;
+  border: none;
+  background: transparent; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+
+  font-family: var(--font-type-button); 
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-button:hover {
+  background-color: var(--background-soft);
+  color: var(--text-accent);
+}
+
+.nav-button.selected {
+  color: var(--title-color);
+  background-color: var(--background-soft);
+  border-bottom: 2px solid var(--text-accent);
+}
+
+.nav-button.selected:hover {
+  color: var(--text-accent);
+}

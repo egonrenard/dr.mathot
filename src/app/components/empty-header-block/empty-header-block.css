@@ -1,0 +1,9 @@
+:host{
+  box-sizing: border-box;
+}
+
+.empty-header-block{
+  display:block;
+  height: 10vh;
+  background-color: white;
+}

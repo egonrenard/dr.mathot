@@ -1,0 +1,13 @@
+.footer-container{
+  display:flex;
+  width: 100%;
+  padding: 2vh 10vw;
+  padding: 2dvh 10dvw;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  height: 10dvh;
+  background-color: var(--background-warm);
+  margin: 0 auto;
+
+}

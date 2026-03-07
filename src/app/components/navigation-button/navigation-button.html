@@ -1,0 +1,9 @@
+<button 
+  class="nav-button" 
+  [routerLink]="routerLink" 
+  [class.selected]="selected" 
+  (click)="onClick()"
+>
+  <div class="icon"></div>
+  <div class="label">{{ label }}</div>
+</button>
