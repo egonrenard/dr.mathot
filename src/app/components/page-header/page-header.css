@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
-.header-container{
+:host {
+  --font-type-title: 'Marcellus', serif;
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   min-height: 10vh;
@@ -9,19 +14,15 @@
   padding: 2vh 10vw;
   padding: 2dvh 10dvw;
   margin: 0 auto;
+  margin-top: 2vh;
+  margin-top: 2dvh;
 }
 
-
-.site-name{
-  font-family: var(--font-type-title); 
-  font-weight: 600;
-  font-size: 1.5rem;      
-  letter-spacing: 1px;    
+.site-name h1 {
+  font-family: 'Marcellus', serif !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
   color: var(--title-color);
   text-decoration: none;
-  display: flex;
-  align-items: center;
-
+  letter-spacing: 2px;
 }
-
-
