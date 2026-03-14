@@ -13,9 +13,11 @@
   background-color: #ffffff;
   padding: 2vh 10vw;
   padding: 2dvh 10dvw;
+  padding-top: 4vh;
+  padding-top: 4dvh;
   margin: 0 auto;
-  margin-top: 2vh;
-  margin-top: 2dvh;
+  user-select: none;
+  cursor: default;
 }
 
 .site-name h1 {
@@ -25,4 +27,60 @@
   color: var(--title-color);
   text-decoration: none;
   letter-spacing: 2px;
+}
+
+.navigation-bar-desktop {
+  display: none;
+}
+
+
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-menu:hover {
+  background-color: var(--background-soft);
+}
+
+.hamburger-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.navigation-bar-mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+
+.navigation-bar-mobile.is-open {
+  display: block;
+}
+
+@media (min-width: 768px){
+  .hamburger-menu {
+    display: none;
+  }
+
+  .navigation-bar-desktop {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px){
+  .site-name h1 {
+    font-size: 2.5rem;
+  }
 }

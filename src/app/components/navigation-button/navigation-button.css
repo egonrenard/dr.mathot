@@ -2,27 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .65vw 1.1vw;
-  padding: .65dvw 1.1dvw;
-  min-width: 9vw;
-  min-width: 9dvw;
+  width: 100%;
+  padding: 1rem 1.5rem;
   border: none;
-  background: transparent; 
+  background: #fffdfd;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 8px;
-
-  font-family: var(--font-type-button); 
+  font-family: var(--font-type-button);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-color);
   letter-spacing: 1px;
   border-bottom: 2px solid transparent;
-}
-
-.nav-button:hover {
-  background-color: var(--background-soft);
-  color: var(--text-accent);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.219);
 }
 
 .nav-button.selected {
@@ -31,6 +24,31 @@
   border-bottom: 2px solid var(--text-accent);
 }
 
-.nav-button.selected:hover {
-  color: var(--text-accent);
+@media (min-width: 768px) and (hover: hover){
+  .nav-button {
+    width: auto;
+    min-width: none;
+    padding: .5vw;
+    border-radius: 2px;
+    border-width: 4px;
+    font-size: 1rem;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .nav-button:hover {
+    background-color: transparent;
+    color: var(--text-accent);
+  }
+  .nav-button.selected {
+    background-color: transparent;
+    border-bottom: 2px solid var(--text-accent);
+  }
+  .nav-button.selected:hover {
+    color: var(--text-accent);
+  }
+}
+@media (min-width: 1200px) and (hover: hover){
+  .nav-button {
+    font-size: 1.5rem;
+  }
 }

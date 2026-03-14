@@ -1,0 +1,21 @@
+<svg width="100%" viewBox="0 0 680 210" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FCFAF8"/> <stop offset="50%" stop-color="#F9F0EE"/> <stop offset="100%" stop-color="#F2DEDE"/> </linearGradient>
+  </defs>
+
+  <rect width="680" height="210" fill="url(#bg)" />
+
+  <path d="M -20 25 Q 180 0, 370 55 Q 530 100, 710 35" fill="none" stroke="#E6BEBE" stroke-width="1.2" opacity="0.25" />
+  <path d="M -20 38 Q 180 13, 370 68 Q 530 113, 710 48" fill="none" stroke="#E6BEBE" stroke-width="0.7" opacity="0.15" />
+
+  <path d="M -20 75 Q 220 40, 420 95 Q 570 135, 710 78" fill="none" stroke="#E6BEBE" stroke-width="1.2" opacity="0.25" />
+  <path d="M -20 88 Q 220 53, 420 108 Q 570 148, 710 91" fill="none" stroke="#E6BEBE" stroke-width="0.7" opacity="0.15" />
+
+  <path d="M -20 125 Q 250 90, 450 140 Q 590 175, 710 128" fill="none" stroke="#E6BEBE" stroke-width="1.2" opacity="0.20" />
+  <path d="M -20 138 Q 250 103, 450 153 Q 590 188, 710 141" fill="none" stroke="#E6BEBE" stroke-width="0.7" opacity="0.15" />
+
+  <path d="M -20 168 Q 280 142, 500 172 Q 620 188, 710 165" fill="none" stroke="#E6BEBE" stroke-width="1" opacity="0.15" />
+
+  <path d="M 80 -5 Q 320 45, 540 15 Q 640 2, 720 35" fill="none" stroke="#F2DEDE" stroke-width="1.5" opacity="0.3" />
+</svg>

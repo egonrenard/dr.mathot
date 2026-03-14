@@ -1,0 +1,14 @@
+<div class="navigation-bar-mobile" (click)="this.navButtonClick.emit()">
+  @for (btn of navButtons; track btn.id) {
+    <!-- selected if btn.id == lectedButtonId then true else false-->
+    <navigation-button
+      [label]="btn.label"
+      [routerLink]="btn.routerLink"
+      [icon]="btn.icon"
+      [selected]="btn.id === selectedButtonId"
+      (select)="selectButton(btn.id)">
+    </navigation-button>
+  }
+</div>
+
+

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { PageBlock } from '../../components/page-block/page-block';
+
+import { HomeHeader } from '../../components/home-header/home-header';
 
 @Component({
   selector: 'home-page',
-  imports: [PageBlock],
+  imports: [HomeHeader],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

@@ -1,0 +1,73 @@
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 10vw;
+  padding: 2dvh 10dvw;
+  position: relative;
+
+  background-image: url("/backgrounds/waves.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 4px 6px #fcfaf8;
+
+  min-height: 54vh;
+  min-height: 54dvh;
+  position: relative;
+  user-select: none;
+}
+
+.image-container{
+  position: absolute;
+  right: 10vw;
+  right: 10dvw;
+  bottom: -2vw;
+  bottom: -2dvw;
+  border-radius: 32px;
+  height:24vw;
+  height: 24dvw;
+  width:24vw;
+  width: 24dvw;
+  box-shadow: 2px 4px 8px #d4a5a5d0;
+  overflow: hidden;
+}
+.image-container:hover{
+
+  box-shadow: 2px 4px 8px #d4a5a5ec;
+}
+
+.image-container img{
+  height:26vw;
+  height: 26dvw;
+  width:26vw;
+  width: 26dvw;
+  object-fit: cover;
+  border-radius: 32px;
+  transition: transform .5s ease;
+}
+
+.image-container:hover img{
+  transform: scale(1.025);
+
+}
+
+
+.text-container h1{
+  font-size: 2.5em;
+  margin-bottom: 2vh;
+  margin-bottom: 2dvh;
+
+}
+
+.text-container p{
+  font-size: 1.2em;
+  max-width: 500px;
+}
+
+.btn{
+  font-size: 1.2em;
+  margin-top: 3vh;
+  margin-top: 3dvh;
+}

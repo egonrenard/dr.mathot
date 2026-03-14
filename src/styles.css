@@ -4,13 +4,13 @@
   --secondary-color: #f7f7f7;
 
   /* Background Colors */
-  --background-light: #fff9f980; 
-  --background-soft: #fdf2f0dc; 
-  --background-warm: #F7EAE8;
+  --background-light: #fff9f980;
+  --background-soft: #fdf2f0dc;
+  --background-warm: #f7eae8;
 
   /* Text Colors */
-  --title-color: #34495E;
-  --text-color: #5D5D5D;
+  --title-color: #34495e;
+  --text-color: #4a5568 ;
   --text-accent: #d4a5a5;
 
   /* Button Colors*/
@@ -34,56 +34,71 @@
 }
 
 body {
-  background-color: var(--background-light); 
+  background-color: #fcfaf8;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(242, 222, 222, 0.5) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(230, 190, 190, 0.3) 0px, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-size: cover;
+
   color: var(--text-color);
-  font-family: var(--font-type-body); 
+  font-family: var(--font-type-body);
   line-height: 1.6;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1 {
+  font-family: 'Marcellus', serif !important;
   color: var(--title-color);
-  font-family: var(--font-type-title); 
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-family: var(--font-type-title);
   font-weight: 600;
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: transparent; 
+  background-color: transparent;
 }
 button {
   display: inline-block;
-  background-color: var(--button-primary); 
+  background-color: var(--button-primary);
   color: var(--title-color);
-  font-family: var(--font-type-button); 
+  font-family: var(--font-type-button);
   font-weight: 600;
   letter-spacing: 1px;
   padding: 14px 28px;
   border: none;
-  border-radius: 8px; 
+  border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease; 
-  box-shadow: 1px 2px 4px  rgba(0, 0, 0, 0.089); 
+  transition: all 0.3s ease;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.089);
 }
 
 button:hover {
-  background-color: var(--button-hover); 
-  transform: translateY(-1px); 
-  box-shadow: 1px 2px 4px  rgba(0, 0, 0, 0.212); 
+  background-color: var(--button-hover);
+  transform: translateY(-1px);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.212);
 }
 
 button:active {
-  background-color: var(--button-active); 
+  background-color: var(--button-active);
   transform: translateY(0);
 }
 .card {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 25px;
-  border: 1px solid var(--background-warm); 
+  border: 1px solid var(--background-warm);
   margin-bottom: 20px;
 }
