@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over mij",
+    "contact": "Contact"
+  },
+  "header": {
+    "menuAlt": "Menu",
+    "languageSwitcherAria": "Taalselectie"
+  },
+  "seo": {
+    "title": "Dr. Mathot",
+    "description": "Specialist in medische en esthetische dermatologie."
+  },
+  "home": {
+    "titleLine1": "Welkom, ik ben",
+    "titleLine2": "Dr. Mathot",
+    "subtitle": "Uw specialist in medische en esthetische dermatologie",
+    "ctaBookAppointment": "Maak een afspraak",
+    "profileImageAlt": "profielfoto van Dr. Mathot"
+  },
+  "footer": {
+    "copyright": "Alle rechten voorbehouden."
+  },
+  "pages": {
+    "about": {
+      "placeholder": "Over-pagina in opbouw."
+    },
+    "contact": {
+      "placeholder": "Contact-pagina in opbouw."
+    }
+  }
+}

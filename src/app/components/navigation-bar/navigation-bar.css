@@ -1,6 +1,14 @@
 .navigation-bar{
   display: flex;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 1.5rem;
   background-color: transparent;
 }
+
+@media (min-width: 1024px) {
+  .navigation-bar {
+    gap: 2.5rem;
+  }
+}
+
+

@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "A propos",
+    "contact": "Contact"
+  },
+  "header": {
+    "menuAlt": "Menu",
+    "languageSwitcherAria": "Selection de langue"
+  },
+  "seo": {
+    "title": "Dr. Mathot",
+    "description": "Specialiste en dermatologie medicale et esthetique."
+  },
+  "home": {
+    "titleLine1": "Bienvenue, je suis",
+    "titleLine2": "Dr. Mathot",
+    "subtitle": "Votre specialiste en dermatologie medicale et esthetique",
+    "ctaBookAppointment": "Prendre rendez-vous",
+    "profileImageAlt": "photo de profil du Dr. Mathot"
+  },
+  "footer": {
+    "copyright": "Tous droits reserves."
+  },
+  "pages": {
+    "about": {
+      "placeholder": "Page A propos en construction."
+    },
+    "contact": {
+      "placeholder": "Page Contact en construction."
+    }
+  }
+}

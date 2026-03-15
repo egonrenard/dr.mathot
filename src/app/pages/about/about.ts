@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'about-page',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './about.css',
 })
 export class About {
-
+  readonly languageService = inject(LanguageService);
 }

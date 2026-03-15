@@ -1,6 +1,7 @@
-import { Component, HostBinding, HostListener } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { NavigationBar } from '../navigation-bar/navigation-bar';
 import { NavigationBarMobile } from '../navigation-bar-mobile/navigation-bar-mobile';
+import { LanguageService, SupportedLanguage } from '../../services/language';
 
 @Component({
   selector: 'page-header',
@@ -9,12 +10,30 @@ import { NavigationBarMobile } from '../navigation-bar-mobile/navigation-bar-mob
   styleUrl: './page-header.css',
 })
 export class PageHeader {
-  navButtons = [
-    { id: 1, label: 'Home', routerLink: '/', icon: 'fa fa-home' },
-    { id: 2, label: 'About Me', routerLink: '/about', icon: 'fa fa-info-circle' },
-    { id: 4, label: 'Contact', routerLink: '/contact', icon: 'fa fa-envelope' },
-  ];
-  constructor() {}
+  readonly languageService = inject(LanguageService);
+  readonly availableLanguages = this.languageService.supportedLanguages;
+
+  readonly navButtons = computed(() => [
+    {
+      id: 1,
+      label: this.languageService.t('nav.home'),
+      routerLink: this.languageService.getLocalizedRoute(''),
+      icon: 'fa fa-home'
+    },
+    {
+      id: 2,
+      label: this.languageService.t('nav.about'),
+      routerLink: this.languageService.getLocalizedRoute('about'),
+      icon: 'fa fa-info-circle'
+    },
+    {
+      id: 4,
+      label: this.languageService.t('nav.contact'),
+      routerLink: this.languageService.getLocalizedRoute('contact'),
+      icon: 'fa fa-envelope'
+    },
+  ]);
+
   isNavOpen = false;
 
   private setBodyScrollLocked(locked: boolean) {
@@ -29,5 +48,13 @@ export class PageHeader {
   closeNav() {
     this.isNavOpen = false;
     this.setBodyScrollLocked(false);
+  }
+
+  changeLanguage(language: SupportedLanguage) {
+    void this.languageService.setLanguage(language, { updateUrl: true });
+  }
+
+  isLanguageActive(language: SupportedLanguage): boolean {
+    return this.languageService.currentLanguage() === language;
   }
 }
