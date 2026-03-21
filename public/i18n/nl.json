@@ -10,17 +10,28 @@
   },
   "seo": {
     "title": "Dr. Mathot",
-    "description": "Specialist in medische en esthetische dermatologie."
+    "description": "Specialist in Algemene Dermatologie en Nagelaandoeningen."
   },
   "home": {
     "titleLine1": "Welkom, ik ben",
     "titleLine2": "Dr. Mathot",
-    "subtitle": "Uw specialist in medische en esthetische dermatologie",
+    "subtitle": "Uw specialist in Algemene Dermatologie en Nagelaandoeningen.",
     "ctaBookAppointment": "Maak een afspraak",
     "profileImageAlt": "profielfoto van Dr. Mathot"
   },
   "footer": {
     "copyright": "Alle rechten voorbehouden."
+  },
+  "about": {
+    "title": "Over mij",
+    "subtitle": "Dr.Mathot voltooide",
+    "findOutMore": "Lees meer",
+    "description": "haar geneeskundestudies aan de Université Libre de Bruxelles (ULB), waar zij in 2020 haar diploma van Arts behaalde. Vervolgens specialiseerde zij zich in de Dermatologie-Venerologie en behaalde haar specialistentitel in 2025, beide met grote onderscheiding."
+  },
+  "services": {
+    "title1": "Gespecialiseerde expertise",
+    "title2": "Nagelspecialist",
+    "title3": "Engagement en onderzoek"
   },
   "pages": {
     "about": {

@@ -10,14 +10,25 @@
   },
   "seo": {
     "title": "Dr. Mathot",
-    "description": "Specialiste en dermatologie medicale et esthetique."
+    "description": "Votre spécialiste en Dermatologie Générale et Pathologies Onguéales."
   },
   "home": {
     "titleLine1": "Bienvenue, je suis",
     "titleLine2": "Dr. Mathot",
-    "subtitle": "Votre specialiste en dermatologie medicale et esthetique",
+    "subtitle": "Votre spécialiste en Dermatologie Générale et Pathologies Onguéales.",
     "ctaBookAppointment": "Prendre rendez-vous",
     "profileImageAlt": "photo de profil du Dr. Mathot"
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Dr Olivia Mathot a effectué",
+    "findOutMore": "Découvrir plus",
+    "description": "ses études de médecine à l’Université Libre de Bruxelles (ULB), où elle a obtenu son diplôme de Médecin en 2020. Elle s’est ensuite spécialisée en Dermatologie-Vénéréologie et a obtenu son titre de spécialiste en 2025, tous deux avec la plus grande distinction."
+  },
+  "services": {
+    "title1": "Expertise spécialisée",
+    "title2": "Spécialiste de l'ongle",
+    "title3": "Engagement et recherche"
   },
   "footer": {
     "copyright": "Tous droits reserves."

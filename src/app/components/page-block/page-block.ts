@@ -9,4 +9,6 @@ import { CommonModule } from '@angular/common';
 })
 export class PageBlock {
   @Input() color: string = '#ffffff';
+  @Input() title: string = '';
+  @Input() description: string = '';
 }

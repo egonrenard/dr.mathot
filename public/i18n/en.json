@@ -10,14 +10,25 @@
   },
   "seo": {
     "title": "Dr. Mathot",
-    "description": "Specialist in medical and aesthetic dermatology."
+    "description": "Your specialist in General Dermatology and Nail Disorders."
   },
   "home": {
     "titleLine1": "Welcome, I am",
     "titleLine2": "Dr. Mathot",
-    "subtitle": "Your specialist in medical and aesthetic dermatology",
+    "subtitle": "Your specialist in General Dermatology and Nail Disorders.",
     "ctaBookAppointment": "Book an appointment",
     "profileImageAlt": "profile image of Dr. Mathot"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Dr. Mathot completed",
+    "findOutMore": "Find out more",
+    "description": "her medical studies at the Université Libre de Bruxelles (ULB), where she earned her Medical Degree in 2020. She subsequently specialized in Dermatology and Venereology, obtaining her specialist certification in 2025, both with great distinction."
+  },
+  "services": {
+    "title1": "Specialized expertise",
+    "title2": "Nail specialist",
+    "title3": "Engagement and research"
   },
   "footer": {
     "copyright": "All rights reserved."

@@ -155,7 +155,7 @@
 }
 
 
-@media (min-width: 1150px) {
+@media (min-width: 1240px) {
   .home-header {
     padding: 2vh 10vw;
     padding: 2dvh 10dvw;
@@ -191,7 +191,7 @@
     margin-top: 3dvh;
   }
 }
-@media (min-width: 1500px){
+@media (min-width: 1440px){
   .home-header{
     padding: 2vh 14vw;
     padding: 2dvh 14dvw;
