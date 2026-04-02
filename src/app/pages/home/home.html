@@ -1,15 +1,16 @@
-<div class="home-page">
-  <!-- Home Banner-->
-  <span class="homepage-header">
+<main class="home-page">
+  <!-- Home Banner -->
+  <header class="homepage-header">
     <home-header></home-header>
-  </span>
-  <span class="homepage-content">
-    <!-- About Me-->
-    <div class="home-intro">
+  </header>
+
+  <div class="homepage-content autoShow"  >
+    <!-- About Me -->
+    <section class="home-intro" aria-label="About Me">
       <page-block>
         <div class="intro-description">
           <h3 class="intro-header">{{ languageService.t('about.subtitle') }}</h3>
-          <div class="intro-text">{{ languageService.t('about.description') }}</div>
+          <p class="intro-text">{{ languageService.t('about.description') }}</p>
           <button class="intro-btn">{{ languageService.t('about.findOutMore') }}</button>
         </div>
       </page-block>
@@ -20,17 +21,17 @@
           class="profile-img"
         />
       </div>
-    </div>
+    </section>
 
     <!-- Services -->
-    <div class="home-services">
+    <section class="home-services autoShow" aria-label="Services">
       <page-block>
         <div class="services-block">
           <div class="image-container">
             <img
               src="/icons/layers.svg"
-              [attr.alt]="languageService.t('home.profileImageAlt')"
-              class="profile-img"
+              [attr.alt]="languageService.t('services.title1')"
+              class="service-img"
             />
           </div>
           <h3 class="service-header">{{ languageService.t('services.title1') }}</h3>
@@ -41,8 +42,8 @@
           <div class="image-container">
             <img
               src="/icons/hearts-plus.svg"
-              [attr.alt]="languageService.t('home.profileImageAlt')"
-              class="profile-img"
+              [attr.alt]="languageService.t('services.title2')"
+              class="service-img"
             />
           </div>
           <h3 class="service-header">{{ languageService.t('services.title2') }}</h3>
@@ -53,13 +54,13 @@
           <div class="image-container">
             <img
               src="/icons/exam.svg"
-              [attr.alt]="languageService.t('home.profileImageAlt')"
-              class="profile-img"
+              [attr.alt]="languageService.t('services.title3')"
+              class="service-img"
             />
           </div>
           <h3 class="service-header">{{ languageService.t('services.title3') }}</h3>
         </div>
       </page-block>
-    </div>
-  </span>
-</div>
+    </section>
+  </div>
+</main>

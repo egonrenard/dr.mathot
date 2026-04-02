@@ -4,8 +4,7 @@
     <h1>{{ languageService.t('home.titleLine1') }}<br /> {{ languageService.t('home.titleLine2') }}</h1>
       <div class="image-container">
         <img
-        src="/images/fakedoctor.png"
-        [attr.alt]="languageService.t('home.profileImageAlt')"
+        [src]="'images/logo.png'" [attr.alt]="languageService.t('header.logoAlt')"
         class="profile-img" />
       </div>
     <p class="subtitle">{{ languageService.t('home.subtitle') }}</p>

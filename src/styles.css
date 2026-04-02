@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@400;600&family=Quicksand:wght@400;500;600&display=swap');
+
 :root {
+  /* Officiële kleuren uit de PDF van Dr. Olivia Mathot */
+  --olivia-cream: #fef8ed; 
+  --olivia-rose: #cba8af;
+  --olivia-sage: #cac9ba; 
+  --olivia-brown: #8f7e6a; 
   /* Primary Colors */
   --primary-color: #e8b4bc;
   --secondary-color: #f7f7f7;
@@ -7,22 +14,28 @@
   --background-light: #fff9f980;
   --background-soft: #fdf2f0dc;
   --background-warm: #f7eae8;
+  --surface-elevated: #fef8edc2;
+  --surface-stroke: #8f7e6a33;
 
   /* Text Colors */
-  --title-color: #34495e;
-  --text-color: #4a5568 ;
-  --text-accent: #d4a5a5;
+  --title-color: var(--olivia-rose);
+  --text-color: var(--olivia-brown);
+  --text-accent: var(--olivia-rose);
 
   /* Button Colors*/
   --button-primary: #f2d7d5;
   --button-hover: #e4b9b6;
   --button-active: #d4a5a5;
 
-  /* Text types*/
+  /* Text types */
+  /* 'Outfit' lijkt erg op Nexa Book (strak en geometrisch)  */
   --font-type-title: 'Outfit', sans-serif;
-  --font-type-subtitle: 'Outfit', sans-serif;
+
+  /* 'Marcellus' geeft dat premium dermatologie gevoel [cite: 20] */
+  --font-type-header: 'Marcellus', serif;
+
+  /* 'Quicksand' of 'Montserrat' zijn goede vervangers voor Corbel  */
   --font-type-body: 'Quicksand', sans-serif;
-  --font-type-button: 'Quicksand', sans-serif;
 }
 
 /* Global Styles */
@@ -72,7 +85,7 @@ h4 {
 button {
   display: inline-block;
   background-color: var(--button-primary);
-  color: var(--title-color);
+  color: var(--olivia-brown);
   font-family: var(--font-type-button);
   font-weight: 600;
   letter-spacing: 1px;
@@ -88,6 +101,7 @@ button {
 button:hover {
   background-color: var(--button-hover);
   transform: translateY(-1px);
+  color: var(--olivia-cream);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.212);
 }
 
