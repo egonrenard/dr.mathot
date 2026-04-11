@@ -1,7 +1,8 @@
 <button 
   class="nav-button" 
   [routerLink]="routerLink" 
-  [class.selected]="selected" 
+  routerLinkActive="selected"
+  [routerLinkActiveOptions]="{ exact: true }"
   (click)="onClick()"
 >
   <div class="icon"></div>

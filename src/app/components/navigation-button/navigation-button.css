@@ -19,10 +19,13 @@
 }
 
 .nav-button.selected {
-  color: var(--olivia-rose);
-  background-color: var(--background-soft);
+  background-color: var(--olivia-rose);
+  color:white;
   border-bottom: 2px solid var(--olivia-rose);
 }
+
+
+
 
 
 @media (min-width: 768px) and (hover: hover){
@@ -42,7 +45,8 @@
   }
   .nav-button.selected {
     background-color: transparent;
-    border-bottom: 2px solid var(--olivia-rose);;
+    color: var(--olivia-rose);
+    border-bottom: 2px solid var(--olivia-rose);
   }
   .nav-button.selected:hover {
     color: var(--title-color);

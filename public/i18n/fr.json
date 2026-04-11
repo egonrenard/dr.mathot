@@ -38,7 +38,41 @@
       "placeholder": "Page A propos en construction."
     },
     "contact": {
-      "placeholder": "Page Contact en construction."
+      "placeholder": "Page Contact en construction.",
+      "clinic1": {
+        "label": "Arsenal Clinic – Etterbeek",
+        "schedule": {
+          "day1": {
+            "day": "Mardi",
+            "hours": "9h-18h"
+          },
+          "day2": {
+            "day": "Jeudi",
+            "hours": "8h-18h"
+          }
+        },
+        "address": "Boulevard Louis Schmidt 2B, 1040 Etterbeek",
+        "phone": "+32 2 253 62 42",
+        "email": "secretariat@arsenalclinic.be",
+        "notes": "Les rendez-vous peuvent être pris en ligne ou via le secrétariat."
+      },
+      "clinic2": {
+        "label": "Dermatology Research Institute – Uccle",
+        "schedule": {
+          "day1": {
+            "day": "Mercredi",
+            "hours": "9h-18h"
+          },
+          "day2": {
+            "day": "Vendredi",
+            "hours": "9h-17h"
+          }
+        },
+        "address": "Chaussée de Waterloo 835, 1180 Uccle",
+        "phone": "+32 (0)2 512 22 83",
+        "email": "info@dr-institute.com",
+        "notes": "Les rendez-vous peuvent être pris via le secrétariat du cabinet."
+      }
     }
   }
 }

@@ -14,12 +14,10 @@
           <button class="intro-btn">{{ languageService.t('about.findOutMore') }}</button>
         </div>
       </page-block>
-      <div class="image-container" id="profile-img-container">
+      <div class="image-container" id="logo-img-container">
         <img
-          src="/images/fakedoctor.png"
-          [attr.alt]="languageService.t('home.profileImageAlt')"
-          class="profile-img"
-        />
+        [src]="'images/logo.png'" [attr.alt]="languageService.t('header.logoAlt')"
+        class="profile-img" />
       </div>
     </section>
 

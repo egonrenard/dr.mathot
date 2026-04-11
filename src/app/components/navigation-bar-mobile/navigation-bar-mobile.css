@@ -3,7 +3,7 @@
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: var(--background-light);
+  background: var(--background-soft);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 
@@ -16,6 +16,40 @@
 
   /* Animatie bij openen */
   animation: overlayIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.close-btn {
+  position: absolute;
+  top: 4vh;
+  top: 4dvh;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: var(--olivia-brown);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.089);
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.close-btn:hover {
+  background-color: var(--button-hover);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.212);
+  transform: translateY(-1px);
+}
+
+.close-btn:active {
+  transform: translateY(0);
 }
 
 @keyframes overlayIn {

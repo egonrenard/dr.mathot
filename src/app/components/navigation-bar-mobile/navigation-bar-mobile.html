@@ -1,12 +1,19 @@
-<div class="navigation-bar-mobile" (click)="this.navButtonClick.emit()">
+<div class="navigation-bar-mobile">
+  <button 
+    type="button" 
+    class="close-btn" 
+    (click)="navButtonClick.emit()"
+    aria-label="Sluiten"
+    [attr.title]="'Sluiten'"
+  >
+    ×
+  </button>
   @for (btn of navButtons; track btn.id) {
-    <!-- selected if btn.id == lectedButtonId then true else false-->
     <navigation-button
       [label]="btn.label"
       [routerLink]="btn.routerLink"
       [icon]="btn.icon"
-      [selected]="btn.id === selectedButtonId"
-      (select)="selectButton(btn.id)">
+      (select)="selectButton()">
     </navigation-button>
   }
 </div>

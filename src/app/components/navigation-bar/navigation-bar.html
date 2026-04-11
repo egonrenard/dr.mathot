@@ -1,12 +1,9 @@
 <div class="navigation-bar" >
   @for (btn of navButtons; track btn.id) {
-    <!-- selected if btn.id == lectedButtonId then true else false-->
     <navigation-button
       [label]="btn.label"
       [routerLink]="btn.routerLink"
-      [icon]="btn.icon"
-      [selected]="btn.id === selectedButtonId"
-      (select)="selectButton(btn.id)">
+      [icon]="btn.icon">
     </navigation-button>
   }
 </div>

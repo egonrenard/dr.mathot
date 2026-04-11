@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>{{ label }}</h2>
+  <div class="schedule-list">
+    @for (entry of scheduleEntries; track $index) {
+      <p class="schedule-item">
+        <img class="info-icon" src="/icons/calendar.svg" alt="" aria-hidden="true" />
+        <span><strong>{{ entry.day }}</strong>: {{ entry.hours }}</span>
+      </p>
+    }
+  </div>
+  <p class="info-row">
+    <img class="info-icon" src="/icons/location.svg" alt="" aria-hidden="true" />
+    <span>{{ address }}</span>
+  </p>
+  <a class="info-row big" href="tel:{{ phone }}">
+    <img class="info-icon" src="/icons/phone.svg" alt="" aria-hidden="true" />
+    <span>{{ phone }}</span>
+  </a>
+  <a class="info-row big" href="mailto:{{ email }}">
+    <img class="info-icon" src="/icons/email.svg" alt="" aria-hidden="true" />
+    <span>{{ email }}</span>
+  </a>
+  <p class="notes">{{ notes }}</p>
+  <button class="button">{{ ctaLabel }}</button>
+</div>

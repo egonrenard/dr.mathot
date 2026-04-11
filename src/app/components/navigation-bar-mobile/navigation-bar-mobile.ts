@@ -11,10 +11,8 @@ export class NavigationBarMobile {
   @Input() navButtons!: { id: number; label: string; routerLink?: string; icon?: string }[];
   @Input() theme?: string;
   @Output() navButtonClick = new EventEmitter<void>();
-  selectedButtonId: number = 1;
 
-  selectButton(id: number) {
-    this.selectedButtonId = id;
+  selectButton() {
     this.navButtonClick.emit();
   }
 }

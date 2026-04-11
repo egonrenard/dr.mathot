@@ -1,9 +1,9 @@
 import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'navigation-button',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './navigation-button.html',
   styleUrl: './navigation-button.css',
 })
@@ -11,7 +11,6 @@ export class NavigationButton {
   @Input() label!: string;
   @Input() routerLink?: string;
   @Input() icon?: string;
-  @Input() selected: boolean = false;
 
   @Output() select = new EventEmitter<void>();
 

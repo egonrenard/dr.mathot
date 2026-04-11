@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
+import { ContactBlock } from '../../components/contact-block/contact-block';
 import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'contact-page',
-  imports: [],
+  imports: [ContactBlock],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
