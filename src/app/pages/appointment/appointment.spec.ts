@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageBlock } from './page-block';
+import { Appointment } from './appointment';
 
-describe('PageBlock', () => {
-  let component: PageBlock;
-  let fixture: ComponentFixture<PageBlock>;
+describe('Appointment', () => {
+  let component: Appointment;
+  let fixture: ComponentFixture<Appointment>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageBlock]
+      imports: [Appointment]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PageBlock);
+    fixture = TestBed.createComponent(Appointment);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

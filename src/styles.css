@@ -3,29 +3,34 @@
 :root {
   /* Officiële kleuren uit de PDF van Dr. Olivia Mathot */
   --olivia-cream: #fef8ed; 
-  --olivia-rose: #cba8af;
+  --olivia-rose: #a76377;
   --olivia-sage: #cac9ba; 
   --olivia-brown: #8f7e6a; 
+  --olivia-black: #37393e;
   /* Primary Colors */
   --primary-color: #e8b4bc;
   --secondary-color: #f7f7f7;
 
   /* Background Colors */
-  --background-light: #fff9f980;
-  --background-soft: #fdf2f0dc;
-  --background-warm: #f7eae8;
+  --background-light: #fbf9f7;
+
   --surface-elevated: #fef8edc2;
   --surface-stroke: #8f7e6a33;
 
+  --border-color-primary: #975362;
+  --border-color-light: #9753622c;
+
   /* Text Colors */
   --title-color: var(--olivia-rose);
-  --text-color: var(--olivia-brown);
+  --text-color: var(--olivia-black);
   --text-accent: var(--olivia-rose);
 
   /* Button Colors*/
-  --button-primary: #f2d7d5;
-  --button-hover: #e4b9b6;
-  --button-active: #d4a5a5;
+  --button-primary: #9e5b6a;
+  --button-hover: #a56674;
+  --button-active: #975362;
+
+
 
   /* Text types */
   /* 'Outfit' lijkt erg op Nexa Book (strak en geometrisch)  */
@@ -47,10 +52,7 @@
 }
 
 body {
-  background-color: #fcfaf8;
-  background-image:
-    radial-gradient(at 0% 0%, #f7eded88 0px, transparent 50%),
-    radial-gradient(at 100% 100%, #e6bebe17 0px, transparent 50%);
+  background-color: var(--background-light);
   background-attachment: fixed;
   min-height: 100vh;
   background-size: cover;
@@ -84,8 +86,8 @@ h4 {
 }
 button {
   display: inline-block;
-  background-color: var(--button-primary);
-  color: var(--olivia-brown);
+  background-color: var(--background-light);
+  color: var(--olivia-black);
   font-family: var(--font-type-button);
   font-weight: 600;
   letter-spacing: 1px;
@@ -95,7 +97,8 @@ button {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.089);
+  box-shadow: 1px 2px 4px #00000017;
+  border: .5px solid var(--border-color-primary)
 }
 
 button:hover {
@@ -109,6 +112,12 @@ button:active {
   background-color: var(--button-active);
   transform: translateY(0);
 }
+
+.active-btn{
+  background-color: var(--button-active);
+  color: var(--olivia-cream);
+}
+
 .card {
   background-color: #ffffff;
   border-radius: 12px;

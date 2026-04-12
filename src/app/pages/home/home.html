@@ -1,64 +1,18 @@
 <main class="home-page">
-  <!-- Home Banner -->
-  <header class="homepage-header">
-    <home-header></home-header>
-  </header>
 
-  <div class="homepage-content autoShow"  >
-    <!-- About Me -->
-    <section class="home-intro" aria-label="About Me">
-      <page-block>
-        <div class="intro-description">
-          <h3 class="intro-header">{{ languageService.t('about.subtitle') }}</h3>
-          <p class="intro-text">{{ languageService.t('about.description') }}</p>
-          <button class="intro-btn">{{ languageService.t('about.findOutMore') }}</button>
-        </div>
-      </page-block>
-      <div class="image-container" id="logo-img-container">
-        <img
-        [src]="'images/logo.png'" [attr.alt]="languageService.t('header.logoAlt')"
-        class="profile-img" />
+  <div class="home-page-container">
+    <div class="home-description">
+      <h2 class="home-header">{{ languageService.t('home.header') }}</h2>
+      <h3 class="name">{{ languageService.t('home.name') }}</h3>
+      <div class="description">{{ languageService.t('home.description-line1') }}</div>
+      <div class="description">{{ languageService.t('home.description-line2') }}</div>
+      <div class="button-container">
+        <button class="active-btn" [routerLink]="languageService.getLocalizedRoute('appointment')">{{ languageService.t('home.book-appointment') }}</button>
+        <button>{{ languageService.t('home.more-info') }}</button>
       </div>
-    </section>
-
-    <!-- Services -->
-    <section class="home-services autoShow" aria-label="Services">
-      <page-block>
-        <div class="services-block">
-          <div class="image-container">
-            <img
-              src="/icons/layers.svg"
-              [attr.alt]="languageService.t('services.title1')"
-              class="service-img"
-            />
-          </div>
-          <h3 class="service-header">{{ languageService.t('services.title1') }}</h3>
-        </div>
-      </page-block>
-      <page-block>
-        <div class="services-block">
-          <div class="image-container">
-            <img
-              src="/icons/hearts-plus.svg"
-              [attr.alt]="languageService.t('services.title2')"
-              class="service-img"
-            />
-          </div>
-          <h3 class="service-header">{{ languageService.t('services.title2') }}</h3>
-        </div>
-      </page-block>
-      <page-block>
-        <div class="services-block">
-          <div class="image-container">
-            <img
-              src="/icons/exam.svg"
-              [attr.alt]="languageService.t('services.title3')"
-              class="service-img"
-            />
-          </div>
-          <h3 class="service-header">{{ languageService.t('services.title3') }}</h3>
-        </div>
-      </page-block>
-    </section>
+    </div>
+    <div class="home-image">
+      <img src="/images/fakedoctor.png" alt="{{ languageService.t('home.profileImageAlt') }}" class="home-logo" />
+    </div>
   </div>
 </main>

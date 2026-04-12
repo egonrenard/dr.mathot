@@ -18,19 +18,22 @@ export class PageHeader {
       id: 1,
       label: this.languageService.t('nav.home'),
       routerLink: this.languageService.getLocalizedRoute(''),
-      icon: 'fa fa-home'
     },
     {
       id: 2,
       label: this.languageService.t('nav.about'),
       routerLink: this.languageService.getLocalizedRoute('about'),
-      icon: 'fa fa-info-circle'
+    },
+    {
+      id: 3,
+      label: this.languageService.t('nav.contact'),
+      routerLink: this.languageService.getLocalizedRoute('contact'),
     },
     {
       id: 4,
-      label: this.languageService.t('nav.contact'),
-      routerLink: this.languageService.getLocalizedRoute('contact'),
-      icon: 'fa fa-envelope'
+      label: this.languageService.t('nav.appointment'),
+      routerLink: this.languageService.getLocalizedRoute('appointment'),
+      isDarkRed: false,
     },
   ]);
 

@@ -9,7 +9,8 @@
   height: 10dvh;
   background-color: transparent;
   margin: 0 auto;
-  color: white;
-  background: #8f7e6aec;
+  color: var(--text-color);
+  background-color: transparent;
+  border-top: 1px solid var(--border-color-light);
 
 }

@@ -1,12 +1,11 @@
 
-import { HomeHeader } from '../../components/home-header/home-header';
-import { PageBlock } from '../../components/page-block/page-block';
 import { LanguageService } from '../../services/language';
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'home-page',
-  imports: [HomeHeader, PageBlock],
+  imports: [RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

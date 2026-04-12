@@ -2,7 +2,8 @@
   "nav": {
     "home": "Home",
     "about": "About Me",
-    "contact": "Contact"
+    "contact": "Contact",
+    "appointment": "Make an Appointment"
   },
   "header": {
     "menuAlt": "Menu",
@@ -13,11 +14,13 @@
     "description": "Your specialist in General Dermatology and Nail Disorders."
   },
   "home": {
-    "titleLine1": "Welcome, I am",
-    "titleLine2": "Dr. Mathot",
-    "subtitle": "Your specialist in General Dermatology and Nail Disorders.",
-    "ctaBookAppointment": "Book an appointment",
-    "profileImageAlt": "profile image of Dr. Mathot"
+    "header": "Dermatologist in Brussels",
+    "name": "Dr. Olivia Mathot",
+    "description-line1": "Medical, aesthetic, and pediatric dermatology, with a personalized approach and a special focus on nail disorders.",
+    "description-line2": "Care based on thorough evaluation, clear communication, and the latest medical insights.",
+    "profileImageAlt": "profile picture of Dr. Mathot",
+    "book-appointment": "Book an appointment",
+    "more-info": "More info"
   },
   "about": {
     "title": "About me",
@@ -29,6 +32,9 @@
     "title1": "Specialized expertise",
     "title2": "Nail specialist",
     "title3": "Engagement and research"
+  },
+  "appointment": {
+    "title": "Make an appointment"
   },
   "footer": {
     "copyright": "All rights reserved."

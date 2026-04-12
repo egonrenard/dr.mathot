@@ -1,5 +1,6 @@
 <button 
   class="nav-button" 
+  [class.dark-red]="isDarkRed"
   [routerLink]="routerLink" 
   routerLinkActive="selected"
   [routerLinkActiveOptions]="{ exact: true }"

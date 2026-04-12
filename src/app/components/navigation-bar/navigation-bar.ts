@@ -8,6 +8,6 @@ import { NavigationButton } from '../navigation-button/navigation-button';
   styleUrl: './navigation-bar.css',
 })
 export class NavigationBar {
-  @Input() navButtons!: { id: number; label: string; routerLink?: string; icon?: string }[];
+  @Input() navButtons!: { id: number; label: string; routerLink?: string; icon?: string; isDarkRed?: boolean }[];
   @Input() theme?: string;
 }

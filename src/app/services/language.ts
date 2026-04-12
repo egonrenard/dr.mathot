@@ -8,125 +8,15 @@ interface TranslationFile {
   [key: string]: string | TranslationFile;
 }
 
-const DEFAULT_TRANSLATIONS: Record<SupportedLanguage, Record<string, string>> = {
-  nl: {
-    'nav.home': 'Home',
-    'nav.about': 'Over mij',
-    'nav.contact': 'Contact',
-    'header.menuAlt': 'Menu',
-    'header.languageSwitcherAria': 'Taalselectie',
-    'seo.title': 'Dr. Mathot',
-    'seo.description': 'Specialist in medische en esthetische dermatologie.',
-    'home.titleLine1': 'Welkom, ik ben',
-    'home.titleLine2': 'Dr. Mathot',
-    'home.subtitle': 'Uw specialist in medische en esthetische dermatologie',
-    'home.ctaBookAppointment': 'Maak een afspraak',
-    'home.profileImageAlt': 'profielfoto van Dr. Mathot',
-    'footer.copyright': 'Alle rechten voorbehouden.',
-    'pages.about.placeholder': 'Over-pagina in opbouw.',
-    'pages.contact.placeholder': 'Contact-pagina in opbouw.',
-    'pages.contact.clinic1.label': 'Arsenal Clinic – Etterbeek',
-    'pages.contact.clinic1.schedule.day1.day': 'Dinsdag',
-    'pages.contact.clinic1.schedule.day1.hours': '9u-18u',
-    'pages.contact.clinic1.schedule.day2.day': 'Donderdag',
-    'pages.contact.clinic1.schedule.day2.hours': '8u-18u',
-    'pages.contact.clinic1.address': 'Boulevard Louis Schmidt 2B, 1040 Etterbeek',
-    'pages.contact.clinic1.phone': '+32 2 253 62 42',
-    'pages.contact.clinic1.email': 'secretariat@arsenalclinic.be',
-    'pages.contact.clinic1.notes':
-      'Het secretariaat is bereikbaar op maandag en dinsdag van 9u tot 18u.\nAfspraken kunnen online of via het secretariaat worden gemaakt.',
-    'pages.contact.clinic2.label': 'Dermatology Research Institute – Uccle',
-    'pages.contact.clinic2.schedule.day1.day': 'Woensdag',
-    'pages.contact.clinic2.schedule.day1.hours': '9u-18u',
-    'pages.contact.clinic2.schedule.day2.day': 'Vrijdag',
-    'pages.contact.clinic2.schedule.day2.hours': '9u-17u',
-    'pages.contact.clinic2.address': 'Chaussée de Waterloo 835, 1180 Ukkel',
-    'pages.contact.clinic2.phone': '+32 (0)2 512 22 83',
-    'pages.contact.clinic2.email': 'info@dr-institute.com',
-    'pages.contact.clinic2.notes': 'Afspraken kunnen via het secretariaat van de praktijk worden gemaakt.'
-  },
-  fr: {
-    'nav.home': 'Accueil',
-    'nav.about': 'A propos',
-    'nav.contact': 'Contact',
-    'header.menuAlt': 'Menu',
-    'header.languageSwitcherAria': 'Selection de langue',
-    'seo.title': 'Dr. Mathot',
-    'seo.description': 'Specialiste en dermatologie medicale et esthetique.',
-    'home.titleLine1': 'Bienvenue, je suis',
-    'home.titleLine2': 'Dr. Mathot',
-    'home.subtitle': 'Votre specialiste en dermatologie medicale et esthetique',
-    'home.ctaBookAppointment': 'Prendre rendez-vous',
-    'home.profileImageAlt': 'photo de profil du Dr. Mathot',
-    'footer.copyright': 'Tous droits reserves.',
-    'pages.about.placeholder': 'Page A propos en construction.',
-    'pages.contact.placeholder': 'Page Contact en construction.',
-    'pages.contact.clinic1.label': 'Arsenal Clinic – Etterbeek',
-    'pages.contact.clinic1.schedule.day1.day': 'Mardi',
-    'pages.contact.clinic1.schedule.day1.hours': '9h-18h',
-    'pages.contact.clinic1.schedule.day2.day': 'Jeudi',
-    'pages.contact.clinic1.schedule.day2.hours': '8h-18h',
-    'pages.contact.clinic1.address': 'Boulevard Louis Schmidt 2B, 1040 Etterbeek',
-    'pages.contact.clinic1.phone': '+32 2 253 62 42',
-    'pages.contact.clinic1.email': 'secretariat@arsenalclinic.be',
-    'pages.contact.clinic1.notes':
-      'Le secrétariat est joignable le lundi et le mardi de 9h à 18h.\nLes rendez-vous peuvent être pris en ligne ou via le secrétariat.',
-    'pages.contact.clinic2.label': 'Dermatology Research Institute – Uccle',
-    'pages.contact.clinic2.schedule.day1.day': 'Mercredi',
-    'pages.contact.clinic2.schedule.day1.hours': '9h-18h',
-    'pages.contact.clinic2.schedule.day2.day': 'Vendredi',
-    'pages.contact.clinic2.schedule.day2.hours': '9h-17h',
-    'pages.contact.clinic2.address': 'Chaussée de Waterloo 835, 1180 Uccle',
-    'pages.contact.clinic2.phone': '+32 (0)2 512 22 83',
-    'pages.contact.clinic2.email': 'info@dr-institute.com',
-    'pages.contact.clinic2.notes': 'Les rendez-vous peuvent être pris via le secrétariat du cabinet.'
-  },
-  en: {
-    'nav.home': 'Home',
-    'nav.about': 'About Me',
-    'nav.contact': 'Contact',
-    'header.menuAlt': 'Menu',
-    'header.languageSwitcherAria': 'Language selector',
-    'seo.title': 'Dr. Mathot',
-    'seo.description': 'Specialist in medical and aesthetic dermatology.',
-    'home.titleLine1': 'Welcome, I am',
-    'home.titleLine2': 'Dr. Mathot',
-    'home.subtitle': 'Your specialist in medical and aesthetic dermatology',
-    'home.ctaBookAppointment': 'Book an appointment',
-    'home.profileImageAlt': 'profile image of Dr. Mathot',
-    'footer.copyright': 'All rights reserved.',
-    'pages.about.placeholder': 'About page in progress.',
-    'pages.contact.placeholder': 'Contact page in progress.',
-    'pages.contact.clinic1.label': 'Arsenal Clinic – Etterbeek',
-    'pages.contact.clinic1.schedule.day1.day': 'Tuesday',
-    'pages.contact.clinic1.schedule.day1.hours': '9 AM-6 PM',
-    'pages.contact.clinic1.schedule.day2.day': 'Thursday',
-    'pages.contact.clinic1.schedule.day2.hours': '8 AM-6 PM',
-    'pages.contact.clinic1.address': 'Boulevard Louis Schmidt 2B, 1040 Etterbeek',
-    'pages.contact.clinic1.phone': '+32 2 253 62 42',
-    'pages.contact.clinic1.email': 'secretariat@arsenalclinic.be',
-    'pages.contact.clinic1.notes':
-      'The secretariat can be reached on Monday and Tuesday from 9 AM to 6 PM.\nAppointments can be made online or via the secretariat.',
-    'pages.contact.clinic2.label': 'Dermatology Research Institute – Uccle',
-    'pages.contact.clinic2.schedule.day1.day': 'Wednesday',
-    'pages.contact.clinic2.schedule.day1.hours': '9 AM-6 PM',
-    'pages.contact.clinic2.schedule.day2.day': 'Friday',
-    'pages.contact.clinic2.schedule.day2.hours': '9 AM-5 PM',
-    'pages.contact.clinic2.address': 'Chaussée de Waterloo 835, 1180 Uccle',
-    'pages.contact.clinic2.phone': '+32 (0)2 512 22 83',
-    'pages.contact.clinic2.email': 'info@dr-institute.com',
-    'pages.contact.clinic2.notes': 'Appointments can be made via the practice secretariat.'
-  }
-};
-
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly router = inject(Router);
   private readonly languageStorageKey = 'preferredLanguage';
+  private readonly warnedMissingKeys = new Set<string>();
 
   private readonly _currentLanguage = signal<SupportedLanguage>('en');
-  private readonly _translations = signal<Record<string, string>>(DEFAULT_TRANSLATIONS.en);
+  private readonly _translations = signal<Record<string, string>>({});
 
   readonly supportedLanguages: readonly SupportedLanguage[] = ['nl', 'fr', 'en'];
   readonly currentLanguage = this._currentLanguage.asReadonly();
@@ -140,7 +30,7 @@ export class LanguageService {
   async setLanguage(language: SupportedLanguage, options: { updateUrl?: boolean } = {}): Promise<void> {
     const nextLanguage = this.normalizeLanguage(language);
     this._currentLanguage.set(nextLanguage);
-    this._translations.set(DEFAULT_TRANSLATIONS[nextLanguage]);
+    this._translations.set({});
 
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem(this.languageStorageKey, nextLanguage);
@@ -149,7 +39,7 @@ export class LanguageService {
 
     const loadedTranslations = await this.loadTranslations(nextLanguage);
     if (loadedTranslations) {
-      this._translations.set({ ...DEFAULT_TRANSLATIONS[nextLanguage], ...loadedTranslations });
+      this._translations.set(loadedTranslations);
     }
 
     if (options.updateUrl && isPlatformBrowser(this.platformId)) {
@@ -161,10 +51,20 @@ export class LanguageService {
   }
 
   t(key: string): string {
-    return this._translations()[key] ?? key;
+    const value = this._translations()[key];
+    if (value !== undefined) {
+      return value;
+    }
+
+    if (isPlatformBrowser(this.platformId) && !this.warnedMissingKeys.has(key)) {
+      this.warnedMissingKeys.add(key);
+      console.warn(`[i18n] Missing translation key: ${key} (${this.currentLanguage()})`);
+    }
+
+    return key;
   }
 
-  getLocalizedRoute(path: '' | 'about' | 'contact', language = this.currentLanguage()): string {
+  getLocalizedRoute(path: '' | 'about' | 'contact' | 'appointment', language = this.currentLanguage()): string {
     if (path === '') {
       return `/${language}`;
     }

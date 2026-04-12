@@ -10,7 +10,7 @@
   min-height: 10vh;
   min-height: 10dvh;
   align-items: center;
-  background-color: white;
+  background-color: transparent;
   padding: 2vh 10vw;
   padding: 2dvh 10dvw;
   padding-top: 4vh;
@@ -20,6 +20,7 @@
   cursor: default;
   position: relative;
   width: 100%;
+  border-bottom: 1px solid var(--border-color-light);
 }
 
 .header-content {
@@ -39,6 +40,11 @@
   width: auto;
   height: clamp(56px, 9vw, 96px);
   object-fit: contain;
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
 }
 
 .header-utilities {
@@ -67,23 +73,26 @@
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   line-height: 1;
-  background: #fff;
-  color: var(--olivia-brown);
+  background: var(--background-light);
+  color: var(--olivia-black);
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   font-size: 0.8rem;
-  opacity: 0.85;
+  opacity: 0.95;
+  font-weight: bold;
+  border: .5px solid var(--button-primary);
 }
 
 .language-button:hover {
   background-color: var(--button-hover);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.212);
+  color:var(--olivia-cream);
 }
 
 .language-button.active {
   opacity: 1;
-  font-weight: bold;
+  color:var(--olivia-cream);
   background-color: var(--button-primary);
 }
 

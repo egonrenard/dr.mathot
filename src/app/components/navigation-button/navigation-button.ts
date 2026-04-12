@@ -11,6 +11,8 @@ export class NavigationButton {
   @Input() label!: string;
   @Input() routerLink?: string;
   @Input() icon?: string;
+  @Input() isDarkRed?: boolean ;
+  
 
   @Output() select = new EventEmitter<void>();
 

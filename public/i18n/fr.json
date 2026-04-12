@@ -2,7 +2,8 @@
   "nav": {
     "home": "Accueil",
     "about": "A propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "appointment": "Prendre rendez-vous"
   },
   "header": {
     "menuAlt": "Menu",
@@ -13,11 +14,13 @@
     "description": "Votre spécialiste en Dermatologie Générale et Pathologies Onguéales."
   },
   "home": {
-    "titleLine1": "Bienvenue, je suis",
-    "titleLine2": "Dr. Mathot",
-    "subtitle": "Votre spécialiste en Dermatologie Générale et Pathologies Onguéales.",
-    "ctaBookAppointment": "Prendre rendez-vous",
-    "profileImageAlt": "photo de profil du Dr. Mathot"
+    "header": "Dermatologue à Bruxelles",
+    "name": "Dr. Olivia Mathot",
+    "description-line1": "Dermatologie médicale, esthétique et pédiatrique, avec une approche personnalisée et une attention particulière aux pathologies unguéales (affections des ongles).",
+    "description-line2": "Des soins fondés sur une évaluation approfondie, une communication claire et les connaissances médicales les plus récentes.",
+    "profileImageAlt": "photo de profil de Dr. Mathot",
+    "book-appointment": "Prendre rendez-vous",
+    "more-info": "Plus d'informations"
   },
   "about": {
     "title": "À propos",
@@ -29,6 +32,9 @@
     "title1": "Expertise spécialisée",
     "title2": "Spécialiste de l'ongle",
     "title3": "Engagement et recherche"
+  },
+  "appointment": {
+    "title": "Prendre rendez-vous"
   },
   "footer": {
     "copyright": "Tous droits reserves."

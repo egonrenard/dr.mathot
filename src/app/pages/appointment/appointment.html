@@ -1,0 +1,41 @@
+<div class="appointment-page">
+  <section class="contact-blocks">
+    <app-contact-block
+      [label]="languageService.t('pages.contact.clinic1.label')"
+      [scheduleEntries]="[
+        {
+          day: languageService.t('pages.contact.clinic1.schedule.day1.day'),
+          hours: languageService.t('pages.contact.clinic1.schedule.day1.hours'),
+        },
+        {
+          day: languageService.t('pages.contact.clinic1.schedule.day2.day'),
+          hours: languageService.t('pages.contact.clinic1.schedule.day2.hours'),
+        },
+      ]"
+      [address]="languageService.t('pages.contact.clinic1.address')"
+      [phone]="languageService.t('pages.contact.clinic1.phone')"
+      [email]="languageService.t('pages.contact.clinic1.email')"
+      [notes]="languageService.t('pages.contact.clinic1.notes')"
+      [ctaLabel]="languageService.t('appointment.title')"
+    ></app-contact-block>
+
+    <app-contact-block
+      [label]="languageService.t('pages.contact.clinic2.label')"
+      [scheduleEntries]="[
+        {
+          day: languageService.t('pages.contact.clinic2.schedule.day1.day'),
+          hours: languageService.t('pages.contact.clinic2.schedule.day1.hours'),
+        },
+        {
+          day: languageService.t('pages.contact.clinic2.schedule.day2.day'),
+          hours: languageService.t('pages.contact.clinic2.schedule.day2.hours'),
+        },
+      ]"
+      [address]="languageService.t('pages.contact.clinic2.address')"
+      [phone]="languageService.t('pages.contact.clinic2.phone')"
+      [email]="languageService.t('pages.contact.clinic2.email')"
+      [notes]="languageService.t('pages.contact.clinic2.notes')"
+      [ctaLabel]="languageService.t('appointment.title')"
+    ></app-contact-block>
+  </section>
+</div>
