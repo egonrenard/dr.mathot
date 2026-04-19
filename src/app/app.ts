@@ -1,7 +1,7 @@
 import { Component, effect, signal } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { PageWrapper } from './components/page-wrapper/page-wrapper';
-import { LanguageService } from './services/language';
+import { LanguageService, type SupportedLanguage } from './services/language';
 import { SeoService } from './services/seo';
 
 @Component({
@@ -12,6 +12,20 @@ import { SeoService } from './services/seo';
 })
 export class App {
   protected readonly title = signal('dr.mathot');
+  private readonly seoFallbacks: Record<SupportedLanguage, { title: string; description: string }> = {
+    nl: {
+      title: 'Dr. Mathot',
+      description: 'Specialist in Algemene Dermatologie en Nagelaandoeningen.',
+    },
+    fr: {
+      title: 'Dr. Mathot',
+      description: 'Votre specialiste en Dermatologie Generale et Pathologies Ongueales.',
+    },
+    en: {
+      title: 'Dr. Mathot',
+      description: 'Your specialist in General Dermatology and Nail Disorders.',
+    },
+  };
 
   constructor(
     private readonly languageService: LanguageService,
@@ -19,13 +33,25 @@ export class App {
     private readonly router: Router
   ) {
     const updateSeo = () => {
+      const currentUrl = this.router.url;
+      const routeLanguage = this.getLanguageFromUrl(currentUrl);
+      const activeLanguage = routeLanguage ?? this.languageService.currentLanguage();
+
+      const baseTitle = this.languageService.t('seo.title');
+      const description = this.languageService.t('seo.description');
+      const resolvedBase = baseTitle === 'seo.title' ? this.seoFallbacks[activeLanguage].title : baseTitle;
+      const resolvedDescription = description === 'seo.description' ? this.seoFallbacks[activeLanguage].description : description;
+
+      const pageName = this.getPageNameFromUrl(currentUrl);
+      const pageTitle = pageName ? `${resolvedBase} | ${pageName}` : resolvedBase;
+
       this.seoService.updateMetadata(
-        this.languageService.t('seo.title'),
-        this.languageService.t('seo.description'),
+        pageTitle,
+        resolvedDescription,
         '',
-        this.router.url
+        currentUrl
       );
-      this.seoService.updateLanguageLinks(this.languageService.currentLanguage(), this.router.url);
+      this.seoService.updateLanguageLinks(activeLanguage, currentUrl);
     };
 
     effect(() => {
@@ -40,5 +66,34 @@ export class App {
     });
 
     void this.languageService.init();
+  }
+
+  private getLanguageFromUrl(url: string): SupportedLanguage | null {
+    const [path] = url.split(/[?#]/, 1);
+    const [firstSegment] = path.split('/').filter(Boolean);
+
+    if (firstSegment === 'nl' || firstSegment === 'fr' || firstSegment === 'en') {
+      return firstSegment;
+    }
+
+    return null;
+  }
+
+  private getPageNameFromUrl(url: string): string {
+    const [path] = url.split(/[?#]/, 1);
+    const segments = path.split('/').filter(Boolean);
+    const pageSegment = segments.find(s => s !== 'nl' && s !== 'fr' && s !== 'en') ?? '';
+
+    const pageKeyMap: Record<string, string> = {
+      '': 'nav.home',
+      'about': 'nav.about',
+      'contact': 'nav.contact',
+      'appointment': 'nav.appointment',
+    };
+
+    const key = pageKeyMap[pageSegment];
+    if (!key) return '';
+    const translated = this.languageService.t(key);
+    return translated === key ? '' : translated;
   }
 }

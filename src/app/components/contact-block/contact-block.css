@@ -7,10 +7,18 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   border-radius: 16px;
-  background-color: white;
+  background: linear-gradient(180deg, #ffffff 50%, #fff9f4 100%);
   box-shadow: 1px 1px 6px #00000017;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 1rem;
   overflow: hidden;
   width: 100%;
 }
@@ -65,7 +73,7 @@ p {
 }
 
 .info-row.big:hover {
-  border-bottom: 2px solid var(--olivia-brown);
+  border-bottom-color: var(--button-active);
 }
 
 .info-icon {
@@ -81,30 +89,67 @@ p {
 
 .button {
   font-size: 1.05em;
-  margin-top: 2vh;
-  margin-top: 2dvh;
+  margin-top: 1vh;
+  margin-top: 1dvh;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 34vh;
+  overflow: hidden;
+  display: block;
+  background-color: #fff9f4;
+}
+
+.fade-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.fade-image.image-loaded {
+  visibility: visible;
+}
+
+.fade-image.active-image {
+  opacity: 1;
+  transition: opacity .45s ease-in;
+}
+
+.fade-image.leaving-image {
+  opacity: 0;
+  transition: opacity .45s ease-out;
+}
+
+.fade-image.entering-image {
+  opacity: 1;
+  transition: opacity .45s ease-in;
 }
 
 @media (min-width: 768px) {
   .button {
     font-size: 1.2em;
-
   }
-  .container {
-    padding: 2rem;
+  .content-container {
+    padding: 1rem 2rem;
   }
 }
 
 @media (min-width: 1024px) {
-
-  .container {
+  .content-container {
     padding: 2.5rem;
   }
 }
 
 @media (min-width: 1240px) {
-
-  .container {
-    padding: 3rem;
+  .content-container {
+    padding: 1.5rem 3rem;
   }
 }

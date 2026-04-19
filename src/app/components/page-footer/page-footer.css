@@ -1,16 +1,130 @@
-.footer-container{
-  display:flex;
+.footer-container {
+  display: flex;
   width: 100%;
   padding: 2vh 10vw;
   padding: 2dvh 10dvw;
   align-items: center;
   justify-content: center;
-  height: 10vh;
-  height: 10dvh;
   background-color: transparent;
   margin: 0 auto;
   color: var(--text-color);
   background-color: transparent;
   border-top: 1px solid var(--border-color-light);
+}
 
+.footer-content {
+  width: min(100%, 80rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.7rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 0;
+}
+
+.footer-card {
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  padding-bottom:  0.8rem;
+}
+
+.footer-card-urgent {
+  background: transparent;
+  border-top: 1px solid var(--border-color-light);
+  padding-top: 0.8rem;
+}
+
+.footer-card h3 {
+  margin: 0 0 0.25rem;
+  padding-left: 0;
+  font-family: var(--font-type-header);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.footer-line {
+  margin: 0.2rem 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text-color);
+}
+
+.footer-card .footer-clinic-name:first-of-type {
+  margin-top: 0;
+  
+}
+
+.footer-clinic-name {
+  margin-top: 0.45rem;
+  font-weight: 700;
+  color: #3f2b35;
+}
+
+.footer-emergency {
+  color: #742235;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-link {
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.footer-link:hover {
+  border-bottom-color: var(--button-active);
+}
+
+.footer-copyright {
+  margin: 0.1rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid > .footer-card:first-child {
+    justify-items: right;
+    padding-right: 2.5vw;
+    padding-right: 2.5dvw;
+  }
+  .footer-grid > .footer-card:last-child {
+    padding-left: 2.5vw;
+    padding-left: 2.5dvw;
+  }
+
+  .footer-card-urgent {
+    border-top: none;
+    border-left: 1px solid var(--border-color-light);
+    padding-top: 0;
+    padding-left: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-line {
+    font-size: 0.92rem;
+  }
+
+  .footer-emergency {
+    font-size: 1.15rem;
+  }
 }

@@ -50,7 +50,7 @@
 
 
 
-@media (min-width: 768px) and (hover: hover){
+@media (min-width: 1200px) and (hover: hover){
   .nav-button {
     width: auto;
     min-width: none;
@@ -75,7 +75,7 @@
     border-bottom: 2px solid var(--olivia-rose);;
   }
 }
-@media (min-width: 1200px) and (hover: hover){
+@media (min-width: 1440px) and (hover: hover){
   .nav-button {
     font-size: 1.5rem;
   }

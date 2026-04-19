@@ -10,4 +10,8 @@ import { LanguageService } from '../../services/language';
 })
 export class Appointment {
   readonly languageService = inject(LanguageService);
+  readonly clinic1Images = ['images/arsenal1.jpg', 'images/arsenal2.jpg'];
+  readonly clinic2Images = ['images/researchinstitute1.jpg', 'images/researchinstitute2.jpg'];
+  readonly clinic1RotationDelayMs = 0;
+  readonly clinic2RotationDelayMs = 2500;
 }

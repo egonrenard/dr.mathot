@@ -37,7 +37,17 @@
     "title": "Make an appointment"
   },
   "footer": {
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "hoursCardTitle": "Opening hours by practice",
+    "clinic1Name": "Arsenal Clinic - Etterbeek",
+    "clinic1Hours": "Tuesday 9 AM-6 PM and Thursday 8 AM-6 PM",
+    "clinic2Name": "Dermatology Research Institute - Uccle",
+    "clinic2Hours": "Wednesday 9 AM-6 PM and Friday 9 AM-5 PM",
+    "urgentCardTitle": "Urgency and data protection",
+    "emergencyLifeThreatening": "Life-threatening emergency",
+    "emergencyOnCallGp": "On-call GP",
+    "privacyLabel": "Data protection:",
+    "privacyLinkText": "See medical advice and privacy details on the contact page"
   },
   "pages": {
     "about": {
@@ -45,6 +55,31 @@
     },
     "contact": {
       "placeholder": "Contact page in progress.",
+      "title": "Get in touch",
+      "intro": "Do you have a general question? You can find the right contact options below.",
+      "generalTitle": "General contact options",
+      "generalIntro": "For appointments or administrative inquiries, you may contact the reception during opening hours by phone or e‑mail.",
+      "appointmentRedirectBefore": "To book a consultation, please use the",
+      "appointmentRedirectHighlight": "Make an appointment",
+      "appointmentRedirectAfter": "page.",
+      "urgentTitle": "Urgent cases",
+      "urgentIntro": "In case of medical urgency, please follow these steps:",
+      "urgentItem1": "During opening hours: please contact the reception",
+      "urgentItem2": "Outside opening hours: contact the on-call general practitioner via 1733",
+      "urgentItem3": "In case of life-threatening emergency: call 112 immediately",
+      "urgentItem2Before": "Outside opening hours: contact the on-call general practitioner via",
+      "urgentItem2Number": "1733",
+      "urgentItem2After": "",
+      "urgentItem3Before": "In case of life-threatening emergency: call",
+      "urgentItem3Number": "112",
+      "urgentItem3After": "immediately",
+      "clinicsTitle": "Clinic addresses and availability",
+      "addressLabel": "Address",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "mapTitle": "Map",
+      "openMapLabel": "Open in Google Maps",
+      "hoursTitle": "Consultation hours",
       "clinic1": {
         "label": "Arsenal Clinic – Etterbeek",
         "schedule": {
@@ -78,7 +113,12 @@
         "phone": "+32 (0)2 512 22 83",
         "email": "info@dr-institute.com",
         "notes": "Appointments can be made via the practice secretariat."
-      }
+      },
+      "medicalDisclaimerTitle": "Medical Advice and Data Protection",
+      "medicalDisclaimerParagraph1": "In accordance with the Code of Medical Ethics and GDPR regulations regarding the protection of health data, no medical advice is provided via e‑mail.",
+      "medicalDisclaimerParagraph2": "A reliable diagnosis requires a clinical examination and a comprehensive consultation. In addition, e‑mail is not a secure means of communication for medical data and does not comply with the legal framework for teleconsultations.",
+      "medicalDisclaimerParagraph3": "Prescriptions and medical certificates are issued during the consultation.",
+      "medicalDisclaimerParagraph4": "Patients already under follow-up may, if necessary, use the contact details provided during their consultation."
     }
   }
 }

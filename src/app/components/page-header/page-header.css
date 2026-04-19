@@ -26,8 +26,14 @@
 .header-content {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
   gap: 0.6rem;
-  flex: 1; 
 }
 
 .site-name {
@@ -51,8 +57,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  justify-content: space-between;
-  flex: 1;
+  justify-content: flex-end;
 }
 
 .navigation-bar-desktop {
@@ -140,14 +145,25 @@
 }
 
 @media (min-width: 768px) {
+  .logo {
+    height: clamp(64px, 7vw, 110px);
+  }
+}
+
+@media (min-width: 1200px) {
   .header-container {
-    display: grid;
     grid-template-columns: auto 1fr auto;
-    align-items: center;
+    column-gap: 1.5rem;
   }
 
   .header-content {
     display: contents;
+  }
+
+  .header-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.1rem;
   }
 
   .navigation-bar-desktop {
@@ -156,15 +172,12 @@
   }
 
   .header-utilities {
+    width: auto;
     justify-self: end;
   }
 
   .hamburger-menu {
     display: none;
-  }
-
-  .logo {
-    height: clamp(64px, 7vw, 110px);
   }
 }
 

@@ -10,12 +10,11 @@
   margin: 0 auto;
   padding: 2vh 10vw;
   padding: 2dvh 10dvw;
-  margin-top: 4vw;
-  margin-top: 4dvw;
+  margin-top: 4vh;
+  margin-top: 4dvh;
+  margin-bottom: 4dvh;
   gap: 2rem;
   cursor: default;
-  padding-bottom: 10vh;
-  padding-bottom: 10dvh;
 }
 
 .contact-blocks {
@@ -26,8 +25,8 @@
 
 @media (min-width: 768px) {
   .appointment-page {
-    margin-top: 2vw;
-    margin-top: 2dvw;
+    margin-top: 2vh;
+    margin-top: 2dvh;
     gap: 8dvh;
     gap: 8dvh;
   }
@@ -45,8 +44,6 @@
     padding: 2dvh 10dvw;
     gap: 10vw;
     gap: 10dvw;
-    padding-bottom: 20vh;
-    padding-bottom: 20dvh;
   }
 }
 
@@ -54,7 +51,6 @@
   .appointment-page {
     padding: 2vh 14vw;
     padding: 2dvh 14dvw;
-    padding-bottom: 24vh;
-    padding-bottom: 24dvh;
+
   }
 }

@@ -1,6 +1,6 @@
 <div class="appointment-page">
   <section class="contact-blocks">
-    <app-contact-block
+    <contact-block
       [label]="languageService.t('pages.contact.clinic1.label')"
       [scheduleEntries]="[
         {
@@ -17,9 +17,12 @@
       [email]="languageService.t('pages.contact.clinic1.email')"
       [notes]="languageService.t('pages.contact.clinic1.notes')"
       [ctaLabel]="languageService.t('appointment.title')"
-    ></app-contact-block>
+      [ctaUrl]="'https://www.doctoranytime.be/d/dermatologue/olivia-mathot?crm-widget=book-appointment'"
+      [images]="clinic1Images"
+      [rotationStartDelayMs]="clinic1RotationDelayMs"
+    ></contact-block>
 
-    <app-contact-block
+    <contact-block
       [label]="languageService.t('pages.contact.clinic2.label')"
       [scheduleEntries]="[
         {
@@ -36,6 +39,9 @@
       [email]="languageService.t('pages.contact.clinic2.email')"
       [notes]="languageService.t('pages.contact.clinic2.notes')"
       [ctaLabel]="languageService.t('appointment.title')"
-    ></app-contact-block>
+      [ctaUrl]="'https://www.dr-institute.com/contactus.php'"
+      [images]="clinic2Images"
+      [rotationStartDelayMs]="clinic2RotationDelayMs"
+    ></contact-block>
   </section>
 </div>

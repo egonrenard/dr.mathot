@@ -1,3 +1,33 @@
 <div class="footer-container">
-  <p>&copy; 2026 Dr. Mathot. {{ languageService.t('footer.copyright') }}</p>
+  <div class="footer-content">
+    <div class="footer-grid">
+      <section class="footer-card">
+        <h3>{{ languageService.t('footer.hoursCardTitle') }}</h3>
+        <p class="footer-line footer-clinic-name">{{ languageService.t('footer.clinic1Name') }}</p>
+        <p class="footer-line">{{ languageService.t('footer.clinic1Hours') }}</p>
+        <p class="footer-line footer-clinic-name">{{ languageService.t('footer.clinic2Name') }}</p>
+        <p class="footer-line">{{ languageService.t('footer.clinic2Hours') }}</p>
+      </section>
+
+      <section class="footer-card footer-card-urgent">
+        <h3>{{ languageService.t('footer.urgentCardTitle') }}</h3>
+        <p class="footer-line footer-emergency">
+          <span>{{ languageService.t('footer.emergencyLifeThreatening') }}</span>
+          <strong>112</strong>
+          <span>- {{ languageService.t('footer.emergencyOnCallGp') }}</span>
+          <strong>1733</strong>
+        </p>
+        <p class="footer-line">
+          <strong>{{ languageService.t('footer.privacyLabel') }}</strong>
+          <a class="footer-link" href="{{ languageService.getLocalizedRoute('contact') }}">
+            {{ languageService.t('footer.privacyLinkText') }}
+          </a>
+        </p>
+      </section>
+    </div>
+
+    <p class="footer-copyright">
+      &copy; 2026 Dr. Mathot. {{ languageService.t('footer.copyright') }}
+    </p>
+  </div>
 </div>

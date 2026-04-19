@@ -116,11 +116,8 @@ export class LanguageService {
   }
 
   private getLanguageFromCurrentUrl(): SupportedLanguage | null {
-    if (!isPlatformBrowser(this.platformId)) {
-      return null;
-    }
-
-    const [firstSegment] = window.location.pathname.split('/').filter(Boolean);
+    const path = isPlatformBrowser(this.platformId) ? window.location.pathname : this.router.url;
+    const [firstSegment] = path.split('/').filter(Boolean);
     const candidate = firstSegment ?? null;
     return this.isSupportedLanguage(candidate) ? candidate : null;
   }

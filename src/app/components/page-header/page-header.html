@@ -1,11 +1,9 @@
 <div class="header-container">
   <div class="site-name">
-    <img [src]="'images/logo-dark-red.png'" [attr.alt]="languageService.t('header.logoAlt')" class="logo" />
+    <img [src]="'images/logo-transparant.png'" [attr.alt]="languageService.t('header.logoAlt')" class="logo" />
   </div>
 
   <div class="header-content">
-
-
     <navigation-bar-mobile
       [navButtons]="navButtons()"
       class="navigation-bar-mobile"
@@ -14,32 +12,34 @@
     >
     </navigation-bar-mobile>
 
-    <navigation-bar [navButtons]="navButtons()" class="navigation-bar-desktop"> </navigation-bar>
+    <div class="header-actions">
+      <navigation-bar [navButtons]="navButtons()" class="navigation-bar-desktop"> </navigation-bar>
 
-    <div class="header-utilities">
-      <div
-        class="language-switcher"
-        [attr.aria-label]="languageService.t('header.languageSwitcherAria')"
-      >
-        @for (language of availableLanguages; track language) {
-          <button
-            type="button"
-            class="language-button"
-            [class.active]="isLanguageActive(language)"
-            (click)="changeLanguage(language)"
-          >
-            {{ language.toUpperCase() }}
-          </button>
-        }
-      </div>
+      <div class="header-utilities">
+        <div
+          class="language-switcher"
+          [attr.aria-label]="languageService.t('header.languageSwitcherAria')"
+        >
+          @for (language of availableLanguages; track language) {
+            <button
+              type="button"
+              class="language-button"
+              [class.active]="isLanguageActive(language)"
+              (click)="changeLanguage(language)"
+            >
+              {{ language.toUpperCase() }}
+            </button>
+          }
+        </div>
 
-      <div class="hamburger-menu">
-        <img
-          [src]="'icons/menu-burger.svg'"
-          [attr.alt]="languageService.t('header.menuAlt')"
-          (click)="toggleNav()"
-          class="hamburger-icon"
-        />
+        <div class="hamburger-menu">
+          <img
+            [src]="'icons/menu-burger.svg'"
+            [attr.alt]="languageService.t('header.menuAlt')"
+            (click)="toggleNav()"
+            class="hamburger-icon"
+          />
+        </div>
       </div>
     </div>
   </div>

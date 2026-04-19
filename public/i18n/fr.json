@@ -37,7 +37,17 @@
     "title": "Prendre rendez-vous"
   },
   "footer": {
-    "copyright": "Tous droits reserves."
+    "copyright": "Tous droits reserves.",
+    "hoursCardTitle": "Heures d'ouverture par cabinet",
+    "clinic1Name": "Arsenal Clinic - Etterbeek",
+    "clinic1Hours": "Mardi 9h-18h et Jeudi 8h-18h",
+    "clinic2Name": "Dermatology Research Institute - Uccle",
+    "clinic2Hours": "Mercredi 9h-18h et Vendredi 9h-17h",
+    "urgentCardTitle": "Urgence et protection des données",
+    "emergencyLifeThreatening": "En cas de danger vital",
+    "emergencyOnCallGp": "Médecin de garde",
+    "privacyLabel": "Protection des données :",
+    "privacyLinkText": "Voir l'avis médical et la confidentialité sur la page contact"
   },
   "pages": {
     "about": {
@@ -45,6 +55,31 @@
     },
     "contact": {
       "placeholder": "Page Contact en construction.",
+      "title": "Contactez-nous",
+      "intro": "Vous avez une question generale ? Vous trouverez ci-dessous les moyens de contact adequats.",
+      "generalTitle": "Moyens de contact generaux",
+      "generalIntro": "Pour toute demande de rendez-vous ou question administrative, vous pouvez contacter le secrétariat durant les heures d’ouverture par téléphone ou par e‑mail.",
+      "appointmentRedirectBefore": "Pour planifier une consultation, utilisez la page",
+      "appointmentRedirectHighlight": "Prendre rendez-vous",
+      "appointmentRedirectAfter": ".",
+      "urgentTitle": "Cas urgents",
+      "urgentIntro": "En cas d'urgence medicale, veuillez suivre les etapes ci-dessous :",
+      "urgentItem1": "Pendant les heures d’ouverture : contactez le secrétariat",
+      "urgentItem2": "En dehors des heures d’ouverture : contactez le médecin de garde via le 1733",
+      "urgentItem3": "En cas d’urgence vitale : appelez immédiatement le 112",
+      "urgentItem2Before": "En dehors des heures d’ouverture : contactez le médecin de garde via le",
+      "urgentItem2Number": "1733",
+      "urgentItem2After": "",
+      "urgentItem3Before": "En cas d’urgence vitale : appelez immédiatement le",
+      "urgentItem3Number": "112",
+      "urgentItem3After": "",
+      "clinicsTitle": "Adresses des cabinets et disponibilites",
+      "addressLabel": "Adresse",
+      "phoneLabel": "Téléphone",
+      "emailLabel": "E‑mail",
+      "mapTitle": "Carte",
+      "openMapLabel": "Ouvrir dans Google Maps",
+      "hoursTitle": "Heures de consultation",
       "clinic1": {
         "label": "Arsenal Clinic – Etterbeek",
         "schedule": {
@@ -78,7 +113,12 @@
         "phone": "+32 (0)2 512 22 83",
         "email": "info@dr-institute.com",
         "notes": "Les rendez-vous peuvent être pris via le secrétariat du cabinet."
-      }
+      },
+      "medicalDisclaimerTitle": "Conseil médical et protection des données",
+      "medicalDisclaimerParagraph1": "Conformément au Code de déontologie médicale et à la réglementation RGPD relative à la protection des données de santé, aucun avis médical n’est donné par e‑mail.",
+      "medicalDisclaimerParagraph2": "Un diagnostic fiable nécessite un examen clinique et un échange complet. Par ailleurs, l’e‑mail ne constitue pas un moyen de communication sécurisé pour les données médicales et ne répond pas au cadre légal de la téléconsultation.",
+      "medicalDisclaimerParagraph3": "Les prescriptions et attestations sont délivrées lors de la consultation.",
+      "medicalDisclaimerParagraph4": "Les patients déjà suivis peuvent, si nécessaire, utiliser les coordonnées communiquées lors de la consultation."
     }
   }
 }

@@ -23,7 +23,17 @@
     "more-info": "Meer info"
   },
   "footer": {
-    "copyright": "Alle rechten voorbehouden."
+    "copyright": "Alle rechten voorbehouden.",
+    "hoursCardTitle": "Openingsuren per praktijk",
+    "clinic1Name": "Arsenal Clinic - Etterbeek",
+    "clinic1Hours": "Dinsdag 9u-18u en Donderdag 8u-18u",
+    "clinic2Name": "Dermatology Research Institute - Ukkel",
+    "clinic2Hours": "Woensdag 9u-18u en Vrijdag 9u-17u",
+    "urgentCardTitle": "Urgentie en gegevensbescherming",
+    "emergencyLifeThreatening": "Bij levensgevaar",
+    "emergencyOnCallGp": "Huisarts van wacht",
+    "privacyLabel": "Gegevensbescherming:",
+    "privacyLinkText": "Bekijk medisch advies en privacy op de contactpagina"
   },
   "about": {
     "title": "Over mij",
@@ -45,6 +55,31 @@
     },
     "contact": {
       "placeholder": "Contact-pagina in opbouw.",
+      "title": "Neem contact op",
+      "intro": "Heeft u een algemene vraag? Hieronder vindt u de juiste contactmogelijkheden.",
+      "generalTitle": "Algemene contactmogelijkheden",
+      "generalIntro": "Voor het maken van een afspraak of voor administratieve vragen kunt u tijdens de openingsuren contact opnemen met het secretariaat via telefoon of e‑mail.",
+      "appointmentRedirectBefore": "Voor het plannen van een consultatie gebruikt u de pagina",
+      "appointmentRedirectHighlight": "Maak een afspraak",
+      "appointmentRedirectAfter": ".",
+      "urgentTitle": "Dringende gevallen",
+      "urgentIntro": "Bij medische urgentie volgt u best onderstaande stappen:",
+      "urgentItem1": "Tijdens de openingsuren: neem contact op met het secretariaat",
+      "urgentItem2": "Buiten de openingsuren: contacteer de huisarts van wacht via 1733",
+      "urgentItem3": "Bij levensgevaar: bel onmiddellijk 112",
+      "urgentItem2Before": "Buiten de openingsuren: contacteer de huisarts van wacht via",
+      "urgentItem2Number": "1733",
+      "urgentItem2After": "",
+      "urgentItem3Before": "Bij levensgevaar: bel onmiddellijk",
+      "urgentItem3Number": "112",
+      "urgentItem3After": "",
+      "clinicsTitle": "Praktijkadressen en bereikbaarheid",
+      "addressLabel": "Adres",
+      "phoneLabel": "Telefoon",
+      "emailLabel": "E‑mail",
+      "mapTitle": "Kaart",
+      "openMapLabel": "Open in Google Maps",
+      "hoursTitle": "Raadplegingsuren",
       "clinic1": {
         "label": "Arsenal Clinic – Etterbeek",
         "schedule": {
@@ -78,7 +113,12 @@
         "phone": "+32 (0)2 512 22 83",
         "email": "info@dr-institute.com",
         "notes": "Afspraken kunnen via het secretariaat van de praktijk worden gemaakt."
-      }
+      },
+      "medicalDisclaimerTitle": "Medisch advies en gegevensbescherming",
+      "medicalDisclaimerParagraph1": "In overeenstemming met de deontologische code en de GDPR-wetgeving inzake de bescherming van gezondheidsgegevens, worden er geen medische adviezen gegeven via e‑mail.",
+      "medicalDisclaimerParagraph2": "Een betrouwbare diagnose vereist een klinisch onderzoek en een volledig overleg. Daarnaast is e‑mail geen beveiligd communicatiemiddel voor medische gegevens en voldoet het niet aan het wettelijk kader van teleconsultatie.",
+      "medicalDisclaimerParagraph3": "Voorschriften en attesten worden tijdens de consultatie verstrekt.",
+      "medicalDisclaimerParagraph4": "Patiënten die reeds in opvolging zijn, kunnen indien nodig gebruikmaken van de contactgegevens die tijdens de consultatie werden meegedeeld."
     }
   }
 }

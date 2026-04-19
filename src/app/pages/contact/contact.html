@@ -1,41 +1,126 @@
 <div class="contact-page">
-  <section class="contact-blocks">
-    <app-contact-block
-      [label]="languageService.t('pages.contact.clinic1.label')"
-      [scheduleEntries]="[
-        {
-          day: languageService.t('pages.contact.clinic1.schedule.day1.day'),
-          hours: languageService.t('pages.contact.clinic1.schedule.day1.hours'),
-        },
-        {
-          day: languageService.t('pages.contact.clinic1.schedule.day2.day'),
-          hours: languageService.t('pages.contact.clinic1.schedule.day2.hours'),
-        },
-      ]"
-      [address]="languageService.t('pages.contact.clinic1.address')"
-      [phone]="languageService.t('pages.contact.clinic1.phone')"
-      [email]="languageService.t('pages.contact.clinic1.email')"
-      [notes]="languageService.t('pages.contact.clinic1.notes')"
-      [ctaLabel]="languageService.t('home.ctaBookAppointment')"
-    ></app-contact-block>
+	<header class="contact-hero">
+		<h1>{{ languageService.t('pages.contact.title') }}</h1>
+		<p>{{ languageService.t('pages.contact.intro') }}</p>
+	</header>
 
-    <app-contact-block
-      [label]="languageService.t('pages.contact.clinic2.label')"
-      [scheduleEntries]="[
-        {
-          day: languageService.t('pages.contact.clinic2.schedule.day1.day'),
-          hours: languageService.t('pages.contact.clinic2.schedule.day1.hours'),
-        },
-        {
-          day: languageService.t('pages.contact.clinic2.schedule.day2.day'),
-          hours: languageService.t('pages.contact.clinic2.schedule.day2.hours'),
-        },
-      ]"
-      [address]="languageService.t('pages.contact.clinic2.address')"
-      [phone]="languageService.t('pages.contact.clinic2.phone')"
-      [email]="languageService.t('pages.contact.clinic2.email')"
-      [notes]="languageService.t('pages.contact.clinic2.notes')"
-      [ctaLabel]="languageService.t('home.ctaBookAppointment')"
-    ></app-contact-block>
-  </section>
+	<section class="contact-sections">
+		<article class="contact-panel">
+			<h2>{{ languageService.t('pages.contact.generalTitle') }}</h2>
+			<p class="section-intro">{{ languageService.t('pages.contact.generalIntro') }}</p>
+
+			<div class="practice-contact">
+				<h3>{{ languageService.t('pages.contact.clinic1.label') }}</h3>
+				<div class="contact-line contact-line-icon">
+					<img class="contact-icon" src="/icons/phone.svg" alt="" aria-hidden="true" />
+					<a href="tel:{{ languageService.t('pages.contact.clinic1.phone') }}">{{ languageService.t('pages.contact.clinic1.phone') }}</a>
+				</div>
+				<div class="contact-line contact-line-icon">
+					<img class="contact-icon" src="/icons/email.svg" alt="" aria-hidden="true" />
+					<a href="mailto:{{ languageService.t('pages.contact.clinic1.email') }}">{{ languageService.t('pages.contact.clinic1.email') }}</a>
+				</div>
+			</div>
+
+			<div class="practice-contact">
+				<h3>{{ languageService.t('pages.contact.clinic2.label') }}</h3>
+				<div class="contact-line contact-line-icon">
+					<img class="contact-icon" src="/icons/phone.svg" alt="" aria-hidden="true" />
+					<a href="tel:{{ languageService.t('pages.contact.clinic2.phone') }}">{{ languageService.t('pages.contact.clinic2.phone') }}</a>
+				</div>
+				<div class="contact-line contact-line-icon">
+					<img class="contact-icon" src="/icons/email.svg" alt="" aria-hidden="true" />
+					<a href="mailto:{{ languageService.t('pages.contact.clinic2.email') }}">{{ languageService.t('pages.contact.clinic2.email') }}</a>
+				</div>
+			</div>
+
+			<p class="contact-note">
+				<span class="contact-note-text">{{ languageService.t('pages.contact.appointmentRedirectBefore') }}</span>
+				<span class="contact-note-action">
+					<a class="contact-note-link" href="{{ languageService.getLocalizedRoute('appointment') }}">
+						<strong>{{ languageService.t('pages.contact.appointmentRedirectHighlight') }}</strong>
+					</a>
+					{{ languageService.t('pages.contact.appointmentRedirectAfter') }}
+				</span>
+			</p>
+		</article>
+
+		<article class="contact-panel contact-panel-urgent">
+			<h2>{{ languageService.t('pages.contact.urgentTitle') }}</h2>
+			<p class="section-intro">{{ languageService.t('pages.contact.urgentIntro') }}</p>
+			<ul class="urgent-list">
+				<li [innerHTML]="getUrgentItem3Html()"></li>
+				<li>{{ languageService.t('pages.contact.urgentItem1') }}</li>
+				<li [innerHTML]="getUrgentItem2Html()"></li>
+			</ul>
+		</article>
+	</section>
+
+	<section class="medical-disclaimer-section">
+		<div class="medical-disclaimer-box">
+			<h2>{{ languageService.t('pages.contact.medicalDisclaimerTitle') }}</h2>
+			<p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph1') }}</p>
+			<p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph2') }}</p>
+			<p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph3') }}</p>
+			<p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph4') }}</p>
+		</div>
+	</section>
+
+	<section class="clinics-section">
+		<h2>{{ languageService.t('pages.contact.clinicsTitle') }}</h2>
+		<div class="clinic-grid">
+			<article class="clinic-entry">
+				<h3>{{ languageService.t('pages.contact.clinic1.label') }}</h3>
+				<p>{{ languageService.t('pages.contact.clinic1.address') }}</p>
+				<p>
+					<strong>{{ languageService.t('pages.contact.hoursTitle') }}</strong>
+					{{ languageService.t('pages.contact.clinic1.schedule.day1.day') }} {{ languageService.t('pages.contact.clinic1.schedule.day1.hours') }}
+					- {{ languageService.t('pages.contact.clinic1.schedule.day2.day') }} {{ languageService.t('pages.contact.clinic1.schedule.day2.hours') }}
+				</p>
+				<div class="clinic-map-block">
+					<iframe
+						class="clinic-map"
+						title="Arsenal Clinic map"
+						loading="lazy"
+						allowfullscreen
+						referrerpolicy="no-referrer-when-downgrade"
+						src="https://www.google.com/maps?q=Boulevard%20Louis%20Schmidt%202B%2C%201040%20Etterbeek&z=16&hl=nl&output=embed">
+					</iframe>
+					<a
+						class="clinic-map-link"
+						href="https://www.google.com/maps?q=Boulevard%20Louis%20Schmidt%202B%2C%201040%20Etterbeek"
+						target="_blank"
+						rel="noopener noreferrer">
+						{{ languageService.t('pages.contact.openMapLabel') }}
+					</a>
+				</div>
+			</article>
+
+			<article class="clinic-entry">
+				<h3>{{ languageService.t('pages.contact.clinic2.label') }}</h3>
+				<p>{{ languageService.t('pages.contact.clinic2.address') }}</p>
+				<p>
+					<strong>{{ languageService.t('pages.contact.hoursTitle') }}</strong>
+					{{ languageService.t('pages.contact.clinic2.schedule.day1.day') }} {{ languageService.t('pages.contact.clinic2.schedule.day1.hours') }}
+					- {{ languageService.t('pages.contact.clinic2.schedule.day2.day') }} {{ languageService.t('pages.contact.clinic2.schedule.day2.hours') }}
+				</p>
+				<div class="clinic-map-block">
+					<iframe
+						class="clinic-map"
+						title="Research Institute map"
+						loading="lazy"
+						allowfullscreen
+						referrerpolicy="no-referrer-when-downgrade"
+						src="https://www.google.com/maps?q=Chauss%C3%A9e%20de%20Waterloo%20835%2C%201180%20Uccle&z=16&hl=nl&output=embed">
+					</iframe>
+					<a
+						class="clinic-map-link"
+						href="https://www.google.com/maps?q=Chauss%C3%A9e%20de%20Waterloo%20835%2C%201180%20Uccle"
+						target="_blank"
+						rel="noopener noreferrer">
+						{{ languageService.t('pages.contact.openMapLabel') }}
+					</a>
+				</div>
+			</article>
+		</div>
+	</section>
 </div>
