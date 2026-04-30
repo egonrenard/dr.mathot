@@ -30,12 +30,6 @@
     gap: 8dvh;
     gap: 8dvh;
   }
-
-  .contact-blocks {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
-    gap: 2rem;
-  }
 }
 
 @media (min-width: 1240px) {
@@ -45,12 +39,17 @@
     gap: 10vw;
     gap: 10dvw;
   }
+
+  .contact-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+    gap: 2rem;
+  }
 }
 
 @media (min-width: 1440px) {
   .appointment-page {
     padding: 2vh 14vw;
     padding: 2dvh 14dvw;
-
   }
 }

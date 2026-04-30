@@ -238,11 +238,6 @@ h3 {
     gap: 2rem;
   }
 
-  .clinic-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-  }
-
   .contact-note-action {
     display: inline;
     margin-top: 0;
@@ -260,6 +255,11 @@ h3 {
     padding: 2vh 10vw;
     padding: 2dvh 10dvw;
     gap: 2.8rem;
+  }
+
+  .clinic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
   }
   .clinic-entry {
     padding: 1.2rem 1.3rem;

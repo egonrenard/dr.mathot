@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { NavigationButton } from '../navigation-button/navigation-button';
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'navigation-bar-mobile',
@@ -8,6 +9,7 @@ import { NavigationButton } from '../navigation-button/navigation-button';
   styleUrl: './navigation-bar-mobile.css',
 })
 export class NavigationBarMobile {
+  readonly languageService = inject(LanguageService);
   @Input() navButtons!: { id: number; label: string; routerLink?: string; icon?: string }[];
   @Input() theme?: string;
   @Output() navButtonClick = new EventEmitter<void>();

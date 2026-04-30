@@ -1,8 +1,14 @@
 .footer-container {
   display: flex;
   width: 100%;
-  padding: 2vh 10vw;
-  padding: 2dvh 10dvw;
+  padding-top: 2vh;
+  padding-top: 2dvh;
+  padding-right: calc(10vw + var(--safe-area-right));
+  padding-right: calc(10dvw + var(--safe-area-right));
+  padding-bottom: calc(2vh + var(--safe-area-bottom));
+  padding-bottom: calc(2dvh + var(--safe-area-bottom));
+  padding-left: calc(10vw + var(--safe-area-left));
+  padding-left: calc(10dvw + var(--safe-area-left));
   align-items: center;
   justify-content: center;
   background-color: transparent;

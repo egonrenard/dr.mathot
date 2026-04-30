@@ -1,12 +1,16 @@
-<div class="navigation-bar" >
-  @for (btn of navButtons; track btn.id) {
-    <navigation-button
-      [label]="btn.label"
-      [routerLink]="btn.routerLink"
-      [icon]="btn.icon"
-      [isDarkRed]="btn.isDarkRed"
-      >
-    </navigation-button>
-  }
-</div>
+<nav class="navigation-bar" [attr.aria-label]="languageService.t('nav.mainAria')">
+  <ul class="navigation-list">
+    @for (btn of navButtons; track btn.id) {
+      <li class="navigation-item">
+        <navigation-button
+          [label]="btn.label"
+          [routerLink]="btn.routerLink"
+          [icon]="btn.icon"
+          [isDarkRed]="btn.isDarkRed"
+          >
+        </navigation-button>
+      </li>
+    }
+  </ul>
+</nav>
 

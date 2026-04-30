@@ -133,6 +133,15 @@ p {
   transition: opacity .45s ease-in;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .fade-image,
+  .fade-image.active-image,
+  .fade-image.leaving-image,
+  .fade-image.entering-image {
+    transition: none !important;
+  }
+}
+
 @media (min-width: 768px) {
   .button {
     font-size: 1.2em;

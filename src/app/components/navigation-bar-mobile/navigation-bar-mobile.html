@@ -1,21 +1,25 @@
-<div class="navigation-bar-mobile">
+<nav class="navigation-bar-mobile" [attr.aria-label]="languageService.t('nav.mobileAria')">
   <button 
     type="button" 
     class="close-btn" 
     (click)="navButtonClick.emit()"
-    aria-label="Sluiten"
-    [attr.title]="'Sluiten'"
+    [attr.aria-label]="languageService.t('nav.close')"
+    [attr.title]="languageService.t('nav.close')"
   >
     ×
   </button>
-  @for (btn of navButtons; track btn.id) {
-    <navigation-button
-      [label]="btn.label"
-      [routerLink]="btn.routerLink"
-      [icon]="btn.icon"
-      (select)="selectButton()">
-    </navigation-button>
-  }
-</div>
+  <ul class="navigation-mobile-list">
+    @for (btn of navButtons; track btn.id) {
+      <li class="navigation-mobile-item">
+        <navigation-button
+          [label]="btn.label"
+          [routerLink]="btn.routerLink"
+          [icon]="btn.icon"
+          (select)="selectButton()">
+        </navigation-button>
+      </li>
+    }
+  </ul>
+</nav>
 
 

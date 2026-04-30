@@ -11,18 +11,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  padding: 5rem 2rem 3rem;
-  gap: 1rem;
+  padding-top: calc(5rem + var(--safe-area-top));
+  padding-right: calc(2rem + var(--safe-area-right));
+  padding-bottom: calc(3rem + var(--safe-area-bottom));
+  padding-left: calc(2rem + var(--safe-area-left));
 
   /* Animatie bij openen */
   animation: overlayIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.navigation-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .close-btn {
   position: absolute;
-  top: 4vh;
-  top: 4dvh;
-  right: 1.5rem;
+  top: calc(4vh + var(--safe-area-top));
+  top: calc(4dvh + var(--safe-area-top));
+  right: calc(1.5rem + var(--safe-area-right));
   width: 44px;
   height: 44px;
   border: none;
@@ -75,15 +86,15 @@
 }
 
 /* Staggered knoppen animatie */
-.navigation-bar-mobile navigation-button {
+.navigation-mobile-item {
   animation: slideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.navigation-bar-mobile navigation-button:nth-child(1) { animation-delay: 0.05s; }
-.navigation-bar-mobile navigation-button:nth-child(2) { animation-delay: 0.10s; }
-.navigation-bar-mobile navigation-button:nth-child(3) { animation-delay: 0.15s; }
-.navigation-bar-mobile navigation-button:nth-child(4) { animation-delay: 0.20s; }
-.navigation-bar-mobile navigation-button:nth-child(5) { animation-delay: 0.25s; }
+.navigation-mobile-item:nth-child(1) { animation-delay: 0.05s; }
+.navigation-mobile-item:nth-child(2) { animation-delay: 0.10s; }
+.navigation-mobile-item:nth-child(3) { animation-delay: 0.15s; }
+.navigation-mobile-item:nth-child(4) { animation-delay: 0.20s; }
+.navigation-mobile-item:nth-child(5) { animation-delay: 0.25s; }
 
 @keyframes slideIn {
   from {

@@ -38,13 +38,14 @@ export class ContactBlock implements OnInit, OnDestroy {
   private startDelayTimeout: ReturnType<typeof setTimeout> | null = null;
   private phaseTimeout: ReturnType<typeof setTimeout> | null = null;
   private isTransitioning = false;
+  private readonly prefersReducedMotion = this.userPrefersReducedMotion();
 
   ngOnInit(): void {
     this.startImageRotation();
   }
 
   private startImageRotation(): void {
-    if (this.images.length <= 1) return;
+    if (this.images.length <= 1 || this.prefersReducedMotion) return;
 
     const startDelay = this.normalizeDelay(this.rotationStartDelayMs);
 
@@ -63,6 +64,14 @@ export class ContactBlock implements OnInit, OnDestroy {
     }
 
     return Math.floor(delayInMs);
+  }
+
+  private userPrefersReducedMotion(): boolean {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+      return false;
+    }
+
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
   isActiveImage(index: number): boolean {

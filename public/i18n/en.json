@@ -3,7 +3,10 @@
     "home": "Home",
     "about": "About Me",
     "contact": "Contact",
-    "appointment": "Make an Appointment"
+    "appointment": "Make an Appointment",
+    "mainAria": "Main navigation",
+    "mobileAria": "Mobile navigation",
+    "close": "Close"
   },
   "header": {
     "menuAlt": "Menu",

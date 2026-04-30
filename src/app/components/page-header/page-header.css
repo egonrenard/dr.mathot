@@ -11,10 +11,14 @@
   min-height: 10dvh;
   align-items: center;
   background-color: transparent;
-  padding: 2vh 10vw;
-  padding: 2dvh 10dvw;
-  padding-top: 4vh;
-  padding-top: 4dvh;
+  padding-top: calc(4vh + var(--safe-area-top));
+  padding-top: calc(4dvh + var(--safe-area-top));
+  padding-right: calc(10vw + var(--safe-area-right));
+  padding-right: calc(10dvw + var(--safe-area-right));
+  padding-bottom: 2vh;
+  padding-bottom: 2dvh;
+  padding-left: calc(10vw + var(--safe-area-left));
+  padding-left: calc(10dvw + var(--safe-area-left));
   margin: 0 auto;
   user-select: none;
   cursor: default;
@@ -34,6 +38,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  flex-direction: row;
 }
 
 .site-name {
@@ -56,7 +61,7 @@
 .header-utilities {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0;
   justify-content: flex-end;
 }
 
@@ -161,9 +166,9 @@
   }
 
   .header-actions {
-    flex-direction: row;
-    align-items: center;
-    gap: 1.1rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
   }
 
   .navigation-bar-desktop {
@@ -172,8 +177,7 @@
   }
 
   .header-utilities {
-    width: auto;
-    justify-self: end;
+    display: none;
   }
 
   .hamburger-menu {
@@ -183,7 +187,10 @@
 
 @media (max-width: 420px) {
   .header-container {
-    padding-inline: 6vw;
+    padding-right: calc(6vw + var(--safe-area-right));
+    padding-right: calc(6dvw + var(--safe-area-right));
+    padding-left: calc(6vw + var(--safe-area-left));
+    padding-left: calc(6dvw + var(--safe-area-left));
   }
 
   .language-button {
@@ -199,8 +206,14 @@
 }
 @media (min-width: 1500px) {
   .header-container {
-    padding: 2vh 14vw;
-    padding: 2dvh 14dvw;
+    padding-top: calc(2vh + var(--safe-area-top));
+    padding-top: calc(2dvh + var(--safe-area-top));
+    padding-right: calc(14vw + var(--safe-area-right));
+    padding-right: calc(14dvw + var(--safe-area-right));
+    padding-bottom: 2vh;
+    padding-bottom: 2dvh;
+    padding-left: calc(14vw + var(--safe-area-left));
+    padding-left: calc(14dvw + var(--safe-area-left));
   }
 }
 

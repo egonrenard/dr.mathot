@@ -3,7 +3,10 @@
     "home": "Home",
     "about": "Over mij",
     "contact": "Contact",
-    "appointment": "Maak een afspraak"
+    "appointment": "Maak een afspraak",
+    "mainAria": "Hoofdnavigatie",
+    "mobileAria": "Mobiele navigatie",
+    "close": "Sluiten"
   },
   "header": {
     "menuAlt": "Menu",

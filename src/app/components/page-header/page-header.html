@@ -13,25 +13,25 @@
     </navigation-bar-mobile>
 
     <div class="header-actions">
+      <div
+        class="language-switcher"
+        [attr.aria-label]="languageService.t('header.languageSwitcherAria')"
+      >
+        @for (language of availableLanguages; track language) {
+          <button
+            type="button"
+            class="language-button"
+            [class.active]="isLanguageActive(language)"
+            (click)="changeLanguage(language)"
+          >
+            {{ language.toUpperCase() }}
+          </button>
+        }
+      </div>
+
       <navigation-bar [navButtons]="navButtons()" class="navigation-bar-desktop"> </navigation-bar>
 
       <div class="header-utilities">
-        <div
-          class="language-switcher"
-          [attr.aria-label]="languageService.t('header.languageSwitcherAria')"
-        >
-          @for (language of availableLanguages; track language) {
-            <button
-              type="button"
-              class="language-button"
-              [class.active]="isLanguageActive(language)"
-              (click)="changeLanguage(language)"
-            >
-              {{ language.toUpperCase() }}
-            </button>
-          }
-        </div>
-
         <div class="hamburger-menu">
           <img
             [src]="'icons/menu-burger.svg'"
