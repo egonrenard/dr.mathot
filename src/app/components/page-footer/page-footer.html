@@ -11,17 +11,28 @@
 
       <section class="footer-card footer-card-urgent">
         <h3>{{ languageService.t('footer.urgentCardTitle') }}</h3>
-        <p class="footer-line footer-emergency">
+        <p class="footer-line footer-emergency footer-emergency-line">
           <span>{{ languageService.t('footer.emergencyLifeThreatening') }}</span>
-          <strong>112</strong>
-          <span>- {{ languageService.t('footer.emergencyOnCallGp') }}</span>
-          <strong>1733</strong>
+          <a class="footer-phone-link" href="tel:112">112</a>
         </p>
-        <p class="footer-line">
-          <strong>{{ languageService.t('footer.privacyLabel') }}</strong>
-          <a class="footer-link" href="{{ languageService.getLocalizedRoute('contact') }}">
+
+        <p class="footer-line footer-emergency footer-emergency-line">
+          <span>{{ languageService.t('footer.emergencyOnCallGp') }}</span>
+          <a class="footer-phone-link" href="tel:1733">1733</a>
+        </p>
+
+
+
+        <p class="footer-line footer-privacy-links-line">
+          <span>{{ languageService.t('footer.privacyTextBefore') }}</span>
+          <a class="footer-link" href="{{ languageService.getLocalizedRoute('privacy') }}">
             {{ languageService.t('footer.privacyLinkText') }}
           </a>
+          <span>{{ languageService.t('footer.privacyTextMiddle') }}</span>
+          <a class="footer-link" href="{{ languageService.getLocalizedRoute('disclaimer') }}">
+            {{ languageService.t('footer.disclaimerLinkText') }}
+          </a>
+          <span>{{ languageService.t('footer.privacyTextAfter') }}</span>
         </p>
       </section>
     </div>

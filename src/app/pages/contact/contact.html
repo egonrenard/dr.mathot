@@ -48,9 +48,17 @@
 			<h2>{{ languageService.t('pages.contact.urgentTitle') }}</h2>
 			<p class="section-intro">{{ languageService.t('pages.contact.urgentIntro') }}</p>
 			<ul class="urgent-list">
-				<li [innerHTML]="getUrgentItem3Html()"></li>
+				<li>
+					{{ languageService.t('pages.contact.urgentItem3Before') }}
+					<a class="urgent-phone-link" href="tel:{{ languageService.t('pages.contact.urgentItem3Number') }}">{{ languageService.t('pages.contact.urgentItem3Number') }}</a>
+					{{ languageService.t('pages.contact.urgentItem3After') }}
+				</li>
 				<li>{{ languageService.t('pages.contact.urgentItem1') }}</li>
-				<li [innerHTML]="getUrgentItem2Html()"></li>
+				<li>
+					{{ languageService.t('pages.contact.urgentItem2Before') }}
+					<a class="urgent-phone-link" href="tel:{{ languageService.t('pages.contact.urgentItem2Number') }}">{{ languageService.t('pages.contact.urgentItem2Number') }}</a>
+					{{ languageService.t('pages.contact.urgentItem2After') }}
+				</li>
 			</ul>
 		</article>
 	</section>
@@ -62,6 +70,11 @@
 			<p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph2') }}</p>
 			<p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph3') }}</p>
 			<p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph4') }}</p>
+			<p>
+				{{ languageService.t('pages.contact.medicalDisclaimerParagraph5Before') }}
+				<a href="{{ languageService.getLocalizedRoute('privacy') }}" rel="noopener noreferrer">{{ languageService.t('pages.contact.medicalDisclaimerParagraph5Link') }}</a>
+				{{ languageService.t('pages.contact.medicalDisclaimerParagraph5After') }}
+			</p>
 		</div>
 	</section>
 

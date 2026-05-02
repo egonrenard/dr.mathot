@@ -17,6 +17,7 @@
   flex: 1;
   min-height: 100%;
   align-items: stretch;
+  margin-bottom: 5vh;
 }
 
 .home-description {
@@ -86,7 +87,9 @@
 
 @media (min-width: 1024px) {
   .home-page-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr .7fr;
+    margin-bottom: 20vh;
+    margin-bottom: 20dvh;
   }
   .button-container {
     grid-template-columns: 1fr;
@@ -101,4 +104,11 @@
   .button-container {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 1500px) {
+  .home-page-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
 }

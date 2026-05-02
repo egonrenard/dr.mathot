@@ -43,7 +43,7 @@ export class App {
       const resolvedDescription = description === 'seo.description' ? this.seoFallbacks[activeLanguage].description : description;
 
       const pageName = this.getPageNameFromUrl(currentUrl);
-      const pageTitle = pageName ? `${resolvedBase} | ${pageName}` : resolvedBase;
+      const pageTitle = pageName ? `${pageName} | ${resolvedBase}` : resolvedBase;
 
       this.seoService.updateMetadata(
         pageTitle,
@@ -84,16 +84,25 @@ export class App {
     const segments = path.split('/').filter(Boolean);
     const pageSegment = segments.find(s => s !== 'nl' && s !== 'fr' && s !== 'en') ?? '';
 
-    const pageKeyMap: Record<string, string> = {
-      '': 'nav.home',
-      'about': 'nav.about',
-      'contact': 'nav.contact',
-      'appointment': 'nav.appointment',
+    const pageKeyMap: Record<string, string[]> = {
+      'about': ['nav.about', 'about.title'],
+      'contact': ['nav.contact', 'pages.contact.title'],
+      'appointment': ['nav.appointment', 'appointment.title'],
+      'practical-info': ['nav.practicalInfo'],
+      'privacy': ['pages.privacy.title'],
+      'disclaimer': ['pages.disclaimer.title'],
     };
 
-    const key = pageKeyMap[pageSegment];
-    if (!key) return '';
-    const translated = this.languageService.t(key);
-    return translated === key ? '' : translated;
+    const keys = pageKeyMap[pageSegment];
+    if (!keys) return '';
+
+    for (const key of keys) {
+      const translated = this.languageService.t(key);
+      if (translated !== key) {
+        return translated;
+      }
+    }
+
+    return '';
   }
 }

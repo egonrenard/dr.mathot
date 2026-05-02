@@ -26,11 +26,17 @@ export class PageHeader {
     },
     {
       id: 3,
+      label: this.languageService.t('nav.practicalInfo'),
+      routerLink: this.languageService.getLocalizedRoute('practical-info'),
+      isDarkRed: false,
+    },
+    {
+      id: 4,
       label: this.languageService.t('nav.contact'),
       routerLink: this.languageService.getLocalizedRoute('contact'),
     },
     {
-      id: 4,
+      id: 5,
       label: this.languageService.t('nav.appointment'),
       routerLink: this.languageService.getLocalizedRoute('appointment'),
       isDarkRed: false,

@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.collapse-box {
+  background: #fffdf9;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px #00000017;
+  border-radius: 12px;
+  overflow: hidden;
+  user-select: none;
+}
+
+.collapse-header {
+  padding: 1rem 1.1rem;
+  background-color: var(--button-active);
+  color: var(--olivia-cream);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.collapse-content {
+  padding: 1rem 1.1rem;
+}
+
+#collapse-arrow {
+  transition: transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+}
+
+#collapse-arrow.open {
+  transform: rotate(180deg);
+}

@@ -42,23 +42,22 @@ h3 {
 
 .contact-panel {
   background: #fffdf9;
-  border: 1px solid var(--border-color-light);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px #00000017;
   border-radius: 12px;
   padding: 1rem 1.1rem;
-  box-shadow: none;
-  box-shadow: 1px 1px 6px #00000017;
 }
 
 .contact-panel-urgent {
-  background: #fff5f2;
-  border-color: #d98b7a66;
+  border-color: var(--title-color);
 }
 
 .contact-panel h2 {
   margin-bottom: 0.85rem;
   font-family: var(--font-type-header);
-  font-weight: 500;
   letter-spacing: 0.02em;
+  color: var(--text-color);
 }
 
 .section-intro {
@@ -97,18 +96,34 @@ h3 {
   flex: 0 0 18px;
 }
 
+p a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-bottom: 1px solid var(--text-color);
+  width: fit-content;
+  transition: border-bottom-color 0.2s ease;
+}
+
+p a:hover {
+  border-bottom-color: var(--button-active);
+  color: var(--button-active);
+}
+
 .contact-line a {
   color: var(--text-color);
   text-decoration: none;
   font-size: 1.1em;
   font-weight: 500;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   width: fit-content;
   transition: border-bottom-color 0.2s ease;
 }
 
 .contact-line a:hover {
   border-bottom-color: var(--button-active);
+  color: var(--button-active);
 }
 
 .urgent-list {
@@ -118,6 +133,19 @@ h3 {
 
 .urgent-list li {
   margin-bottom: 0.45rem;
+}
+
+.urgent-list .urgent-phone-link {
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-color);
+  font-weight: 700;
+}
+
+
+.urgent-list .urgent-phone-link:hover {
+  color: var(--button-active);
+  border-bottom-color: var(--button-active);
 }
 
 .clinics-section {
@@ -165,12 +193,13 @@ h3 {
   margin-top: 0.35rem;
   color: var(--text-color);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid var(--text-color);
   transition: border-bottom-color 0.2s ease;
 }
 
 .clinic-map-link:hover {
   border-bottom-color: var(--button-active);
+  color: var(--button-active);
 }
 
 .contact-note {
@@ -187,14 +216,15 @@ h3 {
 
 .contact-note-link {
   color: var(--text-color);
-  text-decoration: none;
   display: inline-block;
-  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-color);
   transition: border-bottom-color 0.2s ease;
 }
 
 .contact-note-link:hover {
   border-bottom-color: var(--button-active);
+  color: var(--button-active);
 }
 
 .medical-disclaimer-section {
@@ -202,19 +232,19 @@ h3 {
 }
 
 .medical-disclaimer-box {
-  background: linear-gradient(180deg, #ffffff 0%, #fff5f2 100%);
-  border: 1px solid #d98b7a66;
-  border-radius: 12px;
-  padding: 1.2rem 1.3rem;
+  background: #fffdf9;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 4px;
   box-shadow: 1px 1px 6px #00000017;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
 }
 
 .medical-disclaimer-box h2 {
-  margin-top: 0;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.85rem;
   font-family: var(--font-type-header);
-  font-weight: 500;
   letter-spacing: 0.02em;
+  color: var(--text-color);
 }
 
 .medical-disclaimer-box p {

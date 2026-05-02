@@ -64,7 +64,7 @@ export class LanguageService {
     return key;
   }
 
-  getLocalizedRoute(path: '' | 'about' | 'contact' | 'appointment', language = this.currentLanguage()): string {
+  getLocalizedRoute(path: '' | 'about' | 'contact' | 'appointment' | 'privacy' | 'disclaimer' | 'practical-info', language = this.currentLanguage()): string {
     if (path === '') {
       return `/${language}`;
     }

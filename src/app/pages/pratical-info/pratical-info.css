@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-.about-page {
+.pratical-info-page {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -17,16 +17,16 @@
   
 }
 
-.about-hero {
+.pratical-info-hero {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.about-hero h1 {
+.pratical-info-hero h1 {
   margin-bottom: 0.5rem;
 }
 
-.about-intro {
+.pratical-info-intro {
   color: var(--text-color);
   opacity: 0.9;
   font-size: 1.05rem;
@@ -34,7 +34,7 @@
   line-height: 1.6;
 }
 
-.about-content {
+.pratical-info-content {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -43,20 +43,20 @@
 
 
 @media (max-width: 768px) {
-  .about-page {
+  .pratical-info-page {
     padding: 2vh 5vw;
     padding: 2dvh 5dvw;
     gap: 1.5rem;
   }
 
-  .about-content {
+  .pratical-info-content {
     gap: 1.8rem;
   }
 
 }
 
 @media (max-width: 480px) {
-  .about-page {
+  .pratical-info-page {
     padding: 1.5vh 4vw;
     padding: 1.5dvh 4dvw;
   }

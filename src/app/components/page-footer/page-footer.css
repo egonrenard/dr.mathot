@@ -38,7 +38,7 @@
   padding: 0;
   text-align: left;
   width: 100%;
-  padding-bottom:  0.8rem;
+  padding-bottom: 0.8rem;
 }
 
 .footer-card-urgent {
@@ -68,30 +68,53 @@
 
 .footer-card .footer-clinic-name:first-of-type {
   margin-top: 0;
-  
 }
 
 .footer-clinic-name {
   margin-top: 0.45rem;
   font-weight: 700;
-  color: #3f2b35;
+  color: var(--text-color);
 }
 
-.footer-emergency {
-  color: #742235;
-  font-size: 1.1rem;
-  font-weight: 600;
+
+
+.footer-emergency-line {
+  gap: 0.5rem;
+}
+
+.footer-phone-link {
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+.footer-phone-link:hover {
+  color: var(--button-active);
+  border-bottom-color: var(--button-active);
+}
+
+.footer-privacy-label-line {
+  margin-top: 0.35rem;
+}
+
+.footer-privacy-links-line {
+  margin-top: 0;
 }
 
 .footer-link {
   color: var(--text-color);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--text-color);
   transition: border-bottom-color 0.2s ease;
+  -webkit-transition: border-bottom-color 0.2s ease;
+  -moz-transition: border-bottom-color 0.2s ease;
+  -ms-transition: border-bottom-color 0.2s ease;
+  -o-transition: border-bottom-color 0.2s ease;
 }
 
 .footer-link:hover {
   border-bottom-color: var(--button-active);
+  color: var(--button-active);
 }
 
 .footer-copyright {
@@ -105,6 +128,12 @@
 @media (min-width: 768px) {
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 3.5vh;
+    margin-top: 3.5dvh;
+  }
+  .footer-copyright {
+    margin-top: 3.5vh;
+    margin-top: 3.5dvh;
   }
 
   .footer-grid > .footer-card:first-child {
@@ -130,7 +159,5 @@
     font-size: 0.92rem;
   }
 
-  .footer-emergency {
-    font-size: 1.15rem;
-  }
+
 }

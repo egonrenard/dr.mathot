@@ -1,0 +1,12 @@
+<section class="collapse-box">
+  <div class="collapse-header" (click)="toggle()" (keydown.enter)="toggle()" role="button" aria-expanded="{{ isOpen }}" tabindex="0">
+    <h2>{{ title }}</h2>
+    <img src="/icons/collapse-arrow.svg" id="collapse-arrow" [class.open]="isOpen" alt="Toggle collapse" />
+  </div>
+  @if (isOpen) {
+    <div class="collapse-content">
+      test
+    </div>
+  }
+
+</section>

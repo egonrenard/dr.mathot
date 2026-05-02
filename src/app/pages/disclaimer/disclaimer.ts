@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language';
 
 @Component({
-  selector: 'contact-page',
+  selector: 'app-disclaimer',
   imports: [],
-  templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  templateUrl: './disclaimer.html',
+  styleUrl: './disclaimer.css',
 })
-export class Contact {
+export class Disclaimer {
   readonly languageService = inject(LanguageService);
 }
