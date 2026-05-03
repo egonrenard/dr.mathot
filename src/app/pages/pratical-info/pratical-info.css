@@ -14,7 +14,6 @@
   margin-top: 3dvh;
   gap: 2.2rem;
   cursor: default;
-  
 }
 
 .pratical-info-hero {
@@ -40,6 +39,32 @@
   gap: 2.5rem;
 }
 
+.pratical-info-paragraph{
+  font-style:italic;
+  opacity: 0.9;
+  margin-top: 1rem;
+
+}
+
+.pratical-info-subtitle{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.file-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+a{
+  color: var(--button-active);
+  text-decoration: none;
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -60,6 +85,5 @@
     padding: 1.5vh 4vw;
     padding: 1.5dvh 4dvw;
   }
-
 
 }

@@ -1,10 +1,140 @@
 <div class="pratical-info-page">
   <header class="pratical-info-hero">
-    <h1></h1>
-    <p class="pratical-info-intro"></p>
+    <h1>{{ languageService.t('pages.practicalInfo.title') }}</h1>
+    <p class="pratical-info-intro">{{ languageService.t('pages.practicalInfo.intro') }}</p>
   </header>
 
   <main class="pratical-info-content">
-    <collapse-box></collapse-box>
+    <collapse-box title="{{ languageService.t('pages.practicalInfo.section1Title') }}">
+      <ul>
+        <li>{{ languageService.t('pages.practicalInfo.section1List1') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section1List2') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section1List3') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section1List4') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section1List5') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section1List6') }}</li>
+      </ul>
+    </collapse-box>
+
+    <collapse-box title="{{ languageService.t('pages.practicalInfo.section2Title') }}">
+      <ul>
+        <li>{{ languageService.t('pages.practicalInfo.section2List1') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section2List2') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section2List3') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section2List4') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section2List5') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section2List6') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section2List7') }}</li>
+      </ul>
+    </collapse-box>
+
+    <collapse-box title="{{ languageService.t('pages.practicalInfo.section3Title') }}">
+      <p>{{ languageService.t('pages.practicalInfo.section3Paragraph1') }}</p>
+    </collapse-box>
+
+    <collapse-box title="{{ languageService.t('pages.practicalInfo.section4Title') }}">
+      <ul>
+        <li>{{ languageService.t('pages.practicalInfo.section4List1') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section4List2') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section4List3') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section4List4') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section4List5') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section4List6') }}</li>
+        <li>{{ languageService.t('pages.practicalInfo.section4List7') }}</li>
+      </ul>
+    </collapse-box>
+
+    <collapse-box title="{{ languageService.t('pages.practicalInfo.section5Title') }}">
+      <p [innerHTML]="languageService.t('pages.practicalInfo.section5Paragraph1')"></p>
+      <p>{{ languageService.t('pages.practicalInfo.section5Paragraph2') }}</p>
+
+      <p
+        class="pratical-info-paragraph"
+        [innerHTML]="languageService.t('pages.practicalInfo.section5Paragraph3')"
+      ></p>
+
+      <p class="pratical-info-subtitle">
+        {{ languageService.t('pages.practicalInfo.section5Paragraph4') }}
+      </p>
+      <ul class="file-list">
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List1') }}
+        </li>
+
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List2') }}
+        </li>
+
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List3') }}
+        </li>
+
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List4') }}
+        </li>
+
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List5') }}
+        </li>
+
+        <pdf-box>
+          <a
+            href="/documents/DERMATHOT_PREPARE_YOUR_CONSULTATION_ESTHETIC_(FR.NL.EN).pdf"
+            target="_blank"
+            >{{ languageService.t('pages.practicalInfo.section5Paragraph13') }}</a
+          >
+        </pdf-box>
+        <pdf-box>
+          <a
+            href="/documents/DERMATHOT_PREPARE_YOUR_CONSULTATION_ESTHETIC_(FR.NL.EN).pdf"
+            download
+            >{{ languageService.t('pages.practicalInfo.section5Paragraph14') }}</a
+          >
+        </pdf-box>
+
+        <pdf-box>
+          <a
+            href="/documents/DERMATHOT_Prepare_your_consultation_HYPERPIGMENTATION_(FR.NL.EN).pdf"
+            target="_blank"
+            >{{ languageService.t('pages.practicalInfo.section5Paragraph15') }}</a
+          >
+        </pdf-box>
+        <pdf-box>
+          <a
+            href="/documents/DERMATHOT_Prepare_your_consultation_HYPERPIGMENTATION_(FR.NL.EN).pdf"
+            download
+            >{{ languageService.t('pages.practicalInfo.section5Paragraph16') }}</a
+          >
+        </pdf-box>
+      </ul>
+
+      <p class="pratical-info-subtitle">
+        {{ languageService.t('pages.practicalInfo.section5Paragraph5') }}
+      </p>
+
+      <ul class="file-list">
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List6') }}
+        </li>
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List7') }}
+        </li>
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List8') }}
+        </li>
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List9') }}
+        </li>
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List10') }}
+        </li>
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List11') }}
+        </li>
+        <li>
+          {{ languageService.t('pages.practicalInfo.section5List12') }}
+        </li>
+      </ul>
+    </collapse-box>
   </main>
 </div>

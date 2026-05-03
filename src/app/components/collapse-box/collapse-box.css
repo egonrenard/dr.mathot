@@ -12,26 +12,111 @@
   user-select: none;
 }
 
+.collapse-header:focus {
+  outline: none;
+}
+
+/* Dicht + keyboard: inset rand op de header */
+.collapse-box.keyboard-focus:not(.open) .collapse-header {
+  box-shadow: inset 0 0 0 3px var(--primary-color);
+}
+
+/* Open + keyboard: rode rand rond heel de box */
+.collapse-box.open.keyboard-focus {
+  box-shadow: 1px 1px 6px #00000017, 0 0 0 3px var(--button-active);
+}
+
+
 .collapse-header {
-  padding: 1rem 1.1rem;
+  padding: 0.35rem 1rem;
   background-color: var(--button-active);
   color: var(--olivia-cream);
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.collapse-header h2{
+  color: var(--olivia-cream);
 }
 
 .collapse-content {
   padding: 1rem 1.1rem;
 }
 
+.collapse-content ::ng-deep ul {
+  padding: 1rem 1.1rem;
+  margin: 0;
+}
+
+.collapse-content-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.3s;
+}
+
+.collapse-content-wrapper.open {
+  max-height: 2000px;
+  opacity: 1;
+  transition:
+    max-height 0.5s ease,
+    opacity 2s ease 0.1s;
+}
+
 #collapse-arrow {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
   width: 32px;
   height: 32px;
+  -webkit-transition: transform 0.4s ease;
+  -moz-transition: transform 0.4s ease;
+  -ms-transition: transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
 }
 
 #collapse-arrow.open {
   transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .collapse-header {
+    padding: 0.35rem 1.2rem;
+  }
+
+  .collapse-content {
+    padding: 1rem 1.2rem;
+  }
+
+  .collapse-content ::ng-deep ul {
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  .collapse-header {
+    padding: 0.45rem 1.4rem;
+  }
+
+  .collapse-content {
+    padding: 1rem 1.4rem;
+  }
+  .collapse-content ::ng-deep ul {
+    padding: 1rem 1.4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .collapse-header {
+    padding: 0.45rem 1.6rem;
+  }
+
+  .collapse-content {
+    padding: 1rem 1.6rem;
+  }
+  .collapse-content ::ng-deep ul {
+    padding: 1rem 1.6rem;
+  }
 }

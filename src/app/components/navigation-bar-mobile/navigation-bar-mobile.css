@@ -38,7 +38,7 @@
   height: 44px;
   border: none;
   border-radius: 8px;
-  background: white;
+  background: var(--olivia-cream);
   color: var(--olivia-brown);
   font-size: 2rem;
   font-weight: 300;

@@ -1,0 +1,15 @@
+<div
+  class="pdf-box"
+  role="link"
+  tabindex="0"
+  [attr.aria-label]="label"
+  (click)="onBoxClick($event)"
+  (keydown)="onBoxKeydown($event)"
+>
+  <div class="icon-wrapper">
+    <img src="/images/file-pdf.png" alt="PDF Icon" />
+  </div>
+  <div class="pdf-content">
+    <ng-content></ng-content>
+  </div>
+</div>

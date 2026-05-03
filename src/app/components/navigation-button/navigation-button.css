@@ -24,14 +24,14 @@
 
 .nav-button.selected {
   background-color: var(--olivia-rose);
-  color:white;
+  color:var(--olivia-cream);
   border-bottom: 2px solid var(--olivia-rose);
 }
 
 .nav-button.dark-red,
 .nav-button.dark-red.selected {
   background-color: var(--button-primary);
-  color: white;
+  color: var(--olivia-cream);
   border-bottom: 2px solid var(--button-active);
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -42,7 +42,7 @@
 
 .nav-button.dark-red:hover {
   background-color: var(--button-hover);
-  color:white;
+  color:var(--olivia-cream);
 }
 
 
