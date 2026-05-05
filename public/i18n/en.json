@@ -11,11 +11,42 @@
   },
   "header": {
     "menuAlt": "Menu",
-    "languageSwitcherAria": "Language selector"
+    "languageSwitcherAria": "Language selector",
+    "logoAlt": "Dr. Mathot logo"
   },
   "seo": {
     "title": "Dr. Mathot",
-    "description": "Your specialist in General Dermatology and Nail Disorders."
+    "description": "Your specialist in General Dermatology and Nail Disorders.",
+    "pages": {
+      "home": {
+        "title": "Home",
+        "description": "Dermatologist in Brussels for medical, aesthetic and pediatric dermatology, with special expertise in nail disorders."
+      },
+      "about": {
+        "title": "About Me",
+        "description": "Discover Dr. Olivia Mathot's background and expertise in dermatology and venereology."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "Contact Dr. Mathot's practice for general questions, clinic addresses and urgent guidance."
+      },
+      "appointment": {
+        "title": "Make an Appointment",
+        "description": "Book your dermatology consultation with Dr. Mathot in Etterbeek or Uccle."
+      },
+      "practicalInfo": {
+        "title": "Practical Info",
+        "description": "Read practical information about appointments, preparation, fees and useful documents."
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "description": "Learn how Dr. Mathot processes and protects personal data in line with GDPR requirements."
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "description": "Important legal and medical information regarding the use of this website."
+      }
+    }
   },
   "home": {
     "header": "Dermatologist in Brussels",
@@ -255,19 +286,79 @@
       "section5Paragraph2": "This information is intended to help you better understand your care pathway and prepare your consultation optimally.",
       "section5Paragraph3": "These documents are <strong>for information purposes only</strong> and <strong>do not</strong> replace personal <strong>medical advice</strong> under any circumstances.",
       "section5Paragraph4": "Preparing your consultation",
+      "section5PreparationSummary1": "Good preparation helps your consultation run more efficiently and allows your situation to be assessed more accurately.",
+      "section5PreparationSummary2": "You will find the detailed preparation instructions for each type of consultation in the documents below.",
+      "section5PreparationLink": "View the preparation documents below.",
+      "section5AestheticTitle": "Aesthetic consultation",
+      "section5AestheticIntro1": "Why prepare your aesthetic consultation?",
+      "section5AestheticIntro2": "Each face is unique, which is why a personalized assessment is essential. This approach is primarily medical: it is based on a precise anatomical analysis and current scientific evidence to propose a tailored, gradual and natural treatment plan.",
+      "section5AestheticExpectationsTitle": "Your expectations",
+      "section5AestheticExpectations1": "What concerns you most? (wrinkles, spots, skin laxity, texture, dark circles, scars, etc.)",
+      "section5AestheticExpectations2": "What type of result are you aiming for? (a refreshed look, subtle outcome, overall improvement)",
+      "section5AestheticHistoryTitle": "Aesthetic history",
+      "section5AestheticHistory1": "Have you previously undergone aesthetic treatments? (injections, laser, peels, surgery, etc.)",
+      "section5AestheticHistory2": "If so: treated areas, dates, types of products used, and results obtained.",
+      "section5AestheticMedicalTitle": "Medical history and current treatments",
+      "section5AestheticMedical1": "Chronic or autoimmune diseases, or coagulation disorders?",
+      "section5AestheticMedical2": "History of herpes or abnormal scarring (keloids)?",
+      "section5AestheticMedical3": "Current treatments: medications (anticoagulants, aspirin, anti-inflammatory drugs), supplements, or active dermatological treatments (retinoids, acids).",
+      "section5AestheticMedical4": "Pregnancy and breastfeeding: as a precaution, most aesthetic procedures are contraindicated during this period. Please inform me if applicable.",
+      "section5AestheticProcessTitle": "Procedure and legal framework",
+      "section5AestheticProcess1": "An aesthetic consultation is a full medical act that follows a structured and regulated process:",
+      "section5AestheticProcess2": "Comprehensive assessment: evaluation of your skin and discussion of available treatment options (topical treatments, peels, lasers, injections...).",
+      "section5AestheticProcess3": "Informed information: expected benefits, as well as limitations, risks and potential side effects of each technique will be explained.",
+      "section5AestheticProcess4": "Quotation and informed consent: following the consultation, you will receive a detailed quotation and an informed consent form.",
+      "section5AestheticProcess5": "Cooling-off period: in accordance with medical ethics, a reflection period (usually 15 days) is respected between the quotation and the procedure.",
+      "section5AestheticNatureTitle": "Nature of the procedures",
+      "section5AestheticNature1": "Aesthetic treatments are medical procedures that require appropriate indication.",
+      "section5AestheticNature2": "The physician reserves the right to refuse a treatment if it presents a risk or is not medically justified.",
+      "section5AestheticFeesTitle": "Fees",
+      "section5AestheticFees1": "Consultations and aesthetic procedures are not covered by health insurance and do not entitle you to medical leave.",
+      "section5HyperIntro1": "Why prepare your consultation?",
+      "section5HyperIntro2": "Pigmentary disorders (melasma, lentigines, post-inflammatory hyperpigmentation, etc.) are common and often chronic. Their management requires a precise assessment of your skin, your habits, and potential triggering factors.",
+      "section5HyperBeforeTitle": "Before your appointment",
+      "section5HyperSkinTitle": "Skin",
+      "section5HyperSkin1": "Ideally come without makeup, or with light makeup that can be easily removed.",
+      "section5HyperSkin2": "Avoid irritating skincare products (scrubs, acids, retinoids) in the days leading up to the consultation.",
+      "section5HyperSunTitle": "Sun exposure",
+      "section5HyperSun1": "Are you regularly exposed to the sun?",
+      "section5HyperSun2": "Have you recently had significant sun exposure (holidays, skiing, etc.)?",
+      "section5HyperProtectionTitle": "Photoprotection",
+      "section5HyperProtection1": "Do you use daily sun protection? If so, SPF30 or SPF50?",
+      "section5HyperProtection2": "How often do you reapply it?",
+      "section5HyperProtection3": "Do you use additional protective measures (hat, sunglasses, sun avoidance, etc.)?",
+      "section5HyperTreatmentTitle": "Current or past treatments",
+      "section5HyperTreatment1": "Have you already tried treatments for your pigmentation?",
+      "section5HyperTreatment2": "If yes: name of the treatments, duration of use, and results obtained.",
+      "section5HyperRoutineTitle": "Skincare routine",
+      "section5HyperRoutine1": "What products do you use on a daily basis? (cleansers, creams, serums, acids, makeup, etc.)",
+      "section5HyperTriggersTitle": "Triggering factors",
+      "section5HyperTriggers1": "Have you noticed any factors that worsen your pigmentation? Sun exposure, pregnancy, hormonal contraception, medications, skin inflammation (acne, irritation, etc.).",
+      "section5HyperEvolutionTitle": "Evolution",
+      "section5HyperEvolution1": "How long have the spots been present?",
+      "section5HyperEvolution2": "Are they stable, worsening or improving?",
+      "section5HyperEvolution3": "If possible, please bring photos showing their progression.",
       "section5List1": "Nails",
       "section5List2": "Acne",
       "section5List3": "Laser",
       "section5List4": "Hyperpigmentation",
       "section5List5": "Skin cancer screening",
       "section5Paragraph5": "Skin cancer",
+      "section5SkinCancerIntro": "Skin cancer is the most common form of cancer. Early detection is crucial for successful treatment. Through the links below, provided by the European EUROMELANOMA campaign, you will find reliable information about different skin types, risk factors, types of skin cancer, and how to protect your skin from harmful UV radiation.",
       "section5List6": "EUROMELANOMA campaign",
+      "section5List6Url": "https://www.euromelanoma.eu/en-gb/about-euromelanoma/our-campaigns",
       "section5List7": "Discover your skin type",
+      "section5List7Url": "https://www.euromelanoma.eu/en-gb/prevent-skin-cancer/know-your-skin-type",
       "section5List8": "Who is in danger?",
+      "section5List8Url": "https://www.euromelanoma.eu/en-gb/check-for-skin-cancer",
       "section5List9": "Who is at risk?",
+      "section5List9Url": "https://www.euromelanoma.eu/en-gb/check-for-skin-cancer/what-to-look-for",
       "section5List10": "Types of skin cancers",
+      "section5List10Url": "https://www.euromelanoma.eu/en-gb/learn-about-skin-cancer/types-of-skin-cancer",
       "section5List11": "Protect your skin",
+      "section5List11Url": "https://www.euromelanoma.eu/en-gb/prevent-skin-cancer/protect-your-skin",
       "section5List12": "Sun exposure/tanning and sunbeds",
+      "section5List12Url": "https://www.euromelanoma.eu/en-gb/prevent-skin-cancer/tanning-and-sunbeds",
       "section5Paragraph13": "View the 'Aesthetic Preparation' document.",
       "section5Paragraph14": "Download 'Aesthetic Preparation'.",
       "section5Paragraph15": "View the 'Hyperpigmentation Preparation' document.",

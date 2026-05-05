@@ -27,8 +27,8 @@
   flex-direction: column;
   justify-content: flex-start;
   justify-items: start;
-  padding: 2vh 10vw;
-  padding: 2dvh 10dvw;
+  padding: 2vh 8vw;
+  padding: 2dvh 8dvw;
   gap: 1rem;
 }
 

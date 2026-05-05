@@ -41,6 +41,7 @@
 
   /* 'Quicksand' of 'Montserrat' zijn goede vervangers voor Corbel  */
   --font-type-body: 'Quicksand', sans-serif;
+  --font-size-base: 17px;
 
   /* Safe-area insets for devices with notches/camera islands */
   --safe-area-top: env(safe-area-inset-top, 0px);
@@ -56,6 +57,10 @@
     --safe-area-bottom: constant(safe-area-inset-bottom);
     --safe-area-left: constant(safe-area-inset-left);
   }
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 /* Global Styles */
@@ -74,10 +79,20 @@ body {
 
   color: var(--text-color);
   font-family: var(--font-type-body);
+  font-size: var(--font-size-base);
   line-height: 1.6;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25em;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 h1 {

@@ -11,11 +11,42 @@
   },
   "header": {
     "menuAlt": "Menu",
-    "languageSwitcherAria": "Taalselectie"
+    "languageSwitcherAria": "Taalselectie",
+    "logoAlt": "Dr. Mathot logo"
   },
   "seo": {
     "title": "Dr. Mathot",
-    "description": "Specialist in Algemene Dermatologie en Nagelaandoeningen."
+    "description": "Specialist in Algemene Dermatologie en Nagelaandoeningen.",
+    "pages": {
+      "home": {
+        "title": "Home",
+        "description": "Dermatoloog in Brussel voor medische, esthetische en pediatrische dermatologie met bijzondere aandacht voor nagelaandoeningen."
+      },
+      "about": {
+        "title": "Over mij",
+        "description": "Ontdek het parcours en de expertise van Dr. Olivia Mathot in dermatologie en venereologie."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "Contacteer de praktijk van Dr. Mathot voor algemene vragen, praktijkadressen en dringende informatie."
+      },
+      "appointment": {
+        "title": "Maak een afspraak",
+        "description": "Plan uw dermatologische consultatie bij Dr. Mathot in Etterbeek of Ukkel."
+      },
+      "practicalInfo": {
+        "title": "Praktische info",
+        "description": "Lees praktische informatie over afspraken, voorbereiding, erelonen en nuttige documenten."
+      },
+      "privacy": {
+        "title": "Privacyverklaring",
+        "description": "Lees hoe Dr. Mathot persoonsgegevens verwerkt en beschermt volgens de GDPR-wetgeving."
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "description": "Belangrijke juridische en medische informatie over het gebruik van deze website."
+      }
+    }
   },
   "home": {
     "header": "Dermatoloog in Brussel",
@@ -254,20 +285,80 @@
       "section5Paragraph1": "Om u zo goed mogelijk te begeleiden, vindt u hieronder een selectie van <strong>praktische documenten</strong> die u vóór of na uw afspraak kunt raadplegen.",
       "section5Paragraph2": "Deze informatie is bedoeld om u te helpen uw zorgtraject beter te begrijpen en uw consultatie optimaal voor te bereiden.",
       "section5Paragraph3": "Deze documenten zijn <strong>uitsluitend informatief</strong> en vervangen in <strong>geen geval</strong> een persoonlijk <strong>medisch advies</strong>.",
-      "section5Paragraph4": "Consultatie voorbereiden ",
+      "section5Paragraph4": "Consultatie voorbereiden",
+      "section5PreparationSummary1": "Een goede voorbereiding helpt om uw consultatie efficiënter te laten verlopen en om uw situatie correct te kunnen beoordelen.",
+      "section5PreparationSummary2": "De gedetailleerde voorbereiding per type consultatie vindt u in de documenten hieronder.",
+      "section5PreparationLink": "Bekijk de voorbereidingsdocumenten hieronder.",
+      "section5AestheticTitle": "Esthetiek",
+      "section5AestheticIntro1": "Waarom uw esthetische consultatie voorbereiden?",
+      "section5AestheticIntro2": "Elk gezicht is uniek, daarom is een gepersonaliseerde evaluatie essentieel. De aanpak is in de eerste plaats medisch: ze berust op een nauwkeurige anatomische analyse en op actuele wetenschappelijke inzichten om een aangepaste, geleidelijke en natuurlijke behandeling voor te stellen.",
+      "section5AestheticExpectationsTitle": "Uw verwachtingen",
+      "section5AestheticExpectations1": "Wat stoort u precies? (rimpels, vlekken, verslapping, huidtextuur, wallen, littekens, ...)",
+      "section5AestheticExpectations2": "Welk type resultaat wenst u? (frisse uitstraling, subtiel resultaat, globale verbetering)",
+      "section5AestheticHistoryTitle": "Esthetische voorgeschiedenis",
+      "section5AestheticHistory1": "Heeft u al esthetische behandelingen ondergaan? (injecties, laser, peelings, chirurgie, ...)",
+      "section5AestheticHistory2": "Zo ja: behandelde zones, data, gebruikte producten en behaalde resultaten.",
+      "section5AestheticMedicalTitle": "Medische voorgeschiedenis en behandelingen",
+      "section5AestheticMedical1": "Chronische of auto-immuunziekten, of stollingsstoornissen?",
+      "section5AestheticMedical2": "Voorgeschiedenis van herpes of abnormale littekenvorming (keloïden)?",
+      "section5AestheticMedical3": "Lopende behandelingen: medicatie (anticoagulantia, aspirine, ontstekingsremmers), voedingssupplementen of actieve dermatologische behandelingen (retinoïden, zuren).",
+      "section5AestheticMedical4": "Zwangerschap en borstvoeding: uit voorzorg zijn de meeste esthetische behandelingen in deze periode tegenaangewezen. Gelieve dit te melden.",
+      "section5AestheticProcessTitle": "Verloop en wettelijk kader",
+      "section5AestheticProcess1": "Een esthetische consultatie is een volwaardige medische handeling die volgens een gestructureerd en gereguleerd proces verloopt:",
+      "section5AestheticProcess2": "Globale evaluatie: opstellen van een huidanalyse en bespreking van de verschillende behandelingsopties (topische behandelingen, peelings, lasers, injecties...).",
+      "section5AestheticProcess3": "Informatieplicht: de verwachte voordelen, maar ook de beperkingen, risico's en mogelijke bijwerkingen van elke techniek worden toegelicht.",
+      "section5AestheticProcess4": "Offerte en geïnformeerde toestemming: na de consultatie ontvangt u een gedetailleerde offerte en een formulier voor geïnformeerde toestemming.",
+      "section5AestheticProcess5": "Bedenktijd: overeenkomstig de deontologie wordt een bedenktijd (meestal 15 dagen) gerespecteerd tussen de offerte en de uitvoering van de behandeling.",
+      "section5AestheticNatureTitle": "Aard van de behandelingen",
+      "section5AestheticNature1": "Esthetische behandelingen zijn medische handelingen waarvoor een correcte indicatie vereist is.",
+      "section5AestheticNature2": "De arts behoudt zich het recht voor een behandeling te weigeren indien deze een risico inhoudt of medisch niet gerechtvaardigd is.",
+      "section5AestheticFeesTitle": "Honoraria",
+      "section5AestheticFees1": "Consultaties en esthetische behandelingen worden niet terugbetaald door de ziekteverzekering en geven geen recht op een ziekteverlof.",
+      "section5HyperIntro1": "Waarom uw consultatie voorbereiden?",
+      "section5HyperIntro2": "Pigmentstoornissen (melasma, lentigines, post-inflammatoire hyperpigmentatie...) komen vaak voor en zijn meestal chronisch. De behandeling vereist een grondige analyse van uw huid, uw gewoonten en mogelijke uitlokkende factoren.",
+      "section5HyperBeforeTitle": "Vóór uw afspraak",
+      "section5HyperSkinTitle": "Huid",
+      "section5HyperSkin1": "Kom bij voorkeur zonder make-up, of lichte make-up die gemakkelijk te verwijderen is.",
+      "section5HyperSkin2": "Vermijd irriterende behandelingen (peelings, zuren, retinoïden) in de dagen vóór de consultatie.",
+      "section5HyperSunTitle": "Zonblootstelling",
+      "section5HyperSun1": "Wordt u regelmatig blootgesteld aan de zon?",
+      "section5HyperSun2": "Bent u recent sterk blootgesteld geweest (vakantie, skiën, ...)?",
+      "section5HyperProtectionTitle": "Zonbescherming",
+      "section5HyperProtection1": "Gebruikt u dagelijks zonnebescherming? Zo ja: SPF30 of SPF50?",
+      "section5HyperProtection2": "Hoe vaak brengt u deze aan?",
+      "section5HyperProtection3": "Gebruikt u andere beschermingsmaatregelen (hoed, zonnebril, zon vermijden, ...)?",
+      "section5HyperTreatmentTitle": "Huidige en eerdere behandelingen",
+      "section5HyperTreatment1": "Heeft u al behandelingen geprobeerd voor uw pigmentvlekken?",
+      "section5HyperTreatment2": "Zo ja: naam van de behandeling, duur van gebruik en resultaat.",
+      "section5HyperRoutineTitle": "Verzorgingsroutine",
+      "section5HyperRoutine1": "Welke producten gebruikt u dagelijks? (reinigers, crèmes, serums, zuren, make-up, enz.)",
+      "section5HyperTriggersTitle": "Uitlokkende factoren",
+      "section5HyperTriggers1": "Heeft u factoren opgemerkt die uw vlekken verergeren? Zon, zwangerschap, hormonale anticonceptie, medicatie, huidontsteking (acne, irritatie, ...).",
+      "section5HyperEvolutionTitle": "Evolutie",
+      "section5HyperEvolution1": "Sinds wanneer zijn de vlekken aanwezig?",
+      "section5HyperEvolution2": "Zijn ze stabiel, verergerend of verbeterend?",
+      "section5HyperEvolution3": "Indien mogelijk, breng foto's mee van de evolutie.",
       "section5List1": "Nagels",
       "section5List2": "Acne",
       "section5List3": "Laser",
       "section5List4": "Hyperpigmnetation",
       "section5List5": "Huidkankerscreening",
       "section5Paragraph5": "Huidkanker",
-      "section5List6": "Campagne EUROMELANOMA ",
+      "section5SkinCancerIntro": "Huidkanker is de meest voorkomende vorm van kanker. Een vroege opsporing is cruciaal voor een succesvolle behandeling. Via de onderstaande links van de Europese EUROMELANOMA-campagne vindt u betrouwbare informatie over de verschillende huidtypes, risicofactoren, soorten huidkankers en hoe u uw huid kunt beschermen tegen schadelijke zonnestraling.",
+      "section5List6": "Campagne EUROMELANOMA",
+      "section5List6Url": "https://www.euromelanoma.eu/nl-be/over-euromelanoma/onze-campagnes",
       "section5List7": "Ontdek uw huidtype",
+      "section5List7Url": "https://www.euromelanoma.eu/nl-be/huidkanker-voorkomen/ken-je-huidtype",
       "section5List8": "Wie is in gevaar ?",
+      "section5List8Url": "https://www.euromelanoma.eu/nl-be/controleer-op-huidkanker",
       "section5List9": "Wie loopt er risico ?",
+      "section5List9Url": "https://www.euromelanoma.eu/nl-be/controleer-op-huidkanker/waar-op-te-letten",
       "section5List10": "Soorten huidkankers",
+      "section5List10Url": "https://www.euromelanoma.eu/nl-be/leer-over-huidkanker/soorten-huidkankers",
       "section5List11": "Bescherm je huid",
+      "section5List11Url": "https://www.euromelanoma.eu/nl-be/huidkanker-voorkomen/bescherm-je-huid",
       "section5List12": "Zonnen/bruinen en zonnebanken",
+      "section5List12Url": "https://www.euromelanoma.eu/nl-be/huidkanker-voorkomen/zonnen-bruinen-en-zonnebanken",
       "section5Paragraph13": "Bekijk het document 'Voorbereiding Esthiek' .",
       "section5Paragraph14": "Download 'Voorbereiding Esthiek' .",
       "section5Paragraph15": "Bekijk het document 'Voorbereiding Hyperpigmentatie' .",

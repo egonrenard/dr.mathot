@@ -16,6 +16,10 @@
   cursor: default;
 }
 
+p {
+  margin-bottom: 1.5rem;
+}
+
 .pratical-info-hero {
   width: 100%;
   margin-bottom: 1rem;
@@ -39,33 +43,62 @@
   gap: 2.5rem;
 }
 
-.pratical-info-paragraph{
-  font-style:italic;
+.pratical-info-paragraph {
+  font-style: italic;
   opacity: 0.9;
   margin-top: 1rem;
-
 }
 
-.pratical-info-subtitle{
+.pratical-info-subtitle {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 1rem 0;
 }
 
-.file-list{
+.pratical-info-content ul:not(.file-list) {
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.pratical-info-content ul:not(.file-list) li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.file-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   list-style: none;
 }
 
-a{
+#preparation-documents {
+  scroll-margin-top: 1.5rem;
+}
+
+.pratical-info-jump-link {
+  margin-left: 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--text-color);
+  width: fit-content;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.pratical-info-jump-link:hover {
+  color: var(--button-active);
+  border-bottom-color: var(--button-active);
+}
+
+a {
   color: var(--button-active);
   text-decoration: none;
 }
-
-
-
 
 @media (max-width: 768px) {
   .pratical-info-page {
@@ -77,7 +110,6 @@ a{
   .pratical-info-content {
     gap: 1.8rem;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -85,5 +117,4 @@ a{
     padding: 1.5vh 4vw;
     padding: 1.5dvh 4dvw;
   }
-
 }

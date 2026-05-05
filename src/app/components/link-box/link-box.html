@@ -1,0 +1,15 @@
+<div
+  class="link-box"
+  role="link"
+  tabindex="0"
+  [attr.aria-label]="label"
+  (click)="onBoxClick($event)"
+  (keydown)="onBoxKeydown($event)"
+>
+  <div class="icon-wrapper">
+    <img src="/images/link.png" alt="Link Icon" />
+  </div>
+  <div class="link-content">
+    <ng-content></ng-content>
+  </div>
+</div>

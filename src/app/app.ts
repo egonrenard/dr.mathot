@@ -6,31 +6,32 @@ import { SeoService } from './services/seo';
 
 @Component({
   selector: 'app-root',
-  imports: [ PageWrapper],
+  imports: [PageWrapper],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('dr.mathot');
-  private readonly seoFallbacks: Record<SupportedLanguage, { title: string; description: string }> = {
-    nl: {
-      title: 'Dr. Mathot',
-      description: 'Specialist in Algemene Dermatologie en Nagelaandoeningen.',
-    },
-    fr: {
-      title: 'Dr. Mathot',
-      description: 'Votre specialiste en Dermatologie Generale et Pathologies Ongueales.',
-    },
-    en: {
-      title: 'Dr. Mathot',
-      description: 'Your specialist in General Dermatology and Nail Disorders.',
-    },
-  };
+  private readonly seoFallbacks: Record<SupportedLanguage, { title: string; description: string }> =
+    {
+      nl: {
+        title: 'Dr. Mathot',
+        description: 'Specialist in Algemene Dermatologie en Nagelaandoeningen.',
+      },
+      fr: {
+        title: 'Dr. Mathot',
+        description: 'Votre specialiste en Dermatologie Generale et Pathologies Ongueales.',
+      },
+      en: {
+        title: 'Dr. Mathot',
+        description: 'Your specialist in General Dermatology and Nail Disorders.',
+      },
+    };
 
   constructor(
     private readonly languageService: LanguageService,
     private readonly seoService: SeoService,
-    private readonly router: Router
+    private readonly router: Router,
   ) {
     const updateSeo = () => {
       const currentUrl = this.router.url;
@@ -39,18 +40,17 @@ export class App {
 
       const baseTitle = this.languageService.t('seo.title');
       const description = this.languageService.t('seo.description');
-      const resolvedBase = baseTitle === 'seo.title' ? this.seoFallbacks[activeLanguage].title : baseTitle;
-      const resolvedDescription = description === 'seo.description' ? this.seoFallbacks[activeLanguage].description : description;
+      const resolvedBase =
+        baseTitle === 'seo.title' ? this.seoFallbacks[activeLanguage].title : baseTitle;
+      const resolvedDescription =
+        description === 'seo.description'
+          ? this.seoFallbacks[activeLanguage].description
+          : description;
 
       const pageName = this.getPageNameFromUrl(currentUrl);
       const pageTitle = pageName ? `${pageName} | ${resolvedBase}` : resolvedBase;
 
-      this.seoService.updateMetadata(
-        pageTitle,
-        resolvedDescription,
-        '',
-        currentUrl
-      );
+      this.seoService.updateMetadata(pageTitle, resolvedDescription, '', currentUrl);
       this.seoService.updateLanguageLinks(activeLanguage, currentUrl);
     };
 
@@ -82,15 +82,15 @@ export class App {
   private getPageNameFromUrl(url: string): string {
     const [path] = url.split(/[?#]/, 1);
     const segments = path.split('/').filter(Boolean);
-    const pageSegment = segments.find(s => s !== 'nl' && s !== 'fr' && s !== 'en') ?? '';
+    const pageSegment = segments.find((s) => s !== 'nl' && s !== 'fr' && s !== 'en') ?? '';
 
     const pageKeyMap: Record<string, string[]> = {
-      'about': ['nav.about', 'about.title'],
-      'contact': ['nav.contact', 'pages.contact.title'],
-      'appointment': ['nav.appointment', 'appointment.title'],
+      about: ['nav.about', 'about.title'],
+      contact: ['nav.contact', 'pages.contact.title'],
+      appointment: ['nav.appointment', 'appointment.title'],
       'practical-info': ['nav.practicalInfo'],
-      'privacy': ['pages.privacy.title'],
-      'disclaimer': ['pages.disclaimer.title'],
+      privacy: ['pages.privacy.title'],
+      disclaimer: ['pages.disclaimer.title'],
     };
 
     const keys = pageKeyMap[pageSegment];

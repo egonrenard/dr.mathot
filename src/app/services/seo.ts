@@ -13,6 +13,11 @@ export class SeoService {
   private readonly platformId = inject(PLATFORM_ID);
 
   private readonly supportedLanguages: readonly SupportedLanguage[] = ['nl', 'fr', 'en'];
+  private readonly hreflangMap: Record<SupportedLanguage, string> = {
+    nl: 'nl-BE',
+    fr: 'fr-BE',
+    en: 'en',
+  };
 
   updateMetadata(title: string, description: string, image: string = '', url: string = '') {
     this.titleService.setTitle(title);
@@ -43,10 +48,14 @@ export class SeoService {
 
     for (const language of this.supportedLanguages) {
       const localizedPath = this.toLocalizedPath(currentUrl, language);
-      this.setLinkTag('alternate', this.toAbsoluteUrl(localizedPath), language);
+      this.setLinkTag('alternate', this.toAbsoluteUrl(localizedPath), this.hreflangMap[language]);
     }
 
-    this.setLinkTag('alternate', this.toAbsoluteUrl(this.toLocalizedPath(currentUrl, 'en')), 'x-default');
+    this.setLinkTag(
+      'alternate',
+      this.toAbsoluteUrl(this.toLocalizedPath(currentUrl, 'en')),
+      'x-default',
+    );
   }
 
   private toLocalizedPath(url: string, language: SupportedLanguage): string {
@@ -69,7 +78,9 @@ export class SeoService {
   }
 
   private setLinkTag(rel: 'canonical' | 'alternate', href: string, hreflang?: string): void {
-    const selector = hreflang ? `link[rel=\"${rel}\"][hreflang=\"${hreflang}\"]` : `link[rel=\"${rel}\"]`;
+    const selector = hreflang
+      ? `link[rel=\"${rel}\"][hreflang=\"${hreflang}\"]`
+      : `link[rel=\"${rel}\"]`;
     let link = this.document.head.querySelector(selector) as HTMLLinkElement | null;
 
     if (!link) {

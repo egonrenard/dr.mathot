@@ -14,6 +14,11 @@ export class LanguageService {
   private readonly router = inject(Router);
   private readonly languageStorageKey = 'preferredLanguage';
   private readonly warnedMissingKeys = new Set<string>();
+  private readonly documentLanguageMap: Record<SupportedLanguage, string> = {
+    nl: 'nl-BE',
+    fr: 'fr-BE',
+    en: 'en',
+  };
 
   private readonly _currentLanguage = signal<SupportedLanguage>('en');
   private readonly _translations = signal<Record<string, string>>({});
@@ -34,7 +39,7 @@ export class LanguageService {
 
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem(this.languageStorageKey, nextLanguage);
-      document.documentElement.lang = nextLanguage;
+      document.documentElement.lang = this.documentLanguageMap[nextLanguage];
     }
 
     const loadedTranslations = await this.loadTranslations(nextLanguage);

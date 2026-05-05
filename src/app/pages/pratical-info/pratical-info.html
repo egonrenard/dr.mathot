@@ -48,35 +48,25 @@
       <p [innerHTML]="languageService.t('pages.practicalInfo.section5Paragraph1')"></p>
       <p>{{ languageService.t('pages.practicalInfo.section5Paragraph2') }}</p>
 
-      <p
-        class="pratical-info-paragraph"
-        [innerHTML]="languageService.t('pages.practicalInfo.section5Paragraph3')"
-      ></p>
+      <p>
+        <span [innerHTML]="languageService.t('pages.practicalInfo.section5Paragraph3')"></span>
+        <a
+          class="pratical-info-jump-link"
+          href=""
+          (click)="scrollToPreparationDocuments($event)"
+        >
+          {{ languageService.t('pages.practicalInfo.section5PreparationLink') }}
+        </a>
+      </p>
+
 
       <p class="pratical-info-subtitle">
         {{ languageService.t('pages.practicalInfo.section5Paragraph4') }}
       </p>
-      <ul class="file-list">
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List1') }}
-        </li>
+      <p>{{ languageService.t('pages.practicalInfo.section5PreparationSummary1') }}</p>
+      <p>{{ languageService.t('pages.practicalInfo.section5PreparationSummary2') }}</p>
 
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List2') }}
-        </li>
-
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List3') }}
-        </li>
-
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List4') }}
-        </li>
-
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List5') }}
-        </li>
-
+      <ul id="preparation-documents" class="file-list">
         <pdf-box>
           <a
             href="/documents/DERMATHOT_PREPARE_YOUR_CONSULTATION_ESTHETIC_(FR.NL.EN).pdf"
@@ -112,28 +102,44 @@
         {{ languageService.t('pages.practicalInfo.section5Paragraph5') }}
       </p>
 
+      <p>{{ languageService.t('pages.practicalInfo.section5SkinCancerIntro') }}</p>
+
       <ul class="file-list">
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List6') }}
-        </li>
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List7') }}
-        </li>
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List8') }}
-        </li>
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List9') }}
-        </li>
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List10') }}
-        </li>
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List11') }}
-        </li>
-        <li>
-          {{ languageService.t('pages.practicalInfo.section5List12') }}
-        </li>
+        <link-box>
+          <a [href]="languageService.t('pages.practicalInfo.section5List6Url')" target="_blank">
+            {{ languageService.t('pages.practicalInfo.section5List6') }}
+          </a>
+        </link-box>
+        <link-box>
+          <a [href]="languageService.t('pages.practicalInfo.section5List7Url')" target="_blank">
+            {{ languageService.t('pages.practicalInfo.section5List7') }}
+          </a>
+        </link-box>
+        <link-box>
+          <a [href]="languageService.t('pages.practicalInfo.section5List8Url')" target="_blank">
+            {{ languageService.t('pages.practicalInfo.section5List8') }}
+          </a>
+        </link-box>
+        <link-box>
+          <a [href]="languageService.t('pages.practicalInfo.section5List9Url')" target="_blank">
+            {{ languageService.t('pages.practicalInfo.section5List9') }}
+          </a>
+        </link-box>
+        <link-box>
+          <a [href]="languageService.t('pages.practicalInfo.section5List10Url')" target="_blank">
+            {{ languageService.t('pages.practicalInfo.section5List10') }}
+          </a>
+        </link-box>
+        <link-box>
+          <a [href]="languageService.t('pages.practicalInfo.section5List11Url')" target="_blank">
+            {{ languageService.t('pages.practicalInfo.section5List11') }}
+          </a>
+        </link-box>
+        <link-box>
+          <a [href]="languageService.t('pages.practicalInfo.section5List12Url')" target="_blank">
+            {{ languageService.t('pages.practicalInfo.section5List12') }}
+          </a>
+        </link-box>
       </ul>
     </collapse-box>
   </main>

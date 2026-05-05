@@ -20,6 +20,7 @@
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+  
 }
 
 .nav-button.selected {
@@ -54,9 +55,9 @@
   .nav-button {
     width: auto;
     min-width: none;
-    padding: .5vw;
+    padding: 0.5rem 0.65rem;
     border-radius: 2px;
-    border-width: 4px;
+    border-bottom: 2px solid transparent;
     font-size: 1rem;
     box-shadow: none;
     background-color: transparent;
