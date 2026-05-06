@@ -91,18 +91,18 @@
   font-size: 0.8rem;
   opacity: 0.95;
   font-weight: bold;
-  border: .5px solid var(--button-primary);
+  border: 0.5px solid var(--button-primary);
 }
 
 .language-button:hover {
   background-color: var(--button-hover);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.212);
-  color:var(--olivia-cream);
+  color: var(--olivia-cream);
 }
 
 .language-button.active {
   opacity: 1;
-  color:var(--olivia-cream);
+  color: var(--olivia-cream);
   background-color: var(--button-primary);
 }
 
@@ -111,7 +111,7 @@
   transform: translateY(-1px);
   color: var(--olivia-cream);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.212);
-  color:var(--olivia-cream);
+  color: var(--olivia-cream);
 }
 
 .hamburger-menu {
@@ -203,6 +203,13 @@
   .logo {
     height: 118px;
   }
+    .header-container {
+    padding-right: calc(5vw + var(--safe-area-right));
+    padding-right: calc(5dvw + var(--safe-area-right));
+
+    padding-left: calc(5vw + var(--safe-area-left));
+    padding-left: calc(5dvw + var(--safe-area-left));
+  }
 }
 @media (min-width: 1500px) {
   .header-container {
@@ -221,4 +228,5 @@
   .logo {
     height: 126px;
   }
+
 }

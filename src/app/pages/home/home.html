@@ -6,12 +6,19 @@
       <div class="description">{{ languageService.t('home.description-line1') }}</div>
       <div class="description">{{ languageService.t('home.description-line2') }}</div>
       <div class="button-container">
-        <button class="active-btn" [routerLink]="languageService.getLocalizedRoute('appointment')">{{ languageService.t('home.book-appointment') }}</button>
+        <button class="active-btn" [routerLink]="languageService.getLocalizedRoute('appointment')">
+          {{ languageService.t('home.book-appointment') }}
+        </button>
         <button>{{ languageService.t('home.more-info') }}</button>
       </div>
     </div>
-    <div class="home-image">
-      <img src="/images/fakedoctor.png" alt="{{ languageService.t('home.profileImageAlt') }}" class="home-logo" />
-    </div>
+    <figure class="home-image-container">
+      <img
+        src="/images/Dr.Olivia.jpg"
+        alt="{{ languageService.t('home.profileImageAlt') }}"
+        class="home-image"
+      />
+      <figcaption class="image-caption">© Bernal Revert</figcaption>
+    </figure>
   </div>
 </main>
