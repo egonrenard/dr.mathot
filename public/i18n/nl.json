@@ -76,6 +76,20 @@
   },
   "about": {
     "title": "Over mij",
+    "mainTitle": "Dr. Olivia Mathot – Dermatoloog",
+    "mainIntro": "Dr. Olivia Mathot voltooide haar geneeskundestudies aan de Université Libre de Bruxelles (ULB), waar zij in 2020 haar diploma van Arts behaalde. Vervolgens specialiseerde zij zich in de Dermatologie-Venerologie en behaalde haar specialistentitel in 2025, beide met grote onderscheiding.",
+    "educationTitle": "Haar expertise bouwde zij op in de belangrijkste Brusselse instellingen",
+    "educationText": "Met ervaring opgebouwd in toonaangevende Brusselse medische centra, combineert Dr. Mathot uitgebreide kennis met praktische vaardigheden.",
+    "institution1": "UMC Sint-Pieter Ziekenhuis en UVC Brugmann Ziekenhuis",
+    "institution2": "Universitair Kinderziekenhuis Koningin Fabiola (UKZKF)",
+    "institution3": "UZ Brussel (VUB Jette)",
+    "expertiseTitle": "Veelzijdige en gespecialiseerde expertise",
+    "expertiseText": "Dr. Mathot behandelt patiënten van alle leeftijden, van pediatrische dermatologie tot de zorg voor volwassenen. Zij behandelt alle aandoeningen van de huid, het haar en de slijmvliezen, en voert zowel dermatologische chirurgie als esthetische behandelingen uit.",
+    "nailTitle": "Nagelspecialist (nagelaandoeningen)",
+    "nailText": "Tijdens haar opleiding ontwikkelde zij een bijzondere interesse in nagelaandoeningen. Zij verdiepte zich hierin onder supervisie van Professor Richert, een internationale referentie op dit gebied.",
+    "engagementTitle": "Engagement en onderzoek",
+    "engagementText": "Als lid van de Koninklijke Belgische Vereniging voor Dermatologie (KBVDV) en de EADV is zij ook actief binnen de European Nail Group (ENG) en de Groupe Ongles (GO). Dankzij dit engagement kan zij haar patiënten de meest innovatieve behandelingen aanbieden, gebaseerd op de nieuwste inzichten van internationale congressen.",
+    "photoAlt": "Portretfoto van Dr. Olivia Mathot",
     "subtitle": "Dr.Mathot voltooide",
     "findOutMore": "Lees meer",
     "description": "haar geneeskundestudies aan de Université Libre de Bruxelles (ULB), waar zij in 2020 haar diploma van Arts behaalde. Vervolgens specialiseerde zij zich in de Dermatologie-Venerologie en behaalde haar specialistentitel in 2025, beide met grote onderscheiding."
@@ -160,7 +174,8 @@
       "medicalDisclaimerParagraph4": "Patiënten die reeds in opvolging zijn, kunnen indien nodig gebruikmaken van de contactgegevens die tijdens de consultatie werden meegedeeld.",
       "medicalDisclaimerParagraph5Before": "Lees onze volledige",
       "medicalDisclaimerParagraph5Link": "privacyverklaring",
-      "medicalDisclaimerParagraph5After": "over de verwerking en bescherming van uw persoonsgegevens."
+      "medicalDisclaimerParagraph5After": "over de verwerking en bescherming van uw persoonsgegevens.",
+      "ImageAlt": "Dr. Olivia Mathot in haar praktijkruimte, klaar om patiënten te ontvangen."
     },
     "privacy": {
       "title": "Privacyverklaring",
@@ -359,10 +374,15 @@
       "section5List11Url": "https://www.euromelanoma.eu/nl-be/huidkanker-voorkomen/bescherm-je-huid",
       "section5List12": "Zonnen/bruinen en zonnebanken",
       "section5List12Url": "https://www.euromelanoma.eu/nl-be/huidkanker-voorkomen/zonnen-bruinen-en-zonnebanken",
-      "section5Paragraph13": "Bekijk het document 'Voorbereiding Esthiek' .",
-      "section5Paragraph14": "Download 'Voorbereiding Esthiek' .",
-      "section5Paragraph15": "Bekijk het document 'Voorbereiding Hyperpigmentatie' .",
-      "section5Paragraph16": "Download 'Voorbereiding Hyperpigmentatie' ."
+      "section5Paragraph13": "Voorbereiding consultatie Esthiek.",
+      "section5Paragraph14": "Voorbereiding consultatie Esthiek.",
+      "section5Paragraph15": "Voorbereiding consultatie Hyperpigmentatie' .",
+      "section5Paragraph16": "Download 'Voorbereiding Hyperpigmentatie' .",
+      "section5PdfAcne": "Voorbereiding consultatie Acné",
+      "section5PdfLaser": "Voorbereiding consultatie Laser",
+      "section5PdfNails": "Voorbereiding consultatie Nagels",
+      "section5PdfSkinCheck": "Voorbereiding consultatie Huidcheck",
+      "section5PdfEuromelanoma": "Euromelanoma Brochure 2026"
     }
   }
 }

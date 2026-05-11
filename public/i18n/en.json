@@ -59,6 +59,20 @@
   },
   "about": {
     "title": "About me",
+    "mainTitle": "Dr. Olivia Mathot – Dermatologist",
+    "mainIntro": "Dr. Olivia Mathot completed her medical studies at the Université Libre de Bruxelles (ULB), where she earned her Medical Degree in 2020. She subsequently specialized in Dermatology and Venereology, obtaining her specialist certification in 2025, both with great distinction.",
+    "educationTitle": "She built her expertise in Brussels's leading medical institutions",
+    "educationText": "With experience gained in prestigious Brussels medical centers, Dr. Mathot combines extensive knowledge with practical skills.",
+    "institution1": "Sint-Peter's Hospital and Brugmann Hospital",
+    "institution2": "Queen Fabiola Children's University Hospital (UKZKF)",
+    "institution3": "UZ Brussel (VUB Jette)",
+    "expertiseTitle": "Versatile and specialized expertise",
+    "expertiseText": "Dr. Mathot treats patients of all ages, from pediatric dermatology to adult care. She manages all conditions of the skin, hair, and mucous membranes, and performs both dermatological surgery and aesthetic treatments.",
+    "nailTitle": "Nail specialist (nail disorders)",
+    "nailText": "During her training, she developed a special interest in nail disorders. She deepened her expertise under the supervision of Professor Richert, an international reference in this field.",
+    "engagementTitle": "Engagement and research",
+    "engagementText": "As a member of the Royal Belgian Society of Dermatology (KBVDV) and the EADV, she is also active within the European Nail Group (ENG) and the Groupe Ongles (GO). Thanks to this commitment, she can offer her patients the most innovative treatments based on the latest insights from international conferences.",
+    "photoAlt": "Portrait photo of Dr. Olivia Mathot",
     "subtitle": "Dr. Mathot completed",
     "findOutMore": "Find out more",
     "description": "her medical studies at the Université Libre de Bruxelles (ULB), where she earned her Medical Degree in 2020. She subsequently specialized in Dermatology and Venereology, obtaining her specialist certification in 2025, both with great distinction."
@@ -160,7 +174,8 @@
       "medicalDisclaimerParagraph4": "Patients already under follow-up may, if necessary, use the contact details provided during their consultation.",
       "medicalDisclaimerParagraph5Before": "Read our full",
       "medicalDisclaimerParagraph5Link": "privacy policy",
-      "medicalDisclaimerParagraph5After": "on how your personal data is processed and protected."
+      "medicalDisclaimerParagraph5After": "on how your personal data is processed and protected.",
+      "ImageAlt": "Dr. Olivia Mathot in her practice, ready to receive patients."
     },
     "privacy": {
       "title": "Privacy Policy",
@@ -359,10 +374,15 @@
       "section5List11Url": "https://www.euromelanoma.eu/en-gb/prevent-skin-cancer/protect-your-skin",
       "section5List12": "Sun exposure/tanning and sunbeds",
       "section5List12Url": "https://www.euromelanoma.eu/en-gb/prevent-skin-cancer/tanning-and-sunbeds",
-      "section5Paragraph13": "View the 'Aesthetic Preparation' document.",
+      "section5Paragraph13": "Preparation consultationAesthetic.",
       "section5Paragraph14": "Download 'Aesthetic Preparation'.",
-      "section5Paragraph15": "View the 'Hyperpigmentation Preparation' document.",
-      "section5Paragraph16": "Download 'Hyperpigmentation Preparation'."
+      "section5Paragraph15": "Preparation consultation Hyperpigmentation",
+      "section5Paragraph16": "Download 'Hyperpigmentation Preparation'.",
+      "section5PdfAcne": "Preparation consultation Acne",
+      "section5PdfLaser": "Preparation consultation Laser",
+      "section5PdfNails": "Preparation consultation Nails",
+      "section5PdfSkinCheck": "Preparation consultation Skin Check",
+      "section5PdfEuromelanoma": "Euromelanoma Brochure 2026"
     }
   }
 }

@@ -4,6 +4,14 @@
     <p class="pratical-info-intro">{{ languageService.t('pages.practicalInfo.intro') }}</p>
   </header>
 
+  <figure class="home-image-container">
+    <img
+      src="/images/Dr.Olivia3.jpg"
+      alt="{{ languageService.t('home.profileImageAlt') }}"
+      class="home-image"
+    />
+    <figcaption class="image-caption">© Bernal Revert</figcaption>
+  </figure>
   <main class="pratical-info-content">
     <collapse-box title="{{ languageService.t('pages.practicalInfo.section1Title') }}">
       <ul>
@@ -50,15 +58,10 @@
 
       <p>
         <span [innerHTML]="languageService.t('pages.practicalInfo.section5Paragraph3')"></span>
-        <a
-          class="pratical-info-jump-link"
-          href=""
-          (click)="scrollToPreparationDocuments($event)"
-        >
+        <a class="pratical-info-jump-link" href="" (click)="scrollToPreparationDocuments($event)">
           {{ languageService.t('pages.practicalInfo.section5PreparationLink') }}
         </a>
       </p>
-
 
       <p class="pratical-info-subtitle">
         {{ languageService.t('pages.practicalInfo.section5Paragraph4') }}
@@ -68,33 +71,35 @@
 
       <ul id="preparation-documents" class="file-list">
         <pdf-box>
-          <a
-            href="/documents/DERMATHOT_PREPARE_YOUR_CONSULTATION_ESTHETIC_(FR.NL.EN).pdf"
-            target="_blank"
-            >{{ languageService.t('pages.practicalInfo.section5Paragraph13') }}</a
-          >
-        </pdf-box>
-        <pdf-box>
-          <a
-            href="/documents/DERMATHOT_PREPARE_YOUR_CONSULTATION_ESTHETIC_(FR.NL.EN).pdf"
-            download
-            >{{ languageService.t('pages.practicalInfo.section5Paragraph14') }}</a
-          >
+          <a href="/documents/preperation_esthetic.pdf" target="_blank">{{
+            languageService.t('pages.practicalInfo.section5Paragraph13')
+          }}</a>
         </pdf-box>
 
         <pdf-box>
-          <a
-            href="/documents/DERMATHOT_Prepare_your_consultation_HYPERPIGMENTATION_(FR.NL.EN).pdf"
-            target="_blank"
-            >{{ languageService.t('pages.practicalInfo.section5Paragraph15') }}</a
-          >
+          <a href="/documents/preperation_hypergimentation.pdf" target="_blank">{{
+            languageService.t('pages.practicalInfo.section5Paragraph15')
+          }}</a>
         </pdf-box>
         <pdf-box>
-          <a
-            href="/documents/DERMATHOT_Prepare_your_consultation_HYPERPIGMENTATION_(FR.NL.EN).pdf"
-            download
-            >{{ languageService.t('pages.practicalInfo.section5Paragraph16') }}</a
-          >
+          <a href="/documents/preperation_acne.pdf" target="_blank">{{
+            languageService.t('pages.practicalInfo.section5PdfAcne')
+          }}</a>
+        </pdf-box>
+        <pdf-box>
+          <a href="/documents/preperation_laser.pdf" target="_blank">{{
+            languageService.t('pages.practicalInfo.section5PdfLaser')
+          }}</a>
+        </pdf-box>
+        <pdf-box>
+          <a href="/documents/preperation_nails.pdf" target="_blank">{{
+            languageService.t('pages.practicalInfo.section5PdfNails')
+          }}</a>
+        </pdf-box>
+        <pdf-box>
+          <a href="/documents/preperation_skincheck.pdf" target="_blank">{{
+            languageService.t('pages.practicalInfo.section5PdfSkinCheck')
+          }}</a>
         </pdf-box>
       </ul>
 
@@ -105,6 +110,11 @@
       <p>{{ languageService.t('pages.practicalInfo.section5SkinCancerIntro') }}</p>
 
       <ul class="file-list">
+        <pdf-box>
+          <a href="/documents/Brochure_EUROMELANOMA_2026.pdf" target="_blank">{{
+            languageService.t('pages.practicalInfo.section5PdfEuromelanoma')
+          }}</a>
+        </pdf-box>
         <link-box>
           <a [href]="languageService.t('pages.practicalInfo.section5List6Url')" target="_blank">
             {{ languageService.t('pages.practicalInfo.section5List6') }}

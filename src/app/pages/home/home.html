@@ -9,7 +9,7 @@
         <button class="active-btn" [routerLink]="languageService.getLocalizedRoute('appointment')">
           {{ languageService.t('home.book-appointment') }}
         </button>
-        <button>{{ languageService.t('home.more-info') }}</button>
+        <button [routerLink]="languageService.getLocalizedRoute('about')">{{ languageService.t('home.more-info') }}</button>
       </div>
     </div>
     <figure class="home-image-container">

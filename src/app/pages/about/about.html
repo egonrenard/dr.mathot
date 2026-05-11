@@ -1,10 +1,42 @@
 <div class="about-page">
   <header class="about-hero">
-    <h1></h1>
-    <p class="about-intro"></p>
+    <h1>{{ languageService.t('about.title') }}</h1>
   </header>
 
   <main class="about-content">
+    <section class="about-intro-section">
+      <div class="intro-text">
+        <p>{{ languageService.t('about.mainIntro') }}</p>
+        <section class="about-section">
+          <h3>{{ languageService.t('about.educationTitle') }}</h3>
+          <p>{{ languageService.t('about.educationText') }}</p>
+          <ul class="institutions-list">
+            <li>{{ languageService.t('about.institution1') }}</li>
+            <li>{{ languageService.t('about.institution2') }}</li>
+            <li>{{ languageService.t('about.institution3') }}</li>
+          </ul>
+        </section>
+      </div>
+      <div class="intro-image">
+        <img src="/images/Dr.Olivia4.jpg" alt="{{ languageService.t('about.photoAlt') }}" />
+      </div>
+    </section>
+
+
+
+    <section class="about-section">
+      <h3>{{ languageService.t('about.expertiseTitle') }}</h3>
+      <p>{{ languageService.t('about.expertiseText') }}</p>
+    </section>
+
+    <section class="about-section">
+      <h3>{{ languageService.t('about.nailTitle') }}</h3>
+      <p>{{ languageService.t('about.nailText') }}</p>
+    </section>
+
+    <section class="about-section">
+      <h3>{{ languageService.t('about.engagementTitle') }}</h3>
+      <p>{{ languageService.t('about.engagementText') }}</p>
+    </section>
   </main>
 </div>
-

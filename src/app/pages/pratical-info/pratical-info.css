@@ -8,12 +8,44 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 2vh 20vw;
-  padding: 2dvh 20dvw;
-  margin-top: 3vh;
-  margin-top: 3dvh;
+  padding: 8vh 10vw;
+  padding: 8dvh 10dvw;
   gap: 2.2rem;
   cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-image-container {
+  position: absolute;
+  top: -3vh;
+  top: -3dvh;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.home-image {
+  width: 100%;
+  display: block;
+  opacity: 0.75;
+}
+
+.image-caption {
+  position: absolute;
+  top: 4vh;
+  top: 4dvh;
+  left: 1vw;
+  left: 1dvw;
+  z-index: 2;
+  font-size: 0.75rem;
+  color: white;
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.534);
+  padding: 2px 6px;
+  border-radius: 3px;
 }
 
 p {
@@ -22,7 +54,16 @@ p {
 
 .pratical-info-hero {
   width: 100%;
+  background: #fffdf9e5;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 .pratical-info-hero h1 {
@@ -41,6 +82,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .pratical-info-paragraph {
@@ -102,19 +145,59 @@ a {
 
 @media (max-width: 768px) {
   .pratical-info-page {
-    padding: 2vh 5vw;
-    padding: 2dvh 5dvw;
     gap: 1.5rem;
   }
 
   .pratical-info-content {
     gap: 1.8rem;
   }
+
+  .home-image {
+    opacity: 0.65;
+  }
 }
 
 @media (max-width: 480px) {
+  .home-image {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: 1240px) {
   .pratical-info-page {
-    padding: 1.5vh 4vw;
-    padding: 1.5dvh 4dvw;
+    padding: 8vh 12vw;
+    padding: 8dvh 12dvw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .pratical-info-page {
+    padding: 8vh 14vw;
+    padding: 8dvh 14dvw;
+  }
+}
+
+@media (min-width: 1800px) {
+  .pratical-info-page {
+    padding: 8vh 16vw;
+    padding: 8dvh 16dvw;
+  }
+}
+
+@media (min-width: 768px) {
+  .pratical-info-hero {
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  .pratical-info-hero {
+    padding: 1rem 1.4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .pratical-info-hero {
+    padding: 1rem 1.6rem;
   }
 }
