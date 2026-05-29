@@ -60,7 +60,7 @@
 }
 
 .collapse-content-wrapper.open {
-  max-height: 2000px;
+  max-height: 4000px;
   opacity: 1;
   transition:
     max-height 0.5s ease,

@@ -144,7 +144,6 @@ p a:hover {
   font-weight: 700;
 }
 
-
 .urgent-list .urgent-phone-link:hover {
   color: var(--button-active);
   border-bottom-color: var(--button-active);
@@ -277,17 +276,16 @@ p a:hover {
   object-fit: cover;
 }
 
+.medical-disclaimer-section {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
 
-  .medical-disclaimer-section {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .medical-disclaimer-caption {
-    right: 1rem;
-    bottom: 1rem;
-    font-size: 0.8rem;
-  }
+.medical-disclaimer-caption {
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 0.8rem;
+}
 .medical-disclaimer-caption {
   position: absolute;
   right: 0.8rem;
@@ -302,7 +300,6 @@ p a:hover {
 
 @media (min-width: 768px) {
   .contact-page {
-
     gap: 2.4rem;
   }
 
@@ -314,20 +311,16 @@ p a:hover {
   .medical-disclaimer-figure {
     min-height: 0;
   }
-}
-
-
-
-@media (max-width: 480px) {
-  .clinic-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .medical-disclaimer-section {
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
-  .clinic-entry {
-    padding: 1.2rem 1.3rem;
+  .clinic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
-
 
 @media (min-width: 1240px) {
   .contact-page {
