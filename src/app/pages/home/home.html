@@ -1,18 +1,25 @@
 <main class="home-page">
   <div class="home-page-container">
+    <figure class="home-image-container" id="small-image">
+      <figcaption class="image-caption">© Bernal Revert</figcaption>
+    </figure>
     <div class="home-description">
-      <h1 class="home-header">{{ languageService.t('home.header') }}</h1>
-      <h2 class="name">{{ languageService.t('home.name') }}</h2>
+      <div class="header-section">
+        <h1 class="home-header">{{ languageService.t('home.header') }}</h1>
+        <h2 class="name">{{ languageService.t('home.name') }}</h2>
+      </div>
       <div class="description">{{ languageService.t('home.description-line1') }}</div>
       <div class="description">{{ languageService.t('home.description-line2') }}</div>
       <div class="button-container">
         <button class="active-btn" [routerLink]="languageService.getLocalizedRoute('appointment')">
           {{ languageService.t('home.book-appointment') }}
         </button>
-        <button [routerLink]="languageService.getLocalizedRoute('about')">{{ languageService.t('home.more-info') }}</button>
+        <button [routerLink]="languageService.getLocalizedRoute('about')">
+          {{ languageService.t('home.more-info') }}
+        </button>
       </div>
     </div>
-    <figure class="home-image-container">
+    <figure class="home-image-container" id="big-image">
       <img
         src="/images/Dr.Olivia.jpg"
         alt="{{ languageService.t('home.profileImageAlt') }}"
