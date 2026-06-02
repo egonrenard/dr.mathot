@@ -85,6 +85,22 @@
   </section>
 
   <section class="medical-disclaimer-section">
+    <div
+      #medicalImageContainer
+      class="img-contianer"
+      [style.height.px]="imageContainerHeight"
+    >
+    <figure #medicalFigure class="medical-disclaimer-figure">
+      <img
+        src="/images/Dr.Olivia2.jpg"
+        alt="{{ languageService.t('pages.contact.ImageAlt') }}"
+        class="medical-disclaimer-image"
+        (load)="onMedicalImageLoad()"
+      />
+      <figcaption class="medical-disclaimer-caption">© Bernal Revert</figcaption>
+    </figure>
+    </div>
+    
     <div class="medical-disclaimer-box">
       <h2>{{ languageService.t('pages.contact.medicalDisclaimerTitle') }}</h2>
       <p>{{ languageService.t('pages.contact.medicalDisclaimerParagraph1') }}</p>
@@ -99,16 +115,6 @@
         {{ languageService.t('pages.contact.medicalDisclaimerParagraph5After') }}
       </p>
     </div>
-
-    <figure class="medical-disclaimer-figure">
-      <img
-        src="/images/Dr.Olivia2.jpg"
-        alt="{{ languageService.t('pages.contact.ImageAlt') }}"
-        class="medical-disclaimer-image"
-      />
-      <figcaption class="medical-disclaimer-caption">© Bernal Revert</figcaption>
-    </figure>
-
   </section>
 
   <section class="clinics-section">
@@ -120,7 +126,7 @@
         <p>
           <strong>{{ languageService.t('pages.contact.hoursTitle') }}</strong>
           {{ languageService.t('pages.contact.clinic1.schedule.day1.day') }}
-          {{ languageService.t('pages.contact.clinic1.schedule.day1.hours') }} -
+          {{ languageService.t('pages.contact.clinic1.schedule.day1.hours') }} &
           {{ languageService.t('pages.contact.clinic1.schedule.day2.day') }}
           {{ languageService.t('pages.contact.clinic1.schedule.day2.hours') }}
         </p>
@@ -151,7 +157,7 @@
         <p>
           <strong>{{ languageService.t('pages.contact.hoursTitle') }}</strong>
           {{ languageService.t('pages.contact.clinic2.schedule.day1.day') }}
-          {{ languageService.t('pages.contact.clinic2.schedule.day1.hours') }} -
+          {{ languageService.t('pages.contact.clinic2.schedule.day1.hours') }} &
           {{ languageService.t('pages.contact.clinic2.schedule.day2.day') }}
           {{ languageService.t('pages.contact.clinic2.schedule.day2.hours') }}
         </p>

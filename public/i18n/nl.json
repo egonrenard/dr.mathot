@@ -61,9 +61,9 @@
     "copyright": "Alle rechten voorbehouden.",
     "hoursCardTitle": "Openingsuren per praktijk",
     "clinic1Name": "Arsenal Clinic - Etterbeek",
-    "clinic1Hours": "Dinsdag 9u-18u en Donderdag 8u-18u",
+    "clinic1Hours": "Dinsdag en Donderdag 8u-17u",
     "clinic2Name": "Dermatology Research Institute - Ukkel",
-    "clinic2Hours": "Woensdag 9u-18u en Vrijdag 9u-17u",
+    "clinic2Hours": "Woensdagen en Vrijdag 8u-18u ",
     "urgentCardTitle": "Urgentie en gegevensbescherming",
     "emergencyLifeThreatening": "Bij levensgevaar",
     "emergencyOnCallGp": "Huisarts van wacht",
@@ -88,7 +88,7 @@
     "nailTitle": "Nagelspecialist (nagelaandoeningen)",
     "nailText": "Tijdens haar opleiding ontwikkelde zij een bijzondere interesse in nagelaandoeningen. Zij verdiepte zich hierin onder supervisie van Professor Richert, een internationale referentie op dit gebied.",
     "engagementTitle": "Engagement en onderzoek",
-    "engagementText": "Als lid van de Koninklijke Belgische Vereniging voor Dermatologie (KBVDV) en de EADV is zij ook actief binnen de European Nail Group (ENG) en de Groupe Ongles (GO). Dankzij dit engagement kan zij haar patiënten de meest innovatieve behandelingen aanbieden, gebaseerd op de nieuwste inzichten van internationale congressen.",
+    "engagementText": "Als lid van de Koninklijke Belgische Vereniging voor Dermatologie (KBVDV). Dankzij dit engagement kan zij haar patiënten de meest innovatieve behandelingen aanbieden, gebaseerd op de nieuwste inzichten van internationale congressen.",
     "photoAlt": "Portretfoto van Dr. Olivia Mathot",
     "subtitle": "Dr.Mathot voltooide",
     "findOutMore": "Lees meer",
@@ -138,11 +138,11 @@
         "schedule": {
           "day1": {
             "day": "Dinsdag",
-            "hours": "9u-18u"
+            "hours": "8u-17u"
           },
           "day2": {
             "day": "Donderdag",
-            "hours": "8u-18u"
+            "hours": "8u-17u"
           }
         },
         "address": "Boulevard Louis Schmidt 2B, 1040 Etterbeek",
@@ -155,11 +155,11 @@
         "schedule": {
           "day1": {
             "day": "Woensdag",
-            "hours": "9u-18u"
+            "hours": "8u-18u"
           },
           "day2": {
             "day": "Vrijdag",
-            "hours": "9u-17u"
+            "hours": "8u-18u"
           }
         },
         "address": "Chaussée de Waterloo 835, 1180 Ukkel",

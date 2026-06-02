@@ -70,7 +70,7 @@
     "nailTitle": "Spécialiste des ongles (pathologies unguéales)",
     "nailText": "Au cours de sa formation, elle a développé un intérêt particulier pour les pathologies unguéales. Elle a approfondi ses connaissances sous la supervision du Professeur Richert, une référence internationale dans ce domaine.",
     "engagementTitle": "Engagement et recherche",
-    "engagementText": "Membre de la Société Royale Belge de Dermatologie (KBVDV) et de l'EADV, elle est également active au sein du Groupe Ongles Européen (ENG) et du Groupe Ongles (GO). Grâce à cet engagement, elle peut offrir à ses patients les traitements les plus innovants basés sur les dernières perspectives des congrès internationaux.",
+    "engagementText": "Membre de la Société Royale Belge de Dermatologie (KBVDV) et de l'EADV. Grâce à cet engagement, elle peut offrir à ses patients les traitements les plus innovants basés sur les dernières perspectives des congrès internationaux.",
     "photoAlt": "Portrait de Dr. Olivia Mathot",    "subtitle": "Dr Olivia Mathot a effectué",
     "findOutMore": "Découvrir plus",
     "description": "ses études de médecine à l’Université Libre de Bruxelles (ULB), où elle a obtenu son diplôme de Médecin en 2020. Elle s’est ensuite spécialisée en Dermatologie-Vénéréologie et a obtenu son titre de spécialiste en 2025, tous deux avec la plus grande distinction."
@@ -87,9 +87,9 @@
     "copyright": "Tous droits reserves.",
     "hoursCardTitle": "Heures d'ouverture par cabinet",
     "clinic1Name": "Arsenal Clinic - Etterbeek",
-    "clinic1Hours": "Mardi 9h-18h et Jeudi 8h-18h",
+    "clinic1Hours": "Mardi et Jeudi 8h-17h",
     "clinic2Name": "Dermatology Research Institute - Uccle",
-    "clinic2Hours": "Mercredi 9h-18h et Vendredi 9h-17h",
+    "clinic2Hours": "Mercredi et Vendredi 8h-18h",
     "urgentCardTitle": "Urgence et protection des données",
     "emergencyLifeThreatening": "En cas de danger vital",
     "emergencyOnCallGp": "Médecin de garde",
@@ -136,11 +136,11 @@
         "schedule": {
           "day1": {
             "day": "Mardi",
-            "hours": "9h-18h"
+            "hours": "8h-17h"
           },
           "day2": {
             "day": "Jeudi",
-            "hours": "8h-18h"
+            "hours": "8h-17h"
           }
         },
         "address": "Boulevard Louis Schmidt 2B, 1040 Etterbeek",
@@ -153,11 +153,11 @@
         "schedule": {
           "day1": {
             "day": "Mercredi",
-            "hours": "9h-18h"
+            "hours": "8h-18h"
           },
           "day2": {
             "day": "Vendredi",
-            "hours": "9h-17h"
+            "hours": "8h-18h"
           }
         },
         "address": "Chaussée de Waterloo 835, 1180 Uccle",

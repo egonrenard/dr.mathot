@@ -71,7 +71,7 @@
     "nailTitle": "Nail specialist (nail disorders)",
     "nailText": "During her training, she developed a special interest in nail disorders. She deepened her expertise under the supervision of Professor Richert, an international reference in this field.",
     "engagementTitle": "Engagement and research",
-    "engagementText": "As a member of the Royal Belgian Society of Dermatology (KBVDV) and the EADV, she is also active within the European Nail Group (ENG) and the Groupe Ongles (GO). Thanks to this commitment, she can offer her patients the most innovative treatments based on the latest insights from international conferences.",
+    "engagementText": "As a member of the Royal Belgian Society of Dermatology (KBVDV) and the EADV. Thanks to this commitment, she can offer her patients the most innovative treatments based on the latest insights from international conferences.",
     "photoAlt": "Portrait photo of Dr. Olivia Mathot",
     "subtitle": "Dr. Mathot completed",
     "findOutMore": "Find out more",
@@ -89,9 +89,9 @@
     "copyright": "All rights reserved.",
     "hoursCardTitle": "Opening hours by practice",
     "clinic1Name": "Arsenal Clinic - Etterbeek",
-    "clinic1Hours": "Tuesday 9 AM-6 PM and Thursday 8 AM-6 PM",
+    "clinic1Hours": "Tuesday and Thursday 8 AM-5 PM",
     "clinic2Name": "Dermatology Research Institute - Uccle",
-    "clinic2Hours": "Wednesday 9 AM-6 PM and Friday 9 AM-5 PM",
+    "clinic2Hours": "Wednesday andFriday 8 AM-6 PM",
     "urgentCardTitle": "Urgency and data protection",
     "emergencyLifeThreatening": "Life-threatening emergency",
     "emergencyOnCallGp": "On-call GP",
@@ -138,11 +138,11 @@
         "schedule": {
           "day1": {
             "day": "Tuesday",
-            "hours": "9 AM-6 PM"
+            "hours": "8 AM-5 PM"
           },
           "day2": {
             "day": "Thursday",
-            "hours": "8 AM-6 PM"
+            "hours": "8 AM-5 PM"
           }
         },
         "address": "Boulevard Louis Schmidt 2B, 1040 Etterbeek",
@@ -155,11 +155,11 @@
         "schedule": {
           "day1": {
             "day": "Wednesday",
-            "hours": "9 AM-6 PM"
+            "hours": "8 AM-6 PM"
           },
           "day2": {
             "day": "Friday",
-            "hours": "9 AM-5 PM"
+            "hours": "8 AM-6 PM"
           }
         },
         "address": "Chaussée de Waterloo 835, 1180 Uccle",

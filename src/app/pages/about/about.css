@@ -184,11 +184,7 @@
   }
 
   .intro-image img {
-    max-width: 400px;
-  }
-
-  .about-intro-section {
-    margin-bottom: 4rem;
+    max-width: 40vw;
   }
 }
 
@@ -210,6 +206,13 @@
   .about-page {
     padding: 2vh 14vw;
     padding: 2dvh 14dvw;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .about-intro-section {
+    margin-bottom: 4rem;
   }
 }
 

@@ -260,11 +260,17 @@ p a:hover {
   margin-bottom: 0;
 }
 
+.img-contianer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  will-change: height;
+}
 .medical-disclaimer-figure {
   margin: 0;
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
   aspect-ratio: 3 / 2;
   max-width: 100%;
 }
@@ -312,7 +318,6 @@ p a:hover {
     min-height: 0;
   }
   .medical-disclaimer-section {
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
   .clinic-grid {
@@ -327,12 +332,18 @@ p a:hover {
     padding: 2vh 12vw;
     padding: 2dvh 12dvw;
   }
+
+
+  
 }
 
 @media (min-width: 1440px) {
   .contact-page {
     padding: 2vh 14vw;
     padding: 2dvh 14dvw;
+  }
+    .contact-sections {
+    margin-bottom: 5rem;
   }
 }
 
