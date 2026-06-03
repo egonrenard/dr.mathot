@@ -16,7 +16,7 @@ export class PageHeader {
   readonly navButtons = computed(() => [
     {
       id: 1,
-      label: this.languageService.t('seo.title'),
+      label: this.languageService.t('nav.home'),
       routerLink: this.languageService.getLocalizedRoute(''),
     },
     {

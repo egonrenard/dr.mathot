@@ -1,6 +1,9 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Injectable, PLATFORM_ID, REQUEST, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import enTranslations from '../../../public/i18n/en.json';
+import frTranslations from '../../../public/i18n/fr.json';
+import nlTranslations from '../../../public/i18n/nl.json';
 
 export type SupportedLanguage = 'nl' | 'fr' | 'en';
 
@@ -10,7 +13,9 @@ interface TranslationFile {
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
+  private readonly document = inject(DOCUMENT);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly request = inject(REQUEST, { optional: true });
   private readonly router = inject(Router);
   private readonly languageStorageKey = 'preferredLanguage';
   private readonly warnedMissingKeys = new Set<string>();
@@ -22,9 +27,15 @@ export class LanguageService {
 
   private readonly _currentLanguage = signal<SupportedLanguage>('en');
   private readonly _translations = signal<Record<string, string>>({});
+  private _loadingTranslations = false;
 
   readonly supportedLanguages: readonly SupportedLanguage[] = ['nl', 'fr', 'en'];
   readonly currentLanguage = this._currentLanguage.asReadonly();
+  private readonly translationFiles: Record<SupportedLanguage, TranslationFile> = {
+    en: enTranslations as TranslationFile,
+    fr: frTranslations as TranslationFile,
+    nl: nlTranslations as TranslationFile,
+  };
 
   async init(): Promise<void> {
     const defaultLanguage =
@@ -35,14 +46,15 @@ export class LanguageService {
   async setLanguage(language: SupportedLanguage, options: { updateUrl?: boolean } = {}): Promise<void> {
     const nextLanguage = this.normalizeLanguage(language);
     this._currentLanguage.set(nextLanguage);
-    this._translations.set({});
+    this._loadingTranslations = true;
+    this.document.documentElement.lang = this.documentLanguageMap[nextLanguage];
 
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem(this.languageStorageKey, nextLanguage);
-      document.documentElement.lang = this.documentLanguageMap[nextLanguage];
     }
 
     const loadedTranslations = await this.loadTranslations(nextLanguage);
+    this._loadingTranslations = false;
     if (loadedTranslations) {
       this._translations.set(loadedTranslations);
     }
@@ -61,7 +73,7 @@ export class LanguageService {
       return value;
     }
 
-    if (isPlatformBrowser(this.platformId) && !this.warnedMissingKeys.has(key)) {
+    if (isPlatformBrowser(this.platformId) && !this._loadingTranslations && !this.warnedMissingKeys.has(key)) {
       this.warnedMissingKeys.add(key);
       console.warn(`[i18n] Missing translation key: ${key} (${this.currentLanguage()})`);
     }
@@ -121,7 +133,13 @@ export class LanguageService {
   }
 
   private getLanguageFromCurrentUrl(): SupportedLanguage | null {
-    const path = isPlatformBrowser(this.platformId) ? window.location.pathname : this.router.url;
+    const path = isPlatformBrowser(this.platformId)
+      ? window.location.pathname
+      : this.document.location?.pathname
+        ? this.document.location.pathname
+      : this.request
+        ? new URL(this.request.url).pathname
+        : this.router.url;
     const [firstSegment] = path.split('/').filter(Boolean);
     const candidate = firstSegment ?? null;
     return this.isSupportedLanguage(candidate) ? candidate : null;
@@ -142,21 +160,8 @@ export class LanguageService {
   }
 
   private async loadTranslations(language: SupportedLanguage): Promise<Record<string, string> | null> {
-    if (!isPlatformBrowser(this.platformId)) {
-      return null;
-    }
-
-    try {
-      const response = await fetch(`/i18n/${language}.json`, { cache: 'no-store' });
-      if (!response.ok) {
-        return null;
-      }
-
-      const translationFile = (await response.json()) as TranslationFile;
-      return this.flattenTranslations(translationFile);
-    } catch {
-      return null;
-    }
+    const translationFile = this.translationFiles[language];
+    return this.flattenTranslations(translationFile);
   }
 
   private flattenTranslations(

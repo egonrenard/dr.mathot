@@ -12,6 +12,7 @@ import { SeoService } from './services/seo';
 })
 export class App {
   protected readonly title = signal('dr.mathot');
+  private readonly defaultSeoLanguage: SupportedLanguage = 'en';
   private readonly seoFallbacks: Record<SupportedLanguage, { title: string; description: string }> =
     {
       nl: {
@@ -36,21 +37,29 @@ export class App {
     const updateSeo = () => {
       const currentUrl = this.router.url;
       const routeLanguage = this.getLanguageFromUrl(currentUrl);
-      const activeLanguage = routeLanguage ?? this.languageService.currentLanguage();
+      const activeLanguage = routeLanguage ?? this.defaultSeoLanguage;
+      const shouldIndexRoute = routeLanguage !== null;
+      const pageKey = this.getSeoPageKeyFromUrl(currentUrl);
 
       const baseTitle = this.languageService.t('seo.title');
-      const description = this.languageService.t('seo.description');
       const resolvedBase =
         baseTitle === 'seo.title' ? this.seoFallbacks[activeLanguage].title : baseTitle;
+      const pageTitleKey = `seo.pages.${pageKey}.title`;
+      const pageDescriptionKey = `seo.pages.${pageKey}.description`;
+      const translatedPageTitle = this.languageService.t(pageTitleKey);
+      const translatedDescription = this.languageService.t(pageDescriptionKey);
+      const pageName = translatedPageTitle === pageTitleKey ? '' : translatedPageTitle;
       const resolvedDescription =
-        description === 'seo.description'
+        translatedDescription === pageDescriptionKey
           ? this.seoFallbacks[activeLanguage].description
-          : description;
-
-      const pageName = this.getPageNameFromUrl(currentUrl);
+          : translatedDescription;
       const pageTitle = pageName ? `${pageName} | ${resolvedBase}` : resolvedBase;
 
-      this.seoService.updateMetadata(pageTitle, resolvedDescription, '', currentUrl);
+      this.seoService.updateMetadata(pageTitle, resolvedDescription, {
+        url: currentUrl,
+        index: shouldIndexRoute,
+        language: activeLanguage,
+      });
       this.seoService.updateLanguageLinks(activeLanguage, currentUrl);
     };
 
@@ -65,7 +74,6 @@ export class App {
       }
     });
 
-    void this.languageService.init();
   }
 
   private getLanguageFromUrl(url: string): SupportedLanguage | null {
@@ -80,29 +88,34 @@ export class App {
   }
 
   private getPageNameFromUrl(url: string): string {
+    const pageKey = this.getSeoPageKeyFromUrl(url);
+    const pageTitleKey = `seo.pages.${pageKey}.title`;
+    const translated = this.languageService.t(pageTitleKey);
+
+    return translated === pageTitleKey ? '' : translated;
+  }
+
+  private getSeoPageKeyFromUrl(url: string):
+    | 'home'
+    | 'about'
+    | 'contact'
+    | 'appointment'
+    | 'practicalInfo'
+    | 'privacy'
+    | 'disclaimer' {
     const [path] = url.split(/[?#]/, 1);
     const segments = path.split('/').filter(Boolean);
     const pageSegment = segments.find((s) => s !== 'nl' && s !== 'fr' && s !== 'en') ?? '';
 
-    const pageKeyMap: Record<string, string[]> = {
-      about: ['nav.about', 'about.title'],
-      contact: ['nav.contact', 'pages.contact.title'],
-      appointment: ['nav.appointment', 'appointment.title'],
-      'practical-info': ['nav.practicalInfo'],
-      privacy: ['pages.privacy.title'],
-      disclaimer: ['pages.disclaimer.title'],
+    const pageKeyMap: Record<string, 'about' | 'contact' | 'appointment' | 'practicalInfo' | 'privacy' | 'disclaimer'> = {
+      about: 'about',
+      contact: 'contact',
+      appointment: 'appointment',
+      'practical-info': 'practicalInfo',
+      privacy: 'privacy',
+      disclaimer: 'disclaimer',
     };
 
-    const keys = pageKeyMap[pageSegment];
-    if (!keys) return '';
-
-    for (const key of keys) {
-      const translated = this.languageService.t(key);
-      if (translated !== key) {
-        return translated;
-      }
-    }
-
-    return '';
+    return pageKeyMap[pageSegment] ?? 'home';
   }
 }

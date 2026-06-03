@@ -3,6 +3,13 @@ import { Injectable, PLATFORM_ID, inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import type { SupportedLanguage } from './language';
 
+interface SeoMetadataOptions {
+  image?: string;
+  url?: string;
+  index?: boolean;
+  language?: SupportedLanguage;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -11,6 +18,8 @@ export class SeoService {
   private readonly metaService = inject(Meta);
   private readonly document = inject(DOCUMENT);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly siteUrl = 'https://dermathot.be';
+  private readonly defaultImagePath = '/images/logo-dark-red.png';
 
   private readonly supportedLanguages: readonly SupportedLanguage[] = ['nl', 'fr', 'en'];
   private readonly hreflangMap: Record<SupportedLanguage, string> = {
@@ -19,18 +28,27 @@ export class SeoService {
     en: 'en',
   };
 
-  updateMetadata(title: string, description: string, image: string = '', url: string = '') {
+  updateMetadata(title: string, description: string, options: SeoMetadataOptions = {}) {
+    const image = this.toAbsoluteUrl(options.image || this.defaultImagePath);
+    const url = options.url ? this.toAbsoluteUrl(options.url) : '';
+    const robots = options.index === false ? 'noindex, follow' : 'index, follow';
+
     this.titleService.setTitle(title);
 
     this.metaService.updateTag({ name: 'description', content: description });
-    this.metaService.updateTag({ name: 'robots', content: 'index, follow' });
+    this.metaService.updateTag({ name: 'robots', content: robots });
 
     // Open Graph
     this.metaService.updateTag({ property: 'og:title', content: title });
     this.metaService.updateTag({ property: 'og:description', content: description });
     this.metaService.updateTag({ property: 'og:type', content: 'website' });
-    if (image) {
-      this.metaService.updateTag({ property: 'og:image', content: image });
+    this.metaService.updateTag({ property: 'og:site_name', content: 'Dr. Mathot' });
+    this.metaService.updateTag({ property: 'og:image', content: image });
+    if (options.language) {
+      this.metaService.updateTag({
+        property: 'og:locale',
+        content: this.hreflangMap[options.language].replace('-', '_'),
+      });
     }
     if (url) {
       this.metaService.updateTag({ property: 'og:url', content: url });
@@ -40,6 +58,7 @@ export class SeoService {
     this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.metaService.updateTag({ name: 'twitter:title', content: title });
     this.metaService.updateTag({ name: 'twitter:description', content: description });
+    this.metaService.updateTag({ name: 'twitter:image', content: image });
   }
 
   updateLanguageLinks(currentLanguage: SupportedLanguage, currentUrl: string): void {
@@ -70,11 +89,15 @@ export class SeoService {
   }
 
   private toAbsoluteUrl(path: string): string {
-    if (isPlatformBrowser(this.platformId)) {
+    if (/^https?:\/\//.test(path)) {
+      return path;
+    }
+
+    if (isPlatformBrowser(this.platformId) && path.startsWith('/')) {
       return `${window.location.origin}${path}`;
     }
 
-    return path;
+    return `${this.siteUrl}${path.startsWith('/') ? path : `/${path}`}`;
   }
 
   private setLinkTag(rel: 'canonical' | 'alternate', href: string, hreflang?: string): void {
