@@ -25,7 +25,7 @@ export class LanguageService {
     en: 'en',
   };
 
-  private readonly _currentLanguage = signal<SupportedLanguage>('en');
+  private readonly _currentLanguage = signal<SupportedLanguage>('nl');
   private readonly _translations = signal<Record<string, string>>({});
   private _loadingTranslations = false;
 
@@ -39,7 +39,7 @@ export class LanguageService {
 
   async init(): Promise<void> {
     const defaultLanguage =
-      this.getLanguageFromCurrentUrl() ?? this.getSavedLanguage() ?? this.detectBrowserLanguage() ?? 'en';
+      this.getLanguageFromCurrentUrl() ?? this.getSavedLanguage() ?? this.detectBrowserLanguage() ?? 'nl';
     await this.setLanguage(defaultLanguage);
   }
 

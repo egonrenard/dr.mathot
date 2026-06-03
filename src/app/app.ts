@@ -12,7 +12,7 @@ import { SeoService } from './services/seo';
 })
 export class App {
   protected readonly title = signal('dr.mathot');
-  private readonly defaultSeoLanguage: SupportedLanguage = 'en';
+  private readonly defaultSeoLanguage: SupportedLanguage = 'nl';
   private readonly seoFallbacks: Record<SupportedLanguage, { title: string; description: string }> =
     {
       nl: {

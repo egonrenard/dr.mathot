@@ -12,6 +12,32 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
+const supportedLanguages = ['nl', 'fr', 'en'] as const;
+type SupportedLanguage = (typeof supportedLanguages)[number];
+
+function resolvePreferredLanguage(acceptLanguageHeader: string | undefined): SupportedLanguage {
+  const normalizedHeader = (acceptLanguageHeader || '').toLowerCase();
+
+  if (normalizedHeader.includes('fr')) {
+    return 'fr';
+  }
+
+  if (normalizedHeader.includes('en')) {
+    return 'en';
+  }
+
+  return 'nl';
+}
+
+// Redirect root to the best language match, with Dutch as fallback.
+app.get('/', (req, res) => {
+  const preferredLanguage = resolvePreferredLanguage(req.headers['accept-language']);
+  const queryIndex = req.originalUrl.indexOf('?');
+  const query = queryIndex >= 0 ? req.originalUrl.slice(queryIndex) : '';
+  res.setHeader('Vary', 'Accept-Language');
+  res.redirect(302, `/${preferredLanguage}${query}`);
+});
+
 /**
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.

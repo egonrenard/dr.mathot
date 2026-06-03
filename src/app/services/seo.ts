@@ -72,7 +72,7 @@ export class SeoService {
 
     this.setLinkTag(
       'alternate',
-      this.toAbsoluteUrl(this.toLocalizedPath(currentUrl, 'en')),
+      this.toAbsoluteUrl(this.toLocalizedPath(currentUrl, 'nl')),
       'x-default',
     );
   }
