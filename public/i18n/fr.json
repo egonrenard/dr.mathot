@@ -15,8 +15,8 @@
     "logoAlt": "Logo Dr. Mathot"
   },
   "seo": {
-    "title": "Dr. Mathot",
-    "description": "Votre spécialiste en Dermatologie Générale et Pathologies Onguéales.",
+    "title": "Dr. Olivia Mathot – Dermatologue Bruxelles",
+    "description": "Dermatologue à Bruxelles spécialisée en dermatologie médicale, esthétique et pédiatrique. Consultations à Etterbeek (ma/je) et Uccle (me/ve). Experte en pathologies onguéales.",
     "pages": {
       "home": {
         "title": "Accueil",
@@ -24,19 +24,19 @@
       },
       "about": {
         "title": "A propos",
-        "description": "Découvrez le parcours et l'expertise de Dr Olivia Mathot en dermatologie-vénéréologie."
+        "description": "Dr. Olivia Mathot, dermatologue à Etterbeek et Uccle (Bruxelles). Spécialisée en dermatologie médicale, esthétique, pédiatrique et pathologies onguéales."
       },
       "contact": {
         "title": "Contact",
-        "description": "Contactez le cabinet de Dr Mathot pour des questions générales, adresses des cabinets et informations urgentes."
+        "description": "Contactez le cabinet de Dr Mathot à Etterbeek ou Uccle pour vos questions, adresses et informations urgentes."
       },
       "appointment": {
         "title": "Prendre rendez-vous",
-        "description": "Planifiez votre consultation dermatologique chez Dr Mathot à Etterbeek ou Uccle."
+        "description": "Prenez rendez-vous chez la dermatologue Dr Mathot à Etterbeek (ma/je) ou Uccle (me/ve), Bruxelles."
       },
       "practicalInfo": {
         "title": "Infos pratiques",
-        "description": "Consultez les informations pratiques sur les rendez-vous, la préparation, les honoraires et les documents utiles."
+        "description": "Informations pratiques sur les consultations de Dr Mathot à Etterbeek et Uccle : tarifs, préparation et documents."
       },
       "privacy": {
         "title": "Politique de confidentialité",
@@ -94,9 +94,9 @@
     "emergencyLifeThreatening": "En cas de danger vital",
     "emergencyOnCallGp": "Médecin de garde",
     "privacyLabel": "Protection des données :",
-    "privacyLinkText": "Voir l'avis médical et la confidentialité sur la page contact",
-    "privacyTextBefore": "Read our",
-    "privacyTextMiddle": "and",
+    "privacyTextBefore": "Lisez notre",
+    "privacyLinkText": "Politique de confidentialité",
+    "privacyTextMiddle": "et notre",
     "disclaimerLinkText": "disclaimer",
     "privacyTextAfter": "."
   },

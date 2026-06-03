@@ -15,16 +15,16 @@ export class App {
   private readonly seoFallbacks: Record<SupportedLanguage, { title: string; description: string }> =
     {
       nl: {
-        title: 'Dr. Mathot',
-        description: 'Specialist in Algemene Dermatologie en Nagelaandoeningen.',
+        title: 'Dr. Olivia Mathot – Dermatoloog Brussel',
+        description: 'Dermatoloog in Brussel voor medische, esthetische en pediatrische dermatologie. Consultaties in Etterbeek (di/do) en Ukkel (wo/vr). Specialist in nagelaandoeningen.',
       },
       fr: {
-        title: 'Dr. Mathot',
-        description: 'Votre specialiste en Dermatologie Generale et Pathologies Ongueales.',
+        title: 'Dr. Olivia Mathot – Dermatologue Bruxelles',
+        description: 'Dermatologue à Bruxelles spécialisée en dermatologie médicale, esthétique et pédiatrique. Consultations à Etterbeek (ma/je) et Uccle (me/ve). Experte en pathologies onguéales.',
       },
       en: {
-        title: 'Dr. Mathot',
-        description: 'Your specialist in General Dermatology and Nail Disorders.',
+        title: 'Dr. Olivia Mathot – Dermatologist Brussels',
+        description: 'Dermatologist in Brussels specialising in medical, aesthetic and paediatric dermatology. Consultations in Etterbeek (Tue/Thu) and Uccle (Wed/Fri). Expert in nail disorders.',
       },
     };
 
