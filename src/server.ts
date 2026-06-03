@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
   const queryIndex = req.originalUrl.indexOf('?');
   const query = queryIndex >= 0 ? req.originalUrl.slice(queryIndex) : '';
   res.setHeader('Vary', 'Accept-Language');
-  res.redirect(302, `/${preferredLanguage}${query}`);
+  res.redirect(301, `/${preferredLanguage}${query}`);
 });
 
 /**
