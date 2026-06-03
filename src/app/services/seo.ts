@@ -6,7 +6,7 @@ import type { SupportedLanguage } from './language';
 interface SeoMetadataOptions {
   image?: string;
   url?: string;
-  index?: boolean;
+  index?: boolean; // true = indexeren, false = noindex, undefined = standaard indexeren
   language?: SupportedLanguage;
 }
 
@@ -31,6 +31,9 @@ export class SeoService {
   updateMetadata(title: string, description: string, options: SeoMetadataOptions = {}) {
     const image = this.toAbsoluteUrl(options.image || this.defaultImagePath);
     const url = options.url ? this.toAbsoluteUrl(options.url) : '';
+
+    // Waterdichte check: Alleen als options.index expliciet 'false' is, wordt het noindex.
+    // In alle andere gevallen (true, undefined, ontbrekend) is het 'index, follow'.
     const robots = options.index === false ? 'noindex, follow' : 'index, follow';
 
     this.titleService.setTitle(title);
@@ -101,9 +104,7 @@ export class SeoService {
   }
 
   private setLinkTag(rel: 'canonical' | 'alternate', href: string, hreflang?: string): void {
-    const selector = hreflang
-      ? `link[rel=\"${rel}\"][hreflang=\"${hreflang}\"]`
-      : `link[rel=\"${rel}\"]`;
+    const selector = hreflang ? `link[rel="${rel}"][hreflang="${hreflang}"]` : `link[rel="${rel}"]`;
     let link = this.document.head.querySelector(selector) as HTMLLinkElement | null;
 
     if (!link) {
